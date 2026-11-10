@@ -1,0 +1,53 @@
+[
+    {
+        "record_id": 1,
+        "topic": "CFA Structure",
+        "key_rule": "First 2 kW receives Rs 30000 per kW and additional 1 kW receives Rs 18000 per kW. No additional CFA beyond 3 kW.",
+        "source": "MNRE Operational Guidelines",
+        "source_section": "Section 5(e) and 5(h)",
+        "source_pages": [
+            5,
+            6
+        ]
+    },
+    {
+        "record_id": 2,
+        "topic": "CFA Example",
+        "key_rule": "A 2.5 kW system receives Rs 69000 CFA under the standard category.",
+        "source": "MNRE Operational Guidelines",
+        "source_section": "Section 5(h)",
+        "source_pages": [
+            7
+        ]
+    },
+    {
+        "record_id": 3,
+        "topic": "Domestic Content Requirement",
+        "key_rule": "Solar modules must be manufactured domestically using domestically manufactured solar cells. Non-DCR modules make the installation ineligible for CFA.",
+        "source": "MNRE Operational Guidelines",
+        "source_section": "Section 5(m)",
+        "source_pages": [
+            8
+        ]
+    },
+    {
+        "record_id": 4,
+        "topic": "Residential Eligibility",
+        "key_rule": "CFA is available for eligible grid-connected residential rooftop solar installations. Non-residential segments are not eligible.",
+        "source": "MNRE Operational Guidelines",
+        "source_section": "Section 5(b) and 5(d)",
+        "source_pages": [
+            5
+        ]
+    },
+    {
+        "record_id": 5,
+        "topic": "Inverter Capacity",
+        "key_rule": "CFA is calculated according to the rated DC capacity of the solar module system, not the inverter capacity.",
+        "source": "MNRE Operational Guidelines",
+        "source_section": "Section 5(k)",
+        "source_pages": [
+            8
+        ]
+    }
+]
