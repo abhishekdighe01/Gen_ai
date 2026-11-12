@@ -4,8 +4,11 @@ import os
 
 
 def download_file(url, save_path):
+    """Download a file from url and save it to save_path.
 
-    # Check if the file already exists
+    Skips the download if the file already exists.
+    Handles timeouts and request errors gracefully.
+    """
     if os.path.exists(save_path):
         print("File already exists:", save_path)
         return
@@ -13,7 +16,6 @@ def download_file(url, save_path):
     try:
         print("\nDownloading:", url)
 
-        # Create the folder if it does not exist
         os.makedirs(os.path.dirname(save_path), exist_ok=True)
 
         response = requests.get(url, timeout=30)
@@ -25,7 +27,7 @@ def download_file(url, save_path):
         print("Download successful:", save_path)
 
     except requests.exceptions.Timeout:
-        print("Error: Download timed out.")
+        print("Error: Download timed out for:", url)
 
     except requests.exceptions.RequestException as error:
         print("Download failed:", error)
@@ -35,7 +37,7 @@ if __name__ == "__main__":
 
     documents = [
         {
-            "url": "https://mnre.gov.in/en/notice/operational-guidelines-for-implementation-of-the-component-central-financial-assistance-to-residential-consumers-of-pm-surya-ghar-muft-bijli-yojana/",
+            "url": "https://cdnbbsr.s3waas.gov.in/s3716e1b8c6cd17b771da77391355749f3/uploads/2024/07/202407021768035484.pdf",
             "path": "data/raw/mnre_guidelines.pdf"
         },
         {
@@ -45,7 +47,11 @@ if __name__ == "__main__":
         {
             "url": "https://cdnbbsr.s3waas.gov.in/s3716e1b8c6cd17b771da77391355749f3/uploads/2024/12/20241230101814137.pdf",
             "path": "data/raw/resco_guidelines.pdf"
-        }
+        },
+        {
+            "url": "https://mnre.gov.in/en/notice/operational-guidelines-for-implementation-of-the-component-central-financial-assistance-to-residential-consumers-of-pm-surya-ghar-muft-bijli-yojana/",
+            "path": "data/raw/mnre_notice.html"
+        },
     ]
 
     for document in documents:

@@ -4,6 +4,7 @@ from pydantic import BaseModel
 from typing import Optional
 
 from app.records import load_records, search, get_by_id
+from app.smart_search import smart_search
 
 
 # Create FastAPI application
@@ -45,9 +46,24 @@ def get_all_records(limit: int = Query(default=100, ge=1, le=100)):
 
     records = records[:limit]
 
+    # Convert Record objects to dicts for JSON serialization
+    records_dict = []
+    for record in records:
+        records_dict.append({
+            "record_id": record.record_id,
+            "document_title": record.document_title,
+            "issuing_body": record.issuing_body,
+            "date_issued": record.date_issued,
+            "topic": record.topic,
+            "key_rule": record.key_rule,
+            "source": record.source,
+            "source_section": record.source_section,
+            "source_pages": record.source_pages
+        })
+
     return {
-        "total_records": len(records),
-        "records": records
+        "total_records": len(records_dict),
+        "records": records_dict
     }
 
 
@@ -63,23 +79,83 @@ def get_record(record_id: int):
             detail="Record not found"
         )
 
-    return record
+    # Convert Record object to dict for JSON serialization
+    return {
+        "record_id": record.record_id,
+        "document_title": record.document_title,
+        "issuing_body": record.issuing_body,
+        "date_issued": record.date_issued,
+        "topic": record.topic,
+        "key_rule": record.key_rule,
+        "source": record.source,
+        "source_section": record.source_section,
+        "source_pages": record.source_pages
+    }
 
 
-# Search records
+# Search records using smart TF-IDF search
 @app.get("/search")
 def search_records(q: str = Query(..., min_length=1)):
-
-    results = search(q)
-
-    if not results:
+    """
+    Search records using TF-IDF + cosine similarity ranking.
+    Falls back to keyword search if smart search returns no results.
+    """
+    # Try smart search first (TF-IDF + cosine similarity)
+    smart_results = smart_search(q, top_k=10)
+    
+    if smart_results:
+        # Convert (Record, score) tuples to dict format for JSON response
+        results = []
+        for record, score in smart_results:
+            result_dict = {
+                "record_id": record.record_id,
+                "topic": record.topic,
+                "key_rule": record.key_rule,
+                "document_title": record.document_title,
+                "issuing_body": record.issuing_body,
+                "date_issued": record.date_issued,
+                "source": record.source,
+                "source_section": record.source_section,
+                "source_pages": record.source_pages,
+                "relevance_score": round(score, 4)
+            }
+            results.append(result_dict)
+        
+        return {
+            "query": q,
+            "search_method": "smart_search",
+            "total_results": len(results),
+            "results": results
+        }
+    
+    # Fallback to keyword search
+    keyword_results = search(q)
+    
+    if not keyword_results:
         raise HTTPException(
             status_code=404,
             detail="No matching records found"
         )
+    
+    # Convert Record objects to dicts
+    results = []
+    for record in keyword_results:
+        result_dict = {
+            "record_id": record.record_id,
+            "topic": record.topic,
+            "key_rule": record.key_rule,
+            "document_title": record.document_title,
+            "issuing_body": record.issuing_body,
+            "date_issued": record.date_issued,
+            "source": record.source,
+            "source_section": record.source_section,
+            "source_pages": record.source_pages
+        }
+        results.append(result_dict)
 
     return {
-        "keyword": q,
+        "query": q,
+        "search_method": "keyword_search",
         "total_results": len(results),
         "results": results
     }
