@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "question": "How much subsidy will I get for a 3 kW rooftop solar system?",
+    "expected_answer": "₹78,000 CFA for general states (₹60,000 for first 2 kW + ₹18,000 for additional 1 kW)",
+    "source": "MNRE Guidelines Section 5(h)",
+    "category": "CFA Calculation",
+    "project_card_question": true
+  },
+  {
+    "id": 2,
+    "question": "How much terrace area do I need for 1 kW?",
+    "expected_answer": "Approximately 10 square meters (100 sq ft) per kW, can vary from 9-12 sq m depending on panel efficiency",
+    "source": "Industry standard / Technical specifications",
+    "category": "Space Requirements",
+    "project_card_question": true
+  },
+  {
+    "id": 3,
+    "question": "What is the minimum warranty on solar panels under this scheme?",
+    "expected_answer": "Performance warranty: 25 years; Manufacturing defects warranty: 10-12 years per MNRE technical specifications",
+    "source": "MNRE Technical Specifications / ALMM",
+    "category": "Technical Specifications",
+    "project_card_question": true
+  },
+  {
+    "id": 4,
+    "question": "I want 4 kW on my house in Kopargaon. How much subsidy do I get, and do I still need net metering from MSEDCL?",
+    "expected_answer": "₹78,000 CFA (capped at 3 kW, no additional CFA beyond 3 kW). Yes, net metering from MSEDCL is mandatory for grid-connected rooftop solar installations.",
+    "source": "MNRE Guidelines Section 5(e) — CFA cap; DISCOM net metering requirement",
+    "category": "CFA Calculation + Net Metering",
+    "project_card_question": true
+  },
+  {
+    "id": 5,
+    "question": "My vendor says I must pay full cost first and subsidy comes later. Is that right, and in how many days is the subsidy released?",
+    "expected_answer": "Yes, under capex mode you pay first. CFA is disbursed in two installments: 90% after installation and commissioning, 10% after submission of performance report. Timeline varies by DISCOM, typically 30-60 days for first installment.",
+    "source": "MNRE Guidelines Section 5(i)",
+    "category": "Disbursement Process",
+    "project_card_question": true
+  },
+  {
+    "id": 6,
+    "question": "What will MSEDCL's electricity tariff per unit be next year?",
+    "expected_answer": "I don't know. This question is outside the scope of PM Surya Ghar: Muft Bijli Yojana guidelines.",
+    "source": "Out of scope",
+    "category": "Out of Scope",
+    "project_card_question": true,
+    "out_of_scope": true
+  },
+  {
+    "id": 7,
+    "question": "How much Central Financial Assistance (CFA) will I get if I install a 2.5 kW rooftop solar system on my house?",
+    "expected_answer": "₹69,000 CFA for general states (₹60,000 for first 2 kW + ₹9,000 for additional 0.5 kW)",
+    "source": "MNRE Guidelines Section 5(h)",
+    "category": "CFA Calculation",
+    "project_card_question": false
+  },
+  {
+    "id": 8,
+    "question": "Are imported solar panels (non-DCR modules) eligible for central subsidy under PM Surya Ghar: Muft Bijli Yojana?",
+    "expected_answer": "No, solar modules must be manufactured domestically using domestically manufactured solar cells. Non-DCR modules are ineligible for CFA.",
+    "source": "MNRE Guidelines Section 5(m)",
+    "category": "Eligibility Criteria",
+    "project_card_question": false
+  },
+  {
+    "id": 9,
+    "question": "If I install a 3 kW inverter with 2 kW of solar panels, is the subsidy calculated on the inverter capacity or the solar module capacity?",
+    "expected_answer": "CFA is calculated based on the rated DC capacity of the solar module system, not the inverter capacity. For 2 kW of panels, CFA = ₹60,000.",
+    "source": "MNRE Guidelines Section 5(k)",
+    "category": "Technical Specifications",
+    "project_card_question": false
+  },
+  {
+    "id": 10,
+    "question": "Can a Group Housing Society (GHS) or Resident Welfare Association (RWA) get rooftop solar subsidy for common facilities and EV charging?",
+    "expected_answer": "Yes, GHS and RWA can receive CFA for common facilities including EV charging, up to 500 kWp at 3 kWp per house. CFA follows the additional residential capacity rate (₹18,000 per kW for general states).",
+    "source": "MNRE Guidelines Section 5(e)",
+    "category": "Eligibility Criteria",
+    "project_card_question": false
+  }
+]
