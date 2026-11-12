@@ -1,0 +1,1718 @@
+
+--- Page 2 ---
+2 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers Guidelines for PM -Surya Ghar: Muft Bijli Yojana  
+Central Financial Assistance to Residential Consumers  
+1) Background  
+ 
+a) The Government of India has approved the PM Surya Ghar: Muft Bijli Yojana on 29th February, 
+2024 to increase the share of solar rooftop capacity and empower residential households to 
+generate their own electricity. The scheme has an outlay of Rs 75,021 crore and is to be 
+implemented till FY 2026 -27. The administrative approval was gran ted to the scheme vide 
+Order No. 318/17/2024 -Grid Connected Rooftop dated 16th March, 2024.  
+b) The Financial Outlay for the scheme includes the following  components :- 
+S. No.  Scheme Component  Outlay  
+1. CFA to Residential Consumers  ₹ 65,700 crore  
+2. Incentives for Discoms  ₹ 4,950 crore  
+3. Model Solar Villages in each district  ₹ 800 crore  
+4. Incentives for Local Bodies  ₹ 1000 crore  
+5. Payment Security Mechanism  ₹ 100 crore  
+6. Innovative Projects  ₹ 500 crore  
+7. Capacity Building (1% of CFA)  ₹ 657 crore  
+8. Awareness & Outreach (1% of CFA)  ₹ 657 crore  
+9. Service Charge (1% of CFA)  ₹ 657 crore  
+ Total  ₹ 75,021 crore  
+ 
+2) Scope  
+a) These guidelines pertain to the implementation of Component 1 “Central Financial 
+Assistance (CFA) to residential consumers”  under the capex  mode for eligible  consumer  
+categories only .  
+b) The guidelines pertaining to other components of the scheme shall be issued separately.  
+--- Page 3 ---
+3 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers c) These guidelines shall be applicable for all applications received on the National Portal 
+from the date of  the launch of the scheme, i.e. 13th February, 2024.  
+d) The implementation period of the scheme shall be till 31st March, 2027.  
+ 
+3) Aim and Objectives of PM – Surya Ghar: Muft Bijli Yojana   
+The key objectives of the scheme  are:  
+a) To achieve 1 crore rooftop solar system (RTS) installation in residential sector.  
+b) To help provide free/low -cost electricity to 1 crore households up to 300 units of 
+electricity per month by installation of rooftop solar.  
+c) To produce renewable electricity of 1,000 billion units throug h the capacity installed 
+under the scheme , which will result in reduction of 720 million ton of CO2eq emission 
+during the 25 years of lifetime for rooftop solar projects.  
+d) To develop the required enabling ecosystem for rooftop solar projects, including 
+regu latory support, manufacturing facilities, supply chain, vendor network, operation & 
+maintenance facilities, etc., in the country.  
+e) To boost local economy and employment generation along with enhanced energy 
+security  
+f) To aid in achievement of India’s commitme nt for green climate through its NDCs 
+(Nationally Determined Contributions) at UNFCCC by installation of 30 GW of solar 
+capacity through rooftop solar by 2026 -27 
+4) Transition From Existing Scheme  
+a) The Ministry of New and Renewable Energy has been  implementing  the Grid Connected 
+Rooftop Solar Phase II Programme since 2019 , which  was proposed to  be implemented 
+till 2025 -26 with a budgetary outlay of Rs 11,814 crores. This scheme stands subsumed 
+with in the PM Surya Ghar: Muft Bijli Yojana.  
+b) The CFA and other relea ses for the PM – Surya Ghar: Muft Bijli Yojana shall be made from 
+the budgetary outlays of Rooftop Solar Phase II Programme till the dedicated budget 
+allocation for the scheme is operational and disbursements can be made from it. 
+--- Page 4 ---
+4 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers c) Once the new scheme budget is operational, the budget of Phase II programme will get 
+subsumed into the new scheme, and the new scheme funds shall be utilized for meeting 
+the ongoing liabilities of the Phase II programme also.  
+d) The CFA releases for ongoing projects against allocations made by MNRE to 
+implementation agencies under Phase II shall be governed by the guidelines issued under 
+the Phase II programme and shall not be covered under the PM – Surya Ghar Scheme 
+CFA structure. However, the budgetary rele ases for phase II programme shall be met 
+through the new scheme outlay.  
+e) The Phase II programme was implemented in Tender Mode as well as through National 
+Portal. The applicability of CFA rates for claims submitted under Phase II programme has 
+been defined  in Annexure 1  for greater clarity.  
+ 
+5) Central Financial Assistance  
+a) The scheme will support the installation of grid -connected rooftop solar projects in the 
+residential sector through Central Financial Support (CFA) support from the Central 
+Government.  
+b) Eligibility: For the purpose of CFA, residential RTS plant would be the grid connected 
+solar power system tagged to a particular residential power connection of the local 
+DISCOM and will only include installations on a roof/terrace/balcony or on top of 
+elevated structures. Special RTS installations such as Building Integrated PV  (BiPV)  
+systems shall also be considered eligible for CFA support.  To clarify, installations under 
+metering mechanisms such as Group Net Metering and Virtual Net Metering shall be  
+eligible for CFA if  the installations are on any roof/terrace/balcony or on top of elevated 
+structures or as BiPV and the metering arrangement is approved by the DISCOM.  
+c) Capex Mode: The Capex mode is considered to be one wherein the consumer  herself, 
+either through her own capital or through borrowings from financial institutions or 
+otherwise, funds the initial investment into the rooftop solar system. To clarify, these 
+guidelines do not cover RESCO models (where a third party entity other than the   
+consu mer makes the initial investment) or Utility Led/State Led Aggregation Models 
+(where a state entity invests on behalf of consumers on an aggregate basis). These mode s 
+will be dealt separately in other guidelines.  
+--- Page 5 ---
+5 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers d) No CFA will be provided to non -residential segments of consumers (including 
+government segment, commercial and industrial segment etc.).  
+e) CFA Structure: The Central Financial Assistance for the residential sector shall be as per 
+the following table:  
+S. No.  Type of Residential Segment  CFA 
+1. Residential Sector (first 2 kWp of RTS capacity 
+or part thereof)  60% of benchmark cost of 2 kWp  
+2. Residential Sector (with additional RTS 
+capacity of 1 kWp or part thereof)  40% of benchmark cost of 
+additional kWp  
+3. Residential Sector (additional RTS capacity 
+beyond 3 kWp)  No additional CFA  
+4. Group Housing Societies/ Residential Welfare 
+Associations (GHS/RWA) etc, for common 
+facilities including EV charging up to 500 kWp 
+(@3 kWp per house)  As per CFA of S. No. (2) above  
+For GHS/RWAs, the upper limit  of CFA supported RTS capacity is inclusive of individual rooftop plants 
+installed by individual residents in the GHS/RWA.  
+f) The GHS/RWA connection eligible under the scheme shall be dedicated only for common 
+facilities and should not be utilized for provid ing electricity supply to residential 
+consumers within the GHS/RWA.  
+i) The CFA support will generally be provided to entities created by residents for overall 
+maintenance and that are responsible for upkeep of common facilities  and these may 
+be known by alter native  terminologies such as Apartment Owner Associations 
+(AOAs) , Cooperative Housing Societies  etc. 
+--- Page 6 ---
+6 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers g) Benchmark Cost: The benchmark cost for 1 kW system is fixed at ₹ 50,000/kW for the 
+first 2 kW of RTS capacity and ₹ 45,000 for the additional kW with effec t from 13th 
+February, 2024. The benchmark for special category States (States/U Ts of Uttarakhand, 
+Himachal Pradesh, J&K, Ladakh, States in the North East including Sikkim, U Ts of A&N 
+and Lakshadweep) will be Rs 55,000 for first 2 kW of RTS capacity and Rs 49,500 for the 
+additional kW of RTS capacity.  
+h) Effective CFA: The CFA for the scheme with effect from date of initiation, i.e., 13th 
+February, 2024 is as follows: - 
+ 
+S. 
+No. Type of Residential Segment  CFA CFA (Special 
+Category States)  
+1. Residential Sector (first 2 kW p of RTS capacity 
+or part thereof)  Rs 30,000/kWp  Rs 33,000/kWp  
+2. Residential Sector (with additional RTS 
+capacity of 1 kW p or part thereof)  Rs 18,000/kWp  Rs 19,800/kWp  
+3. Residential Sector (additional RTS capacity 
+beyond 3 kW p) No additional  CFA No additional CFA  
+4. Group Housing Societies/ Residential Welfare 
+Associations (GHS/RWA) etc, for common 
+facilities including EV charging up to 500 kW p 
+(@3 kW p per house)  Rs 18,000/kWp  Rs 19,800/kWp  
+ 
+ 
+ To illustrate  
+i. If a consumer installs a system of 1.5 kW, she is eligible for a CFA of ₹ 30,000x 1.5 = ₹ 
+45,000  
+ii. If a consumer installs a capacity of 2.5 kW, she is eligible for a CFA of ₹ 30,000x2 + ₹ 
+18,000x0.5 = ₹ 69,000  
+--- Page 7 ---
+7 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers iii. If a consumer installs a capacity of 6 kW, she is eligible for a CFA of ₹ 30,000 x2  + 
+Rs18,000x1 = ₹ 78,000  
+iv. If an RWA installs a capacity of 100 kW, with 20 households, it will be eligible for a CFA 
+of ₹ 18,000x60  kW (Lower of (20x3  kW), 100  kW) = ₹ 10,80,000  
+v. If an RWA installs a capacity of 100 kW, with 50 households, it will be elig ible for a CFA 
+of ₹ 18,000x100  kW (Lower of (50x3  kW), 100 kW)= ₹ 18,00,000  
+i) Additional State Subsidy:  The State/UT governments may supplement the CFA provided 
+by the central government for the residential sector with an additional subsidy for RTS; 
+however, this shall be subject to adherence to all scheme guidelines by the State. The 
+framework of s uch supp ort by the State/UT governments shall be  in alignment with the 
+support provided under the scheme . The process for disbursement of state subsidy 
+component shall be  integrated with the National Portal.   
+j) Revision of Benchmark Cost:  The benchmark cost will be revised at the time of midterm 
+review of the scheme  to reflect changed market trends, if any, or earlier in case of 
+substantial upward revision in module prices for unforeseen reasons. The benchmark will 
+reflect changes in solar module supply prices, inver ter costs and other systems costs as 
+per the methodology defined by the Ministry of New and Renewable Energy.  In case of 
+upward revision of benchmark rates and consequent increase in requirement of 
+budgetary support, necessary approvals  in consultation wit h Department of Expenditure  
+shall be taken separately by the Ministry  to revise the scheme targets appropriately.  
+k) Sizing of Inverter: The CFA shall be irrespective of the size of the inverter installed. If a 
+consumer installs a rooftop solar plant with a higher/lower rated inverter capacity than 
+the number of modules, the CFA provided will be as per the rated DC capacity of the 
+module sy stem (according to the CFA structure) and not as per the inverter capacity. The 
+inverter should, however, meet the technical specification defined in the scheme.  
+l) Additional Components: The rooftop solar installation may include additional 
+technology compon ents such as small wind hybrids, battery storage, solar tracker 
+systems etc. However, the CFA calculation shall be based on the CFA structure under the 
+scheme as per capacity of solar modules installed in the system.  
+--- Page 8 ---
+8 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers m) Domestic Content Requirement: Solar mod ules used in the installation must satisfy the 
+Domestic Content Requirement condition i.e., domestically manufactured modules 
+manufactured from domestically manufactured cells . This is an essential condition for 
+the installation to be eligible for the CFA.  Use of non -DCR modules in any form in the 
+installation shall render  the installation ineligible for CFA.  
+n) Pre-existing RTS: A rooftop solar installation by residential consumers/RWAs that has 
+availed CFA under a prior/current scheme for rooftop solar by Mi nistry of New and 
+Renewable Energy and has subsequently increased the RTS installation size shall be 
+eligible for additional CFA under the current scheme only for the balance capacity up to 
+3 kW of overall RTS plant size.  
+(1) For example, if a household had i nstalled a RTS of 1 kW under Phase 2 Grid Connected 
+Rooftop Solar Scheme and availed a subsidy of Rs 14,588, and if such a household 
+enhances the total capacity to 4 kW overall, in such a case, the household shall be 
+eligible to claim an additional subsidy  under the current scheme only for the 
+additional 2 kW capacity, i.e. Rs 48,000.  
+(2) Alternatively, if a household installs a RTS of 1 kW under PM – Surya Ghar scheme 
+and avails a subsidy of Rs 30,000, and if such a household later enhances the total 
+capacity  to 4 kW overall, in such a case, the household shall be eligible to claim an 
+additional subsidy under the current scheme only for the additional 2 kW capacity, 
+i.e. Rs 48,000.  
+o) A rooftop solar installation shall be eligible for CFA only once after install ation. If an 
+already installed rooftop solar is shifted/relocated to a new location, such a system shall 
+not be eligible for CFA under the scheme.  
+p) Give It Up:  Consumers will have the option to forgo the CFA under the scheme so that 
+the scheme benefits can reach a wider cross -section of consumers.  This will be enabled 
+by a “Give It Up” option on the National Portal.  Consumers who opt for installing RTS 
+without availing CFA under this scheme, including those who may wish to forgo the RTS 
+CFA (under the “Give It Up” campaign or otherwise) shall be free to do so without using 
+domestically manufactured cells/modules (Dome stic Content Requirement or DCR).  
+6) Method of Implementation  
+--- Page 9 ---
+9 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers a) National Portal: Any eligible consumer  shall avail the benefits of the scheme only 
+through the PM Surya Ghar National Portal (hereinafter referred to as “Portal” or “ NP”). 
+b) Eligible Consumer: Any i nterested consumer with a valid Consumer Account Number (or 
+its equivalent consumer ID) for a Distribution Utility (Distribution Companies, or in some 
+cases Power/Energy Department of the state wherever applicable)  shall apply on the 
+National Portal. The P ortal shall generate an application ID for the application. The 
+consumer shall be assisted on the National Portal with informational aids, audio visual 
+material and other decision -making tools to decide on rooftop solar installation and its 
+possible config urations.  
+c) Choice of Vendor: The consumer shall then choose a vendor who is registered on the 
+National Portal. The consumer shall be free to enter into arrangements with any such  
+RTS vendor at mutually decided  rates. There shall be no tendering or rate discovery by 
+the state DISCOMs/agencies under the scheme to empanel RTS vendors  as was being 
+carried out in the Phase II program . The portal shall include a mechanism  of vendor 
+comparison so that consumer can make a better decision in finalizing the vendor of 
+choice.  
+d) Finalization of Terms:  The consumer shall mutually decide with the vendor on the system 
+design, system components, system quality, additional functionalities, localized design 
+requirements etc. Based on the mutually decided system design, the consumer shall also 
+mutually agree with the vendor on the financial terms and conditions. The vendor and 
+the consumer may sign an agreement covering these aspects. A suggested sample 
+vendor -consumer agreement is attached at Annexure 2, however, the actual agreement 
+may  vary on a case -to-case basis.   
+e) In order to protect the interests of the consumers, the National Portal will provide 
+comprehensive informational material, decision making tools, s ystem and vendor 
+comparison tools etc . so that the consumers can make an informed choice.  
+f) Minimum Technical Specifications:  The Ministry shall identify the minimum technical 
+specifications to be adhered to by all vendors for RTS systems installed under the 
+scheme. It will be the responsibility of the vendors to ensure that the system meets the 
+minimum technical specifications a s detailed i n Annexure 3 . This will also be checked by 
+the DISCOMs at the time of inspection.  
+--- Page 10 ---
+10 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers g) Indicative Costs of Components:  The Ministry will publish indicative  costs of system 
+components (modules, inverters and other important equipment) for the benefit  of 
+consumers  in order to ensure that consumers are not overcharged .   
+h) Feasibility Approval: As per the provisions of the Electricity (Rights of Consumers) Rules, 
+2020 and subsequent amendments, applications for rooftop solar systems up to 10 kW 
+capacity s hall be deemed to have been accepted without requiring approval of technical 
+feasibility by the DISCOMs. Till the operationalization of this provision by respective 
+Regulatory Commissions/DISCOMs, t he consumer shall upload the necessary documents 
+for seeking feasibility approval, wherever required as per extant state regulations.  
+i) Vendor Installation: The vendor shall install the system, conduct necessary safety and 
+other checks and also educate the consumer on various aspects of RTS maintenance and 
+safety and provide informational material to the consumer as appropriate.  
+j) Portal Updation: After the vendor has completed the installations, the consumer shall 
+update the system details on the portal and upload all the relevant documents including 
+geo-tagged photographs  as required on the portal . The vendor may assist the consumers 
+in filling up the necessary details  through the consumer login . Subsequently, the 
+application will move to the DISCOM.  
+k) DISCOM I nspection:  The concerned DISCOM shall conduct a physical inspection of the 
+system, sign the appropriate agreements with the consumer  (net meter agreement or 
+otherwise ), conduct a checklist -based inspection  as per the National Portal and approve 
+the application on the National Portal for release of CFA.  Alternatively, the DISCOMs may 
+send back the application for corrections or reject the claim with  adequate  justification . 
+The CFA will be processed only after the DISCOM has physically verified the sys tem and 
+completed the process on the Portal . 
+--- Page 11 ---
+11 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers l) Meter Installation and Agreement: The meter shall be installed by DISCOM after rooftop 
+installation is complete and the DISCOM and the consumer will sign the appropriate 
+metering agreement  as per state regulations . The net meter will be provided by the 
+DISCOM or the consumer may procure the net meters from enlisted meter vendors. A 
+model net metering agreement is shown at Annexure 4 . However, the actual agreement 
+may vary. All metering arra ngements (net metering, gross metering, net billing, virtual 
+net metering, group net metering etc.) approved by the respective Electricity Regulatory 
+Commissions of States/UTs shall be covered under the scheme.  
+m) Metering in AMISP  Areas:  For the purpose of n et metering, in the areas where the Smart 
+Metering works have already been awarded under Revamped  Distribution Sector  
+Scheme (R DSS), DISCOMs/PDs (Power Departments) should mandatorily get the Smart 
+Meters installed through the AMISP (Advance Metering Infra structure Service Provider).  
+n) Meteri ng in Non -AMISP Areas: In case the Smart Metering works are yet to be awarded 
+under RDSS, the net meters should be installed (preferably Smart Meters with 4G Cellular  
+NIC card) as per manufacturers empaneled  list and technical specifications published by 
+Central Electricity Authority in its website.  
+o) Non Metered Grid Connected Systems:  Systems that are not feeding into the grid but 
+are connected to the grid (behind -the-meter systems, battery hybrid systems etc .) shall 
+be eligible for CFA under the scheme subject to approval by the respective Electricity 
+Regulatory Commissions . In such cases , the DISCOM will inspect the installation, ensure 
+the functioning of the reverse power relay protection and incorporate su itable remarks 
+in the report . However, Off-grid connected installations will not be eligible for CFA under 
+the scheme.  
+p) E-Token: The release of the CFA shall be operationalized through an e -token. The e -token 
+will be generated after submission of  applicati on on the National Portal  and will be visible 
+on the consumer profile  in the Portal . After the necessary documents have been 
+uploaded and inspection by the DISCOM has been completed, the e -token shall be 
+activated  with the amount of eligible CFA as per the  actual installed capacity.  The e -token 
+shall then be redeemed by the consumer by logging into her profile on the Portal  and the 
+CFA shall subsequently be released to the consumer account .  
+--- Page 12 ---
+12 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers q) Financing: The consumer may also opt for financing through the National Portal. The loan 
+products of various banks and financial institutions will be available on the NP and the 
+consumer may opt for any of them through integration provided by Jan Samarth Portal 
+or th rough other  Financial Institutions directly.  
+r) Loan Products:  It is envisaged that standardized low interest loan products in the range 
+of benchmark rates (Repo + 50 bps) for installation of residential RTS systems that are up 
+to 3 kW in size will be made a vailable to the consumers  by Banks.  
+i) These financing options shall be supplemented by standardized products of similar 
+nature for non -subsidized segments also, including residential sector RTS of sizes 
+more than 3 kW . The standard loan products from Banks/F Is will be published on the 
+portal.   
+s) Consumer Account Details: All consumer details including bank account information and 
+a cancelled cheque image/bank e -statement file/passbook scan or any other electronic 
+document certifying that the bank account number  is held by the concerned consumer 
+must be submitted on the National Portal by the consumer.   
+i) In case the consumer  has opted for a loan product to finance the rooftop solar 
+installation, the consumer  profile shall also include the loan account details (entered 
+by the Consumer or through integration with banking portals). On redemption of the 
+e-token in such cases, the CFA will be transferred to the loan account of the 
+consumer . If the CFA exceeds the outstanding loan amount of the consumer, the CFA 
+will be disbursed to the consumer's loan account in the bank up to the amount of 
+loan outstanding , with the remainder disbursed into the consumer's bank account.  
+t) Processing of Claims:  The CFA will be proces sed within 15 days of approval  by the 
+concerned DISCOM.  
+7) Vendor Registration and Performance  
+a) Registration of Vendors: The scheme shall be implemented only through the vendors 
+registered on the National Portal i.e. a consumer has to choose a registered vendor for 
+availing CFA under the scheme.  
+--- Page 13 ---
+13 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers b) Registration Levels: The vendors shall have the option to register with the sta te 
+DISCOMs /state agencies  for state level registration and with the National Programme 
+Implementation Agency (NPIA) for national /multi -state /state  level  registration  as per 
+procedure prescribed by MNRE. In case of multiple DISCOMs within a state, the state  
+government shall identify a nodal DISCOM /agency  which shall undertake vendor 
+registrations on behalf of all DISCOMs of that state.   
+c) Vendor Profiles: The registered vendors will be able to create their profiles on National 
+Portal, including RTS system spec ifications offered, prices offered and key contacts for 
+consumers to reach out to. The consumers will be able to raise requests for enquiries 
+through the portal and it is also expected that the vendors will respond to interest 
+expressed by consumers in a t imely and reasonable manner. The vendor profile will also 
+include vendor rating, details about consumer feedback and other data relating to the 
+performance of the vendor on completed/ongoing projects for which they are the 
+designated vendors.  
+d) Services:  Registered vendors shall provide the services to the consumers  for 
+repairs/maintenance of the RTS plant free of cost for 5 years of the Comprehensive 
+Maintenance Contract (CMC) period from the date of commissioning of the plan. Non -
+performing/ under -performing system component will be replaced/repaired free of cost 
+in the CMC period. The consumer  shall be provided with the warranties given by the 
+respective OEMs on the system components for any future replacement of 
+malfunctioning components. Any deficiency of the RTS system leading to non -disbursal 
+of CFA/non -commiss ioning of the RTS by the DISCOM on account of system 
+quality/component issues shall be rectified by the vendor. In all cases, the vendors shall 
+adhere to the minimum technical specifications provided in the scheme in their 
+installations.   
+e) Penalties: The Im plementing agency (State DISCOM or agency) or MNRE officials or any 
+other designated agency may inspect the ongoing installation or installed plants. In case 
+the systems are not as per standards, nonfunctional on account of poor quality of 
+installation, or  in non -compl iance of scheme guidelines, the respective registering 
+authority  will reserve the right to de -register  the vendor and /or levy such penalties as 
+may be prescribed , after giving due notice to the vendor.   
+--- Page 14 ---
+14 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers  
+8) Functionalities in the National Portal  
+a) The National Portal is currently live and functional, however over the period of the 
+implementation  of the scheme, various value additions and feature enhancements will 
+be undertaken for up gradation  of the portal. These enhancements inter alia may include  
+the following: -  
+i) Integration with State Portals: The National Portal will provide a seamless and fully 
+integrated experience to prosumers in the residential sector. The portal will be fully 
+integrated with State DISCOM portals for a harmonized experience for consumers in 
+all stages of rooftop installatio ns, including requests for net metering, load sanctions, 
+inspections etc.  
+ii) Platform Services: The portal will create a public platform on which other 
+applications, websites, financing intermediaries and e -commerce sites can plug into, 
+through Application P rogramming Interfaces (APIs) and provide additional services 
+for citizens.  
+iii) GIS based Services: The portal will be augmented with GIS based services to enable 
+better decision making and visualization of RTS systems for vendors and consumers. 
+The GIS based system planning will also be integrated with PM -Gati Shakti Portal to 
+leverage additional functionalities and optimize power systems planning.  
+iv) Marketplace for Vendors: The National Portal will create a transparent and open 
+marketplace for vendors by adding  vendor feedback and vendor performance on the 
+portal.  
+v) Multimode Messaging: The National Portal will be accessible through apps, chatbots 
+and WhatsApp also, enabling wider outreach to all segments. The Portal will also 
+generate multi -level triggers for de lays in DISCOM inspection and net meter 
+installations and the DISCOMs shall be encouraged to ensure timely commissioning 
+of RTS plants, once the vendors have installed the systems.  
+vi) Other Value Added Services: There shall be other value -added activities suc h as 
+providing basic financial modelling of the proposed system and consumer’s return 
+period, entry of technical parameters of the system.  
+--- Page 15 ---
+15 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers vii) Integration with Banks: The portal will provide integration with banking products 
+offered by various financial insti tutions and will promote digital -only products for 
+ease of use by the consumers . Integration with Jan Samarth portal shall be done to 
+ensure bidirectional flow of information to and from the National Portal to the 
+respective financial institutions and to e nsure tagging of loan account of consumer 
+to the application on National Portal.  
+viii) Give It Up: The facility for forgoing CFA under the scheme as a part of the “Give It 
+Up” campaign shall be created on the National Portal. Such consumers would still be 
+able t o access all facilities of the National Portal as well as linkages with banks for 
+necessary financial products as per availability. This segment will benefit from non -
+financial easement of processes and standardized financing products created by 
+banks thro ugh the National Portal.  
+ix) Generation and Benefits Tracking : The National Portal will receive generation data 
+from connected inverters/smart meters for providing better analytical services to the 
+consumer as well as to assist DISCOMs in collecting data. In case the RTS generation 
+data (intermittent or real -time or near real -time) of an RTS is being received by the 
+vendor through SIM/dongle/Wi -Fi etc., access to that data shall be provided by the 
+vendor to the National Portal. This will enable tracking of the RTS generati on data on 
+the National Portal . 
+b) Active Applications: MNRE may specify a time period for which an application sha ll be 
+kept active on the N ational Portal from the date of application , after which the 
+application shall be deemed to be dormant. In case such period is specified, t he applicant 
+would be able to  reactivate the dormant app lication at any time through the consumer 
+profile on the National Portal subject to the overall limit of 1 crore active applications.  
+c) Limit on Active Applications: As the scheme is fund limited, the receiving of applications 
+on the National Portal shall be  limited to 1 crore active applications and only these 
+applications shall be considered for release of CFA. Once this limit is reached,  MNRE may 
+specify a time period for completion of installations so as to ensure achievement of 
+scheme target of 1 crore i nstallations.   
+ 
+--- Page 16 ---
+16 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers d) Applicant Login: Applicant login will be provided on the national portal to undertake 
+relevant activities pertaining to each installation including updating of status of 
+installation, technical specifications of the system installed, grieva nce redressal, 
+uploading of relevant pictures (pre and post installation) and other items. The consumer 
+has the user rights to undertake all activities on the National Portal without relying on 
+the vendor.  
+ 
+9) System Components and Minimum Technical Specifications  
+System Components: A Roof Top Solar (RTS) Photo Voltaic (PV) system shall generally 
+consist of equipment/components like Solar Photo Voltaic (SPV) modules, Inverter/micro 
+inverters, Module Mounting structures, Energy Meter, Array Junction Bo xes, DC 
+Distribution Box, AC Distribution Box, Protections – Earthing, Lightning, Surge, Cables, 
+Drawing & Manuals and any other necessary component based upon the site 
+requirement. The installations under the scheme that shall be commissioned shall 
+adhere  to the minimum  technical specifications and quality standards as published by 
+MNRE (Detailed in Annex ure 3, as may be  amended from time to time ). Consumers may 
+install specifications that are higher than these standards and will still be considered 
+eligib le under the scheme.  
+ 
+10) Ensuring Quality of Installations  
+a) Inspections  and Evaluations : The Scheme Implementation Agencies (National 
+Programme Implementation Agency (NPIA) nationally and State Implementation 
+Agencies (SIA) at State level) as well as other designated agencies by State/UT 
+governments shall conduct regular inspections /evaluation  of RTS systems installed 
+under the scheme, both at the time of commissioning and post commissioning.  
+ 
+b) Third Party Assessment: The NPIA shall establish adequate mechan ism to ensure 
+independent third party assessment of RTS installations of at least 1% of installed 
+systems  on a pan -India basis .  
+ 
+--- Page 17 ---
+17 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers c) SIA Monitoring: The SIA may  establish adequate mechanism to ensure post -
+commissioning  inspection of installed systems  on a sam pling basis . The SIA may conduct 
+additional independent third party assessments of systems.  
+ 
+d) Vendor Rating: All the vendors registered on the National Portal will be given a vendor 
+rating depending on the size and scale of installations done, quality of e quipment , 
+quality of workmanship , quality of service  and other criteria. This vendor rating will be 
+visible to the consumers  on the National Portal.  Detailed methodology  regarding 
+vendor rating will be as prescribed by MNRE . 
+ 
+11) Grievance Redressal  
+a) The consumers and vendors can raise grievances through the National Portal that will be 
+channeled for resolution to the SIA/ NPIA. The grievances will be resolved within a period 
+of 30 days.  
+b) The consumers  and vendors will get regular updates regarding status o f grievances 
+through SMS, emails and other channels of communication.  
+c) The grievances may be raised through the National Call Centre, National Portal or the 
+Portal app. In each case, a unique tracking ID will be created by the NPIA for the 
+consumer to track  the status of resolution of the grievance through an online system.  
+ 
+12) Memorandum of Understanding  
+a) A Memorandum of Understanding (MoU) will be signed under the scheme between 
+Ministry of New and Renewable Energy and the State/UT Energy Department within 3 
+months of notification of these guidelines. The Draft MoU between MNRE and the 
+State/UTs is as per Annexure 5 .  
+b) Release of funds under other  scheme components (Incentives to DISCOMs, Model Solar 
+Village, Incentives to PRIs/ULBs, Payment Security Mechanism etc.) to State/UTs or 
+entities under the State/UTs will be conditional to signing of the MoU with the concerned 
+State/UT.  
+c) The MoU will also be mandatory for allowing the release of additional state/UT subsidy 
+for RTS to consumers  under the scheme.  
+--- Page 18 ---
+18 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers  
+13) Implementation Agency  
+a) REC Limited shall initially be the Implementation Agency at the national level (National 
+Programme Implementation Agency (NP IA)) and will undertake activities relating to 
+operation of the National Portal and registration of vendors at the national level as well 
+as all other scheme related activities. However, MNRE will have the discretion to 
+designate any other agency as the NP IA as per any exigency.  
+ 
+b) The Distribution Utility  (DISCOMs or Power/Energy Departments, as the case may be)  
+shall be the State Implementation Agencies (SIA) at the State/UT level  and shall ensure 
+adherence to timelines specified for provisioning of services for prosumers and shall 
+coordinate with NPIA on matters pertaining to performance of vendors registered on the 
+National Portal, grievance redressal, programme monitoring at Sta te/UT level and other 
+responsibilities ascribed to it by MNRE from time to time .  
+ 
+14) Fund Release Mechanism  
+a) The NPIA  will assess the expected liabilities for each quarter  for release of CFA to 
+consumers under the scheme  (consumers under PM Surya Ghar: Muft Bijli Yojana and 
+consumers under Phase II Simplified Procedure)  and status of expenditure against 
+previously sanctioned releases  and make necessary requisitions for release of funds to 
+MNRE.  
+b) MNRE will process such req uisitions and release funds from time to time in accordance 
+with norms of Government of India  in order to ensure that the CFA is disbursed to 
+consumers  without delay.  
+c) For liabilities under the RTS Phase II programme (Tender mode), MNRE will process the 
+claims in accordance with Phase II scheme guidelines and issue necessary sanctions for 
+release of funds.   
+d) The Implementing agencies  will remit the accrue d interested and othe r charges to 
+Consolidated Fund o f India as per Rule 230 (8) of General Financial Rules , 2017  and its 
+amendments.  
+ 
+--- Page 19 ---
+19 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers 15) Scheme  Monitoring  
+a) A Group of Ministers will be constituted for overall guidance and coordination with 
+states.  
+b) A Steering Committee under the chairmanship of Cabinet Secretary and including 
+Secretaries of Ministry of New and Renewable Energy, Department of Financial Services, 
+Ministry of Power, Ministry of Housing and Urban Affairs and Ministry of Rural 
+Development  will monitor the implementation of the scheme.  
+c) The Mission Directorate in the Ministry of New and Renewable Energy will be responsible 
+for the implementation of the scheme . The Directorate will be headed by a Mission 
+Director not below the rank of  Joint Secretary  to Government of India.  The NPIA will 
+function under the directions of the Mission Directorate.  
+d) There will be a State Level Coordination Committee headed by the Chief 
+Secretary/ Advisor to Lieutenant Governor/ Administrator and comprising of Secret aries 
+of key departments to coordinate and monitor the implementation of the scheme in the 
+State/UT.  
+e) There will be a District Level Committee headed by the District Magistrate/District 
+Collector and comprising of other members for monitoring the implementa tion of the 
+scheme at the district level.  
+ 
+16) Amendment of Scheme Guidelines  
+a) MNRE may make necessary amendments in the scheme guidelines  within the overall 
+spirit of the Cabinet approval  or issue any clarification to remove difficulties  in the 
+implementation of the scheme , as and when required, with the approval of Hon’ble 
+Minister, New and Renewable Energy.  
+  
+--- Page 20 ---
+20 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers  
+Annexure 1  
+Coverage of applications under PM Surya Ghar: Muft Bijli Yojana  
+ 
+Application received under Phase II rooftop solar programme (before 13th Feb 2024)  
+Sr. No  Parameter  Applicable Subsidy  
+1 First instance of claims submission 
+before 5th Jan  Rs. 14,588/kW for upto 3 kW capacity and 
+thereafter Rs. 7,294/kW till 10kW capacity  
+(Subsidy prevailing before revision on 
+05.01.2024)  
+2 First instance of claims submission on 
+and after 5th Jan  Rs. 18,000/kw for upto 3kW capacity and 
+thereafter Rs. 9,000/kw till 10kW capacity  
+(revised subsidy as per notification dated 
+05.01.2024)  
+Note:  all applications received prior to launch of PM - Surya Ghar : Muft Bijli Yojana (before 13th 
+Feb 2024 will be covered under the Phase II rooftop solar programme) and will be eligible for the 
+CFA as indicate above. All applications submitted under the Pha se II of rooftop solar programme 
+will be admissible for CFA if the claim is received till October 2024. The claims received after 
+October 2024 will not be entertained.  
+Application received under PM - Surya Ghar : Muft Bijli Yojana (on and after 13th Feb 2 024)  
+1 All applications made on and after 13th 
+Feb 60% of benchma rk cost upto 2 kW capacity 
+and 4 0% for 1 kW additional capacity. No 
+subsidy beyond 3 kW.  
+(as approved under PM -Surya Ghar: Muft 
+Bijli Yojana)  
+ 
+--- Page 21 ---
+21 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers The CFA claims from installations undertaken in tender mode by respective 
+DISCOMs/implementation agencies under previous programmes for Rooftop Solar will be 
+considered under the guidelines of the respective programmes and not PM Suryaghar. The CFA 
+calcula tion will also be as per the respective programme guidelines.  No new/additional 
+capacity allocation by issuing any sanction under tender mode of GCRT phase II will be allowed 
+on or after 12.2.2024 to the DISCOM s. 
+  
+--- Page 22 ---
+22 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers Annexure 2  
+Model Draft Agreement  between Consumer & Vendor for installation of grid connected 
+rooftop solar (RTS) project under PM – Surya Ghar: Muft Bijli Yojana  
+This agreement is executed on ------- (Day) ------ (Month) ------- (Year) for design, supply, 
+installation, commissioning and 5 -year comprehensive maintenance of RTS project/system  
+along with warranty under PM Surya Ghar : Muft Bijli Yojana  
+Between  
+……………………………………………. (Name of Consumer) having address at 
+…………………………………………………………………. (hereinafter referred to as first Party i.e. 
+/consumer /consumer/purchaser /owner of system).  
+And 
+………………………………………………………..(Name of Vendor) having registered office at 
+……………………………………………….(hereinafter referred to as second Party i.e. Vendor/ contractor/ 
+System Integrator).  
+Whereas  
+First Party wishes to install a Grid Connected Rooftop Solar Plant  on the rooftop of the residential 
+building of the Consumer under PM Surya Ghar : Muft Bijli  Yojana.  
+ 
+And whereas   
+ 
+Second Party has verified availability of appropriate roof and found it feasible to install a Grid 
+Connected Roof Top Solar plant and that t he second party is willing  to design, supply, install, 
+test, commission and carry out Operation & Maintenance of the  Roofto p Solar plant for 5 year 
+period   
+ 
+On this day, the First Party and Second Party agree to the following:  
+ 
+The First Party hereby undertakes to  perform the following activities : 
+--- Page 23 ---
+23 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers 1. Submission of online application at National Portal for installation of RTS project/system , 
+Submission of application for net -metering and system inspection  and upload of the 
+relevant documents on the National Portal of the scheme  
+2. Provide secure storage of the material of the RTS plant delivered at the premises  till 
+handover of the system . 
+3. Provide access to the Roof Top during installation of the plant, operation &                
+maintenance, testing of the plant and equipment and for meter reading from solar 
+meter, inverter etc.  
+4. Provide electricity during plant  installation and water for cleaning of the panels.  
+5. Report any malfunctioning of the plant to the Vendor during the warranty period.  
+6. Pay the amount as per the payment schedule as mutually agreed with the vendor , 
+including any additional amount to the secon d party for any additional work 
+/customization required depending upon the building condition  
+ 
+The Second Party hereby undertakes to  perform the following activities : 
+1. The Vendor  must follow all the standards and safety guidelines prescribed under  state 
+regulations and technical standards prescribed by MNRE for RTS projects , failing which 
+the vendor is liable for blacklisting from participation in the govt. project/ scheme and 
+other penal actions in accordance with the law. The responsibility of su pply, installation 
+and commissioning of the rooftop solar project/system in complete compliance with 
+MNRE scheme guidelines lies with the Vendor.   
+2. Site Survey:  Site visit, survey  and development of detailed project report for installation 
+of RTS system. This also includes, feasibility study of roof, strength of roof and shadow 
+free area .  If any additional work or customization is involved for the plant installation as 
+per site condition and requirement of the consumer building, the Vendor shall prepare 
+an estimate and can raise separate invoice including GST in addition to the amount 
+towards standard plant cost. The consumer shall pay the amount for such additional 
+work directly to the Vendor.  
+3. Design & Engineering:  Design of plant along with drawings and selection of components  
+as per standard provided by the  DISCOM/SERC/MNRE  for best performance and safety 
+of the plant . 
+--- Page 24 ---
+24 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers 4. Module and Inverter:  The solar modules, including the solar cells, should be 
+manufactured in India. Both the solar modules and inverters shall conform to the 
+relevant standards and specifications prescribed by MNRE. Any other requirement, viz. 
+star labelling (solar modules), quality control orders and standards & labelling (inverters) 
+etc., shall also be complied.  
+5. Procurement & Supply:  Procurement of complete system as per BIS/IS/IEC standard 
+(whatever applicable) & safety guidelines for installation of rooftop solar plants. T he 
+supplied materials should comply with all MNRE standards for release of subsidy . 
+6. Installation & Civil work: Complete civil work, structure work and electrical work 
+(inclu ding drawings) following all the  safety and relevant BIS standards . 
+7. Documentation ( Technical Catalogues/Warranty Certificates/BIS certificates/other 
+test reports etc):  All such documents shall be provided to the consumer for online 
+uploading and submission of technical specifications, IEC/BIS report, Sr. Nos, Warranty 
+card of Solar Panel  & Inverter, Layout & Electrical SLD, Structure Design and Drawing, 
+Cable and other detailed documents.  
+8. Project completion report (PCR):  Assisting the consumer in filling and uploading of 
+signed documents (Consumer & Vendor) on the national  portal.  
+9. Warrant y: System warranty certificate s should be provided to the consumer . The 
+complete system should be warranted for 5 years from the date of commissioning by 
+DISCOM. Individual component warranty documents provided by the manufacturer shall 
+be provided to the consumer and all possible assistance  should be extended to the 
+consumer for claiming the warranty from the manufacturer.  
+10. NET meter & Grid Connectivity:  Net meter supply/procurement, testing and approvals 
+shall be in the scope of vendor. Grid connection of the plant shall be in the scope of the 
+vendor . 
+11. Testing and Commissioning:  The vendor shall be present at the time of testing and 
+commissioning by the DISCOM.  
+12. Operation & Maintenance: Five (5) years Comprehensive Operation and Maintenance 
+including overhaul ing, wear and tear and regular checking of healthiness of system at 
+proper interval shall be in the scope of vendor. The vendor shall also educate the 
+consumer on best practices for cleaning of the modules and system maintenance.  
+--- Page 25 ---
+25 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers 13. Insurance:  Any insurance cost pertaining to material transfer/storage before 
+commissioning of the system shall be in the scope of the vendor.  
+14. Applicable Standard:  The system must meet the technical standards and specifications 
+notified by MNRE . The vendor is solely responsible to  supply component and service 
+which meets the technical standards and specification prescribed by MNRE and State 
+DISCOM s. 
+15. Project/system cost & payment terms:   The cost of the plant and payment schedule 
+should be mutually discussed and decided between the vendor and consumer. The 
+consumer may opt for milestone -based payment to the vendor and the same shall be 
+included in the agreement.  
+16. Dispute: In-case of any dispute between consumer and vendor (in 
+supply/installation/maintenance of system or payment terms ), both parties must settle 
+the same mutually or as per law. MNRE/DISCOM shall not be liable for, and would not 
+be a party to any dispute arising between vendor and consumer.  
+17. Subsidy / Project Related Documents:  Vendor must provide all the documents to 
+consumer and help in uploading the same to National Portal for smooth release of 
+subsidy.  
+18. Performance of Plant:  The Performance Ratio (PR) of Plant must be 75% at the time of 
+commissioning of the project  by DISCOM or its authorised agency. Vendor must provide 
+(returnable basis) radiation sensor with valid calibration certificate of any NABL / 
+International laboratory at the time of commissioning / testing of the plant . Vendor must 
+maintain the PR of the p lant till warranty of project i.e. 5 years from the date of 
+commissioning.  
+19. Mutually Agreed Terms of Payment  …  
+First Party          Second Party  
+Name           Name   
+Address          Address  
+Sign          Sign 
+Date           Date  
+--- Page 26 ---
+26 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers Disclaimer: This agreement is between vendor and consumer and any dispute related to the same 
+shall not involve any third party including  MNRE and Dis tribution Utilities .   
+--- Page 27 ---
+27 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers Annexure 3  
+TECHNICAL SPECIFICATIONS FOR ROOFTOP SOLAR PLANTS INSTALLED  
+UNDER  THE COMPONENT OF “CFA TO RESIDENTIAL CONSUMERS” OF  
+PM-SURYA GHAR: MUFT BIJLI YOJANA  
+ 
+The projects under PM -Surya Ghar: Muft Bijli Yojana shall be commissioned as per the 
+technical specifications given below. The vendor will be solely responsible for any 
+shortcomings or negligence/malpractice, which may lead to the delisting/blacklisting of the 
+firm/vendor from participation in any programme of the Ministry.  
+A Roof Top Solar (RTS) Photo Voltaic (PV) system shall be installed on 
+rooftops/terraces/balcony/Building Integrated Photovoltaic (BIPV) or on elevated 
+structures. In case of installation on an elevated structure, the structure must have a  
+minimum ground c learance of 8 feet  at the lowest point, in order to be considered eligible 
+for the CFA under the scheme. The RTS system shall consist of the following:  
+1. Solar Photo Voltaic (SPV) modules consisting of required number of SPV modules  
+2. Inverter/PCU  
+3. Module Mount ing structures  
+4. Net Meter/Smart Meter  
+5. Array Junction Boxes  
+6. DC Distribution Box  
+7. AC Distribution Box  
+8. Protections – Earthing, Lightning, Surge  
+9. Cables  
+10. Drawing & Manuals  
+11. Miscellaneous  
+  
+--- Page 28 ---
+28 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers Components/Package of Grid Connected Rooftop Solar PV System: The components  of a Grid 
+Connected Rooftop Solar PV System shall essentially comprise but not be limited to solar PV 
+Panels/modules of required number, Inverters/PCU, module mounting structures of minimum 
+600mm ground clearance at the lowest point from the roof surface,  total Cable/wiring of 
+suitable length, cable conduits, required array junction boxes, DC distribution box, AC 
+distribution box, various connectors, nut - bolts, civil and mechanical works, Protection -
+Earthing, lightning, surges, drawling & manual, 05 years  of comprehensive operation & 
+maintenance of grid -connected rooftop solar PV plant and other miscellaneous works.  
+ 
+1. Solar PV modules  
+1.1. Domestic Manufactured Solar PV modules using domestically manufactured Solar  
+cells shall be used in the Scheme.  
+1.2. The PV modules used must qualify to the latest edition of IEC standards or 
+equivalent BIS standards, i.e. IEC 61215/IS 14286, IEC 61853 -Part I or IS 16170 -Part 
+I, IS/IEC 61730 Part -1 & Part 2 and IS 17210(part 1) or IEC 62804 -1 (PID). For the PV 
+modules to be use d in a highly corrosive atmosphere throughout their lifetime, 
+they must qualify to IEC   61701/IS 61701. Thin - Film terrestrial photovoltaic (PV) 
+modules must qualify to IS 16077: 2013 / IEC 61646: 2008  
+1.3. The rated power of solar PV module shall have maximu m tolerance up to +3%.  
+1.4. The peak -power point current of any supplied module string (series connected 
+modules) shall not vary by +1% from the respective arithmetic means for all 
+modules and/or for all module strings (connected to the same MPPT), as the case 
+may be.  
+1.5. The peak -power point voltage of any supplied module string (series connected 
+modules) shall not vary by + 2% from the respective arithmetic means for all 
+modules and/or for all module strings (connected to the same MPPT), as the case 
+may be.  
+1.6. The te mperature co -efficient power of the PV module shall be equal to or better 
+than -0.4%/°C for crystalline modules and -0.3 %/°C for thin films modules.  
+--- Page 29 ---
+29 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers 1.7. Solar PV modules capacity to be used should adhere to the Approved List of Models 
+and Manufacturers (ALMM)    of Solar Photovoltaic Modules (Requirement for 
+Compulsory Registration) Order 2019 - Implementation issued vide OM NO. 
+283/54/2018 -GRID SOLAR -Part (I) Dated 10th March 2021 and subsequent 
+amendments.  
+1.8. Solar PV modules of minimum fill factor 75%, to be u sed. 
+1.9. All PV modules should have a nominal power output of >90%  at STC  during the first 
+10 years, and >80% during the next 15 years. Further, module shall have nominal 
+power output of >97% during the first year of installation —degradation of the 
+module belo w 0.5 % per annum  
+1.10. The manufacturer should warrant the Solar Module(s) to be free from the defects 
+and/or failures specified below for a period not less than five (5) years from the 
+date of commissioning.  
+i. Defects and/or failures due to manufacturing.  
+ii. Defects and/or failures due to quality of materials.  
+iii. Nonconformity to specifications due to faulty manufacturing and/or 
+inspection processes. If the solar Module(s) fails to conform to this warranty, 
+the manufacturer will repair or replace the solar module (s), at the Owners sole 
+option. The PV modules shall be replaced by manufacturers, without charging 
+any cost to the end consumer during the specified period of warranty.  
+1.11. Modules deployed must use a RF identification tag laminated inside the glass. The 
+following information must be mentioned in the RFID used on each module:  
+i. Name of the manufacturer of the PV module  
+ii. Name of the manufacturer of Solar Cells.  
+iii. Month & year of the manufacture (separate for solar cells and modules)  
+iv. Country of origin (separately for  solar cells and module)  
+v. I-V curve for the module Wattage, Im, Vm and FF for the module  
+vi. Unique Serial No and Model No of the module  
+vii. Date and year of obtaining IEC PV module qualification certificate.  
+viii. Name of the test lab issuing IEC certificate.  
+--- Page 30 ---
+30 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers ix. Other rele vant information on traceability of solar cells and module as per 
+ISO 9001 and ISO 14001.  
+x. Nominal wattage +3%.  
+xi. Name, if applicable.  
+ 
+1.12. Other details as per IS/IEC 61730 -1 clause 11 should be provided at appropriate 
+place. In addition to the above, the following information should also be provided:  
+i. The actual Power Output Pmax shall be mentioned on the label pasted on 
+the back side of PV Module.  
+ii. The Maximum system voltage for which the module is suitable to be 
+provided on the back sheet of the module.  
+iii. Polarity of terminals or leads (colour coding is permissible) on junction Box 
+housing near cable entry or cable and connector.  
+ 
+1.13. Unique Serial No, Model No, Name of Manufacturer, Manufacturing year, Make in 
+India logo and module wattage details should be disp layed inside the laminated 
+glass.  
+ 
+2. Inverter/PCU  
+2.1 The Solar Photovoltaic Inverters must comply with the Quality Control Order dated 
+30.08.2017  for Solar Photovoltaic Inverters and its amendments thereof.  
+2.2 Inverters/PCU should comply with applicable IEC/equivalent BIS standard for efficiency 
+measurements and environmental tests as per standard codes IEC 61683/IS 61683, IS 
+16221 (Part 2), IS 16169 and IEC 60068 -2(1,2,14,30)  
+2.3 /Equivalent BIS Std.  
+2.4 Maximum Power Point Tracker (MPPT) shall be integrated in the inverter/PCU to 
+maximize energy drawn from the array. Charge controller (if any) / MPPT units 
+environmental testing should qualify IEC 60068 -2(1, 2, 14, 30)/Equivalent BIS standard. 
+The junction boxes/enclosures should be IP 65 or better (for outdoor)/  IP 54or better 
+(indoor) and as per IEC 529 Specifications.  
+--- Page 31 ---
+31 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers 2.5 All inverters/PCUs shall be IEC 61000 compliant for electromagnetic compatibility, 
+harmonics, Surge, etc.  
+2.6 The PCU/ inverter shall have overloading capacity of minimum 20%.  
+2.7 Typical technical featur es of the inverter shall be as follows - 
+i. Nominal AC output voltage and frequency: as per CEA/State regulations  
+ii. Output frequency: 50 Hz  
+iii. Grid Frequency Synchronization range: as per CEA/State Regulations  
+iv. Ambient temperature considered: -20°C to 60°C  
+v. Protection of Enclosure: IP -54 (Minimum) for indoor and IP -65(Minimum) for 
+outdoor.  
+vi. Grid Frequency Tolerance range: as per CEA/State regulations  
+vii. Grid Voltage tolerance: as per CEA/State Regulations  
+viii. No-load losses: Less than 1% of rated power  
+ix. Inverter effic iency (Min.): >90 % (In case of 10 kW or below with  in-built galvanic 
+isolation)  
+x. The Minimum Overall Efficiency (ηt) as per IS 17980 for Solar Inverters should 
+adhere to the following:  
+xi. THD: < 3%  
+xii. PF: > 0.9 (lag or lead)  
+xiii. Should not inject DC power more than 0.5% of full rated output at the 
+interconnection point and comply to IEEE 519.  
+xiv. The inverter should have the inbuilt facility  to communicate system related 
+data  through SIM/dongle.  The inverter may also be enabled for Wi -Fi based 
+communication.  
+ 
+2.8 All the Inverters should contain the following clear and indelible Marking Label &     
+Warning Label as per IS16221 Part II, clause 5. The equipment shall, as a minimum, be 
+permanently marked with:  
+i. The name or trademark of the manufacturer or supplier;  
+ii. A model number, name or other means to identify the equipment,  
+--- Page 32 ---
+32 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers iii. A serial number, code or other marking allowing identification of 
+manufacturing location and the manufacturing batch or date within a twelve - 
+month time period.  
+iv. Input voltage, type of voltage (a.c. or d.c.), frequency, and maximum 
+continuous current for each input.  
+v. The Ingress Protection (IP) rating  
+ 
+2.9 In case the consumer is having a 3 -ϕ connection, 1 -ϕ/3-ϕ inverter shall be provided by 
+the vendor as per the consumer’s requirement and regulations of the State.  
+2.10 Inverter/PCU shall be capable of complete automatic operation including wake -up, 
+synchronization & shutdown.  
+2.11 Integration of PV Power with Grid & Grid Islanding:  
+i. In the event of a power failure on the electric grid, it is required that any 
+independent power -producing inverters attached to the grid turn off in a short  
+period of time. This prevents the DC -to-AC inverters from continuing to feed power 
+into small sections of the grid, known as “islands.” Powered islands present a risk to 
+workers  who may expect the area to be unpowered, and they may also damage 
+grid-tied equipment. The Rooftop PV system shall be equipped with islanding 
+protection. In addition to disconnection from the grid (due to islanding protection) 
+disconnection due to under a nd over voltage conditions shall also be provided, if 
+not available in inverter.  
+ 
+3. Module Mounting Structure (MMS):  
+3.1 Supply, installation, erection and acceptance of module mounting structure (MMS) with 
+all necessary accessories, auxiliaries and spare part shall be in the scope of the work.  
+3.2 Module mounting structures can be made from three types of materials. They are Hot Dip 
+Galvanized Iron, Aluminium and Hot Dip Galvanized Mild Steel (MS). However, MS will be 
+preferred for raised structure.  
+--- Page 33 ---
+33 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers 3.3 MMS Steel shall  be as per latest IS 2062:2011 and galvanization of the mounting structure 
+shall be in compliance of latest IS 4759. MMS Aluminium shall be as per AA6063 T6. For 
+Aluminium structures, necessary protection towards rusting need to be provided either 
+by coati ng or anodization.  
+3.4 All bolts, nuts, fasteners shall be of stainless steel of grade SS 304 or hot dip galvanized, 
+panel mounting clamps shall be of aluminium and must sustain the adverse climatic 
+conditions. Structural material shall be corrosion resistant and electrolytically compatible 
+with the materials used in the module frame, its fasteners, nuts and bolts.  
+3.5 The module mounting structures should have angle of inclination as per the site 
+conditions to take maximum insolation and complete shadow -free opera tion during 
+generation hours. However, to accommodate more capacity the angle of inclination may 
+be reduced until the plant meets the specified performance ratio requirements.  
+3.6 The Mounting structure shall be so designed to withstand the speed for the wind zone of 
+the location where a PV system is proposed to be installed. The PV array structure design 
+shall be appropriate with a factor of safety of minimum 1.5.  
+3.7 The upper edge of the module must be covered with wind shield so as to avoid build air 
+ingress be low the module. Slight clearance must be provided on both edges (upper & 
+lower) to allow air for cooling.  
+3.8 Suitable fastening arrangement such as grouting and calming should be provided to 
+secure the installation against the specific wind speed. The Empanel led Agency shall be 
+fully responsible for any damages to SPV System caused due to high wind velocity within 
+guarantee period as per technical specification.  
+3.9 The structures shall be designed to allow easy replacement, repairing and cleaning of any 
+module. T he array structure shall be so designed that it will occupy minimum space 
+without sacrificing the output from the SPV panels. Necessary testing provision for MMS 
+to be made available at site.  
+3.10 Adequate spacing shall be provided between two panel frames and rows of panels to 
+facilitate personnel protection, ease of installation, replacement, cleaning of panels and 
+electrical maintenance.  
+3.11 The structure shall be designed to withstand operating environmental conditions for a 
+period of minimum 25 years.  
+--- Page 34 ---
+34 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers 3.12 The Rooft op Structures maybe classified in three broad categories as follows : 
+i. Ballast structure  
+a. The mounting structure must be Non -invasive ballast type and any sort of penetration of 
+roof to be avoided.  
+b. The minimum clearance of the structure from the roof level should be in between 70 -
+150 mm to allow ventilation for cooling, also ease of cleaning and maintenance of panels 
+as well as cleaning of terrace.  
+c. The structures should be suitably loaded with reinforced concrete blocks of appropriate 
+weight made out of M25 concrete mixture.  
+ 
+ii. Tin shed  
+a. The structure design should be as per the slope of the tin shed.  
+b. The inclination angle of structure can be done in two ways - 
+c. Parallel to the tin shed (flat keeping zero -degree tiling angle), if the slope of shed in 
+Proper south direction  
+d. With same tilt angle based on the slope of tin shed to get the maximum output.  
+e. The minimum clearance of the lowest point from the tin shade should be more then 
+100mm.  
+f. The base of structure should be connected on the Purlin of tin shed with the pr oper 
+riveting.  
+g. All structure member should be of minimum 2 mm thickness.  
+ 
+iii. RCC Elevated structure: It can be divided into further three categories:  
+A Minimum clearance from roof (upto 1000 MM) (for reference only)  
+a. The structure shall be designed to allow easy  replacement of any module and shall be in 
+line with site requirement. The gap between module should be minimum 30MM.  
+--- Page 35 ---
+35 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers b. Base Plate – Base plate thickness of the Structure should be 5MM for this segment.  
+c. Column – Structure Column should be minimum 2MM in Lip section / 3MM in C -Channel 
+section. The minimum section should be 70MM in Web side and 40 MM in flange side in 
+Lip section.  
+d. Rafter - Structure rafter should be minimum 2MM in Lip section / 3MM in C -Channel 
+section. The minimum section should be 70MM in Web  side (y - axis) and 40 MM in flange 
+side (x -axis).  
+e. Purlin - Structure purlin should be minimum 2MM in Lip section. The minimum section 
+should be 60MM in Web side and 40MM in flange side in Lip section.  
+f. Front/back bracing – The section for bracing part shou ld be minimum 2MM  thickness.  
+g. Connection – The structure connection should be bolted completely. Leg to rafter should 
+be connected with minimum 12 diameter bolt. Rafter and purlin should be connected 
+with minimum 10 diameter bolt. Module mounting fasteners  should be SS -304 only and 
+remaining fasteners either SS -304 or HDG 8.8 Grade.  
+h. For single portrait structure the minimum ground clearance should be 500MM.  
+ 
+B Medium clearance from roof (1000MM – 2000 MM) ( for reference only)  
+a. Base Plate – Base plate thicknes s of the Structure should be Minimum 6MM for this 
+segment.  
+b. Column – Structure Column should be minimum 2MM in Lip section / 3MM in C -Channel 
+section. The minimum section should be 80MM in Web side and 50MM in flange side in 
+Lip section.  
+c. Rafter - Structure rafter should be minimum 2MM in Lip section / 3MM in C -Channel 
+section. The minimum section should be 70MM in Web side and 40MM in flange side in 
+Lip section.  
+d. Purlin - Structure purlin should be minimum 2MM in Lip section. The minimum section 
+should be 70MM in Web side and 40MM in flange side in Lip section.  
+--- Page 36 ---
+36 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers e. Front/back bracing – The section for bracing part should be minimum 2MM thickness.  
+f. Connection – The structure connection should be bolted completely. Leg to rafter 
+should be connected with minimum 12  diameter bolt. Rafter and purlin should be 
+connected with minimum 10 diameter bolt. Module mounting fasteners should be SS -
+304 only and remaining fasteners either SS -304 or HDG 8.8 Grade.  
+ 
+C Maximum clearance from roof (2000MM – 3000 MM) (for reference only ) 
+a. Base Plate – Base plate thickness of the Structure should be minimum 8 MM for this 
+segment.  
+b. Column – Structure Column thickness should be minimum 2.6MM in square hollow 
+section (minimum 50x50) or rectangular hollow section (minimum 60x40) or 3MM in C-
+Channel section.  
+c. Rafter - Structure rafter should be minimum 2MM in Lip section / 3MM in Channel 
+section. The minimum section should be 80MM in Web side and 50MM in flange side in 
+Lip section.  
+d. Purlin - Structure purlin should be minimum 2MM in Lip sectio n. The minimum section 
+should be 80MM in Web side and 50MM in flange side in Lip section.  
+e. Front/back bracing – The section for bracing part should be minimum 3MM thickness.  
+f. Connection – The structure connection should be bolted completely. Leg to rafter 
+should be connected with minimum 12 diameter bolt. Rafter and purlin should be 
+connected with minimum 10 diameter bolt. Module mounting fasteners should be SS -
+304 only and remaining fasteners either SS -304 or HDG 8.8 Grade.  
+ 
+D Super elevated structure (More th an 3000 MM clearance from roof) (for reference only)  
+A. Base structure  
+a. Base Plate – Base plate thickness of the Structure should be 10MM for this segment.  
+--- Page 37 ---
+37 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers b. Column – Structure Column minimum thickness should be minimum 2.9MM in square 
+hollow section (minimum 60x60) or rectangular hollow section (minimum 80x40).  
+c. Rafter - Structure Rafter minimum thickness should be minimum 2.9MM in square 
+hollow section (minimum 60x60) or rectangular hollow section (minimum 80x40).  
+d. Cross bracing – Bracing for the connection of rafter and column should be of minimum 
+thickness of 4mm L -angle with the help of minimum bolt diameter of 10mm.  
+B. Upper structure of super elevated structure – 
+a. Base Plate – Base plate thickness of the Structure should be minimum 5MM for this 
+segment.  
+b. Column – Structure Column should be minimum 2MM in Lip section / 3MM in Channel 
+section. The minimum section should be 70MM in Web side and 40MM in flange side in 
+Lip section.  
+c. Rafter - Structure rafter should be minimum 2MM in Lip section / 3MM in Channel 
+section . The minimum section should be 70MM in Web side and 40MM in flange side in 
+Lip section.  
+d. Purlin - Structure purlin should be minimum 2MM in Lip section. The minimum section 
+should be 60MM in Web side and 40MM in flange side in Lip section.  
+e. Front/back braci ng – The section for bracing part should be minimum 2MM thickness.  
+f. Connection – The structure connection should be bolted completely. Leg to rafter 
+should be connected with minimum 12 diameter bolt. Rafter and  
+g. purlin should be connected with minimum 10 dia meter bolt. Module mounting 
+fasten ers should be SS -304 only and remaining fasteners either SS -304 or HDG 8.8 Grade.  
+C. If distance between two legs in X -Direction is more than 3M than sag angle/Bar should 
+be provide for purlin to avoid deflection failure. The  sag angle should be minimum 
+2MM thick, and bar should be minimum 12Dia.  
+D. Degree - The Module alignment and tilt angle shell be calculated to provide the 
+maximum annual energy output. This shall be decided on the location of array 
+installation.  
+--- Page 38 ---
+38 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers E. Foundation – Foundation should be as per the roof condition; two types of the 
+foundation can be done - either penetrating the roof or without penetrating the roof.  
+a. If penetration on the roof is allowed (based on the client requirement) then minimum 
+12MM diameter anchor  fasteners with minimum length 100MM can be used with 
+proper chipping. The minimum RCC size should be 400x400x300 cubic mm. Material 
+grade of foundation should be minimum M20.  
+b. If penetration on roof is not allowed, then foundation can be done with the help  of ‘J 
+Bolt’ (refer IS 5624 for foundation hardware). Proper Neto bond solution should be used 
+to adhere the Foundation block with the RCC roof. Foundation J - bolt length should be 
+minimum 12MM diameter and length should be minimum 300MM.  
+ 
+F. Material standards:  
+a. Design of foundation for mounting the structure should be as per defined standards 
+which clearly states the Load Bearing Capacity & other relevant parameters for 
+foundation design (As per IS 6403 / 456 / 4091 / 875).  
+b. Grade of raw material to be used for mounting the structures so that it complies the 
+defined wind loading conditions (As per IS 875 - III) should be referred as follows (IS 
+2062 – for angles and channels, IS 1079 – for sheet, IS 1161 & 1239 for round pipes, IS 
+4923 for rectangular an d square hollow section)  
+c. Test reports for the raw material should be as per IS 1852 / 808 / 2062 / 1079 / 811.  
+d. In process inspection report as per approved drawing & tolerance should be as per IS 
+7215.  
+e. For ascertaining proper welding of structure part foll owing should be referred:  
+f. D.P. Test (Pin Hole / Crack) (IS 822)  
+g. Weld wire grade should be of grade (ER 70 S - 6) 
+h. For ascertaining hot dip galvanizing of fabricated structure following should be 
+referred: - 
+--- Page 39 ---
+39 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers i. Min coating required should be as per IS 4759 & EN 1461.  
+j. Testing of galvanized material  
+a) Pierce Test (IS 2633)  
+b) Mass of Zinc (IS 6745)  
+c) Adhesion Test (IS 2629)  
+d) CuSO4 Test (IS 2633)  
+e) Superior High -Grade Zinc Ingot should be of 99.999% purity (IS 209) (Preferably 
+Hindustan Zinc Limited or Equivalent).  
+k. Foundation  Hardware – If using foundation bolt in foundation then it should be as per 
+IS 5624.  
+ 
+4. Metering  
+4.1 The specifications net meter/smart meter shall be as per the latest technical specifications 
+issued by the Central Electricity Authority (CEA) and its amendment thereof . 
+4.2 A Roof Top Solar (RTS) Photo Voltaic (PV) system shall consist of following energy meters:  
+a) Net meter/ smart meter: To record import and export units . 
+b) Generation meter (if required as per the state regulations: To keep record for total 
+generation of the plant.  
+4.3 The installation of meters including CTs & PTs, wherever applicable, shall be carried out 
+by the respective DisComs as per the terms, conditions and procedures laid down by the 
+concerned SERCs/DISCOMs.  
+ 
+5. Array Junction Boxes  
+5.1 The junction boxes  are to be provided in the PV array for termination of connecting cables. 
+The Junction Boxes (JBs) shall be made of GRP/FRP/Powder Coated aluminum  /cast aluminum 
+alloy with full dust, water & vermin proof arrangement. All wires/cables must be terminated 
+through cable lugs. The JBs shall be such that input & output termination can be made through 
+suitable cable glands. Suitable markings shall be provided on the bus -bars for easy 
+identification and cable ferrules will be fitted at the cable termination points  for identification.  
+--- Page 40 ---
+40 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers 5.2 Copper bus bars/terminal blocks housed in the junction box with suitable termination threads 
+Conforming to IP 65 or better standard and IEC 62208 Hinged door with EPDM rubber gasket 
+to prevent water entry, Single /double compression ca ble glands should be provided.  
+5.3 Polyamide glands and MC4 Connectors may also be provided. The rating of the junction box 
+shall be suitable with adequate safety factor to interconnect the Solar PV array.  
+5.4 Suitable markings shall be provided on the bus bar for  easy identification and the cable 
+ferrules must be fitted at the cable termination points for identification.  
+5.5 Junction boxes shall be mounted on the MMS such that they are easily accessible and are 
+protected from direct sunlight and harsh weather.  
+ 
+6. DC Distribution Box (DCDB)  
+6.1 May not be required for small plants, if suitable arrangement is available in the inverter.  
+6.2 DC Distribution Box are to be provided to receive the DC output from the PV array field.  
+6.3 DCDBs shall be dust & vermin proof conform having IP 65 or better protection, as per site 
+conditions.  
+6.4 The bus bars are made of EC grade copper of required size. Suitable capacity MCBs/MCCB shall 
+be provided for controlling the DC power output to the inverter along with necessary surge 
+arrestors. MCB shall  be used for currents up to 63 Amperes, and MCCB shall be used for 
+currents greater than 63 Amperes.  
+ 
+7. AC Distribution Box (ACDB)  
+7.1 AC Distribution Panel Board (DPB) shall control the AC power from inverter, and should have 
+necessary surge arrestors, if requi red. There is interconnection from ACDB to mains at LT Bus 
+bar while in grid tied mode.  
+7.2 All switches and the circuit breakers, connectors should conform to IEC 60947:2019, part I, II 
+and III/ IS 60947 part I, II and III.  
+7.3 The isolators, cabling work should be undertaken as part of the project.  
+7.4 All the Panel’s shall be metal clad, totally enclosed, rigid, floor mounted, air -insulated, cubical 
+type suitable for operation on 1 -ϕ/3-ϕ, 415 or 230 volts, 50 Hz (or voltage levels as per 
+CEA/State regulations).  
+--- Page 41 ---
+41 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers 7.5 The panels shall be designed for minimum expected ambient temperature of 45 degree 
+Celsius, 80 percent humidity and dusty weather.  
+7.6 All indoor panels will have protection of IP 54 or better, as per site conditions. All outdoor 
+panels will have protection of IP  65 or better, as per site conditions.  
+7.7 Should conform to Indian Electricity Act and CEA safety regulations (till last amendment).  
+7.8 All the 415 or 230 volts (or voltage levels as per CEA/State regulations) AC devices / equipment 
+like bus support insulators, circuit breakers, SPDs, Voltage Transformers (VTs) etc., mounted 
+inside the switchgear shall be suitable for continuous operation and satisfactory performance 
+under the following supply conditions.  
+a. Variation in supply voltage: as per CEA/State regulations  
+b. Variation in supply frequency: as per CEA/State regulations  
+7.9 The inverter output shall have the necessary rated AC surge arrestors, if required and MCB/ 
+MCCB. RCCB shall be used for successful operation of the PV system, if inverter does not have 
+required earth fault/residual current protection.  
+ 
+8. Protections  
+The system should be provided with all necessary protections like earthing, Lightning, and 
+Surge Protection, as described below:  
+8.1 Earthing Protection  
+8.1.1 The earthing shall be done in accordance with latest Standards.  
+8.1.2 Each array structure of the PV yard, Low Tension (LT) power system, earthing grid for 
+switchyard, all electrical equipment, inverter, all junction boxes, etc. shall be grounded 
+properly as per IS 3043 -2018.  
+8.1.3 All metal casing/ shielding of the plant shall be thoroughly grounded in accordance 
+with CEA Safety Regulation 2010. In addition, the lightning arrester/masts should also 
+be earthed inside the array field.  
+8.1.4 Earth resistance should be as low as possible and shall never be higher than 5 ohms.  
+8.1.5 For 10 KW and above systems, separate three earth pits shall be provided for individual 
+three earthing viz.: DC side earthing, AC side earthing and lightning arrestor earthing.  
+ 
+--- Page 42 ---
+42 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers 8.2 Lightning Protection  
+8.2.1 The SPV power plants shall be provided with lightning & over voltage protection, if 
+required. The main aim in this protection shall be to reduce the overvoltage to a 
+tolerable value before it reaches the PV or other sub system components. The source 
+of over voltage can be lightning, atmosphere disturbances etc.  Lightning arrestor shall 
+not be installed on the mounting structure.  
+8.2.2 The entire space occupying the SPV array shall be suitably protected against 
+Lightning by deploying required number of Lightning Arrestors (LAs). Lightning 
+protection should be provided as per NFC17 -102:2011/IEC 62305 standard.  
+8.2.3 The protection against induced high -voltages shall be provided by the use of Metal 
+Oxide Varistors (MOVs)/Franklin Rod type LA/Early streamer type LA.  
+8.2.4 The current carrying cable from lightning arrestor to the earth  pit should have 
+sufficient current carrying capacity according to IEC 62305. According to standard, 
+the minimum requirement for a lightning protection system designed for class of 
+LPS III is a 6 mm2 copper/ 16 mm2 aluminum or GI strip bearing size 25*3 mm  thick). 
+Separate pipe for running earth wires of Lightning Arrestor shall be used.  
+ 
+8.3 Surge Protection  
+8.3.1 Internal surge protection, wherever required, shall be provided.  It will consist of three 
+SPD type -II/MOV type surge arrestors connected from +ve and –ve terminals to earth.  
+ 
+ 
+9. Cables  
+9.1 All cables should conform to latest edition of IEC/equivalent BIS Standards along with 
+IEC 60227/IS 694, IEC 60502/IS 1554 standards.  
+9.2 Cables should be flexible and should have good resistance to heat, cold, water, oil, 
+abrasion  etc. 
+9.3 Armored cable should be used and overall PVC type ‘A’ pressure extruded insulation or 
+XLPE insulation should be there for UV protection.  
+--- Page 43 ---
+43 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers 9.4 Cables should have Multi Strand, annealed high conductivity copper conductor on DC 
+side and copper/FRLS type Alum inum conductor on AC side. For DC cabling, multi - core 
+cables shall not be used.  
+9.5 Cables should have operating temperature range of -10°C to +80°C and voltage rating 
+of 660/1000 V.  
+9.6 Sizes of cables between array interconnections, array to junction boxes, junction boxes 
+to Inverter etc. shall be so selected to keep the voltage drop less than 2% (DC Cable 
+losses).  
+9.7 The size of each type of AC cable selected shall be based on minimum voltage drop. 
+However; the maximum drop shall be limited to 2%.  
+9.8 The electric cables for DC systems for rated voltage of 1500 V shall conform to IS 
+17293:2020.  
+9.9 All cable/wires are to be routed in a RPVC pipe/ GI cable tray and suitably tagged and 
+marked with proper manner by good quality ferule or by other means so that the cable 
+is easily identified.  
+9.10 All cable trays including covers to be provided.  
+9.11 Thermo -plastic clamps to be used to clamp the cables and conduits, at intervals not 
+exceeding 50 cm.  
+9.12 Size of neutral wire shall be equal to the size of phase wires, in a three phase syste m. 
+9.13 The Cable should be so selected that it should be compatible up to the life of the solar 
+PV panels i.e. 25 years.  
+ 
+10. Drawings & Manuals:  
+ 
+10.1 Operation & Maintenance manual/user manual, Engineering and Electrical Drawings 
+shall be supplied along with the power plant.  
+10.2 The manual shall include complete system details such as array lay out, schematic of 
+the system, inverter details, working principle etc.  
+10.3 The Manual should also include all the Dos & Don’ts of Power Plant along with Graphical 
+Representation wi th indication of proper methodology for cleaning, Operation and 
+Maintenance etc.  
+--- Page 44 ---
+44 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers 10.4 Step by step maintenance and troubleshooting procedures shall also be given in the 
+manuals.  
+10.5 Vendors should also educate the consumers during their AMC period.  
+ 
+11. Miscellaneous:  
+11.1 Connectivity: The maximum capacity for interconnection with the grid at a specific 
+voltage level shall be as specified in the SERC regulation for Grid connectivity and 
+norms of DISCOM and amended from time to time.  
+11.2 Safety measures: Electrical safety of the  installation(s) including connectivity with the 
+grid must be taken into account and all the safety rules & regulations applicable as per 
+Electricity Act, 2003 and CEA Safety Regulation 2010 etc. must be followed.  
+11.3 Shadow analysis: The shadow analysis repor t with the instrument such as Solar 
+Pathfinder or professional shadow analysis software of each site should be provided 
+and the consumer should be educated to install the system only in shadow free space. 
+Lower performance of the system due to shadow effec t shall be liable for penalty for 
+lower performance.  
+ 
+ 
+--- Page 45 ---
+45 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers Quality Certification, Standards and Testing for Grid -Connected Rooftop Solar PV  Systems/Power Plants  
+Solar PV Modules/Panels  
+IEC 61215/  
+IS 14286  Design Qualification and Type Approval for Crystalline  Silicon Terrestrial 
+Photovoltaic (PV) Modules  
+IS/IEC 61701  Salt Mist Corrosion Testing of Photovoltaic (PV) Modules  
+IEC 61853 - 1 / 
+IS 16170 -1 Photovoltaic (PV) module performance testing and energy rating  
+–:Irradiance and temperature performance measurements, and power 
+Rating.  
+IEC 62716/ IS 16664  Photovoltaic (PV) Modules – Ammonia (NH3) Corrosion Testing (as per the 
+site condition like dairies, toilets etc)  
+IS 16077 : 2013 / IEC 
+61646 : 2008  Thin - Film terrestrial photovoltaic (PV) modules - Design qualification and 
+type approval  
+IS/IEC 61730 -1,2 Photovoltaic (PV) Module Safety Qualification – Part 1:  
+Requirements for Construction, Part 2: Requirements for Testing  
+IS 17210 (part 1) or 
+IEC TS  62804 -1 Photovoltaic (PV) modules – Test method for detection of potential - 
+induced degradation. IEC 62804 -1: Part 1: Crystalline Silicon  
+Solar PV Inverters  
+IEC 62109 or  
+IS : 16221  Safety of power converters for use in photovoltaic power systems – Part 1: 
+General requirements, and Safety of power converters for use in 
+photovoltaic power systems  
+Part 2: Particular requirements for inverters. Safety compliance (Protection 
+degree IP 65 or better for outdoor mounting, IP 54 or better for indoor 
+mounting)  
+IS/IEC 61683 latest  Photovoltaic Systems – Power conditioners: Procedure for  
+Measuring Efficiency (10%, 25%, 50%, 75% & 90 -100% Loading Conditions)  (as applicable)  
+IEC 60068 -2 /IEC  62093  
+(as applicable)  Environmental Testing of PV System – Power Conditioners and Inverters  
+--- Page 46 ---
+46 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers IEC 62116:2014/ 
+IS16169  Utility -interconnected photovoltaic inverters - Test procedure of  
+islanding prevention measures  
+Fuses  
+IS/IEC 60947 (Part  1, 2 
+& 3), EN  50521  General safety requirements for connectors, switches, circuit breakers 
+(AC/DC):  
+1)Low -voltage Switchgear and Control -gear, Part 1: General rules 2)Low -
+Voltage Switchgear and Control -gear, Part 2: Circuit Breakers  
+3) Low-voltage  switchgear  and Control -gear, Part 3: Switches, 
+disconnectors switch -disconnectors and fuse -combination units  
+4) EN 50521:  Connectors  for photovoltaic  system -Safety 
+requirements and tests  
+IS/IEC 60269 -6 Low-voltage fuses - Part 6: Supplementary requirements for fuse - 
+Links for the protection of solar photovoltaic energy systems  
+Solar PV Roof Mounting Structure  
+IS 2062/IS 4759/  
+AA6063 T6  Material for the structure mounting  
+Surge Arrestors  
+BFC 17 -102:2011/ 
+NFC 102:2011/ IEC 
+62305  Lightening Protection Standard  
+IEC 60364 -5-53/ IS  
+15086 -5 (SPD)   
+IEC 61643 - 11:2011  Electrical installations of buildings - Part 5 -53: Selection and erection of  
+electrical equipment - Isolation, switching and control Low -voltage surge 
+protective devices - Part 11: Surge protective  
+devices connected to low -voltage power systems - Requirements  
+and test methods  
+--- Page 47 ---
+47 
+Guidelines for PM-Surya Ghar: Muft Bijli Yojana 
+Central Financial Assistance to Residential Consumers Cables  
+IEC 60227/IS 694, IEC 
+60502/IS 1554 (Part 
+1& 2)/ IEC69947 (as  
+applicable)  
+ General test and measuring method for PVC (Polyvinyl chloride) insulated 
+cables (for working voltages up to and including 1100 V, and resistant for 
+outdoor installation)  
+IS 17293:2020  Electric Cables for Photovoltaic Systems for Rated Voltage 1500 V DC  
+Earthing /Lightning  
+IEC 62561/IEC  60634 
+Series (Chemical 
+earthing ) (as 
+applicable)  IEC 62561 -1: Lightning protection system components (LPSC) - Part:  
+Requirements for connection components  
+IEC 62561 -2: Lightning protection system components (LPSC) – Part 
+2:Requirements for conductors and earth electrodes  
+IEC 62561 -7: Lightning protection system components (LPSC) - Part 
+7:Requirements for earthing enhancing compounds  
+Junction Boxes  
+IEC 60529  Junction boxes and solar panel terminal boxes shall be of the thermo -plastic 
+type with IP 65 or better protection for outdoor use, and IP 54 or better 
+protection for indoor use  
+ 
+--- Page 48 ---
+48 
+ 
+ 
+ 
+ Annexure 4  
+Model Net Metering Agreement  
+  
+This Agreement is made and entered into at (location) …………….. on this (date) …………….. day  
+of (month) …………………. (year) …………… between the Eligible Consumer (Name) …………… 
+having premises at (address) ……………… and Consumer No. ……………… as the first Party,  
+  
+AND  
+  
+The Distribution Licensee ………………………………. (hereinafter referred to as 'the Licensee') and 
+having its Registered Office at (address) …………………………………. as second Party of this 
+Agreement.  
+  
+Whereas, the Eligible Consumer has applied to the Licensee for approval of  a Net Metering 
+Arrangement under the provisions of the (State Guidelines reference name) 
+……………………………………………………. and subsequent amendments and sought its connectivity 
+to the Licensee's Distribution Network.  
+  
+And whereas, the Licensee has agreed to provide  Network connectivity to the Eligible 
+Consumer for injection of electricity generated from its Roof -top Renewable Energy  
+Generating System of …………….. kilowatt (kW)  
+Both Parties hereby agree as follows: -  
+  
+1. Eligibility :  
+  
+--- Page 49 ---
+49 
+ 
+ 
+ 
+ The Roof -top Renewable Energy Generating System meets the applicable norms for being 
+integrated into the Distribution Network, and that the Eligible Consumer shall maintain the 
+System accordingly for the duration of this Agreement.  
+  
+2. Technical and Inter -connection Req uirements :  
+  
+2.1. The metering arrangement and the inter -connection of the Roof -top Renewable Energy 
+Generating System with the Network of the Licensee shall be as per the provisions of the Net 
+Metering Regulations and the technical standards and norms specifi ed by the Central 
+Electricity Authority for connectivity of distributed generation resources and for the 
+installation and operation of meters.  
+  
+2.2. The Eligible Consumer agrees that he shall install, prior to connection of the Roof -top 
+Renewable Energy Gener ating System  to the Network of the Licensee, an isolation device 
+(both automatic and in built within inverter and external manual relays); and the Licensee 
+shall have access to it if required for the repair and maintenance of the Distribution Network.  
+  
+2.3. The Licensee shall specify the interface/inter -connection point and metering point.  
+  
+2.4. The Eligible Consumer shall furnish all relevant data, such as voltage, frequency, circuit 
+breaker, isolator position in his System, as and when required by the Licensee.  
+ 
+2.5. All the equipment connected to Network of the Licensee at the time of installation shall be 
+compliant with the Technical Specifications for rooftop system as Published by MNRE.  
+  
+3. Safety :  
+  
+3.1. The consumer shall comply with the Central Electricity Authority (Measures Relating to Safety 
+and Electricity Supply) Regulations 2010  
+--- Page 50 ---
+50 
+ 
+ 
+ 
+  
+3.2. The equipment connected to the Licensee's Distribution System shall be compliant with 
+relevant International (IEEE/IEC)  or Indian Standards (BIS), as the case may be, and the 
+installation of electrical equipment shall comply with the requirements specified by the 
+Central Electricity Authority regarding safety and electricity supply.  
+  
+3.3. The design, installation, maintenance  and operation of the Roof -top Renewable Energy 
+Generating System  shall be undertaken in a manner conducive to the safety of the Roof -top 
+Renewable Energy Generating System  as well as the Licensee's Network.  
+  
+3.4. If, at any time, the Licensee determines that the Eligible Consumer's Roof -top  Renewable 
+Energy Generating System is causing or may cause damage to and/or results in the Licensee's 
+other consumers or its assets, the Eligible Consumer shall disconnect the Roof -top Renewable 
+Energy Generating System  from the distribution Network upon direction from the Licensee 
+and shall undertake corrective measures at his own expense prior to re -connection.  
+  
+3.5. The Licensee shall not be responsible for any accident resultin g in injury to human beings or 
+animals or damage to property that may occur due to back - feeding from the Roof -top 
+Renewable Energy Generating System  when the grid supply is off. The Licensee may 
+disconnect the installation at any time in the event of such  exigencies to prevent such 
+accident.  
+  
+4. Other Clearances and Approvals :  
+  
+The Eligible Consumer shall obtain any statutory approvals and clearances that may be 
+required, such as from the Electrical Inspector or the municipal or other authorities, before 
+connecting the Roof -top Renewable Energy Generating System  to the distributi on Network.  
+  
+5. Period of Agreement, and Termination :  
+--- Page 51 ---
+51 
+ 
+ 
+ 
+   
+This Agreement shall be for a period for 25 years, but may be terminated prematurely.   
+(a) By mutual consent; or  
+(b) By the Eligible Consumer, by giving 30 days' notice to the Licensee.  
+(c) By the Licensee, by giving 30 days' notice, if the Eligible Consumer breaches any terms of this 
+Agreement or the provisions of the Net Metering Regulations and does not remedy such 
+breach within 30 days, or such other reasonable period as may be provided, of receiving 
+notice of such breach, or for any other valid reason communicated by the Licensee in writing.  
+  
+6. Access and Disconnection:   
+  
+6.1. The Eligible Consumer shall provide access to the Licensee to the metering equipment and 
+disconnecting devices of Roof-top Renewable Energy Generating System , both automatic and 
+manual, by the Eligible Consumer.  
+  
+6.2. If, in an emergent or outage situation, the Licensee cannot access the disconnecting devices 
+of the Roof -top Renewable Energy Generating System , both automati c and manual, it may 
+disconnect power supply to the premises.  
+  
+6.3. Upon termination of this Agreement under Clause 5, the Eligible Consumer shall disconnect 
+the Roof -top Renewable Energy Generating System  forthwith from the Network of the 
+Licensee.  
+  
+7. Liabil ities :  
+  
+7.1. The Parties shall indemnify each other for damages or adverse effects of either Party's 
+negligence or misconduct during the installation of the Roof -top Renewable Energy 
+Generating System , connectivity with the distribution Network and operation of the System.  
+--- Page 52 ---
+52 
+ 
+ 
+ 
+   
+7.2. The Parties shall not be liable to each other for any loss of profits or revenues, business 
+interruption losses, loss of contract or goodwill, or for indirect, consequential, inci dental or 
+special damages including, but not limited to, punitive or exemplary damages, whether any 
+of these liabilities, losses or damages arise in contract, or otherwise.  
+  
+8. Commercial Settlement :  
+  
+8.1. The commercial settlements under this Agreement shall be in accordance with the Net 
+Metering Regulations.  
+  
+8.2. The Licensee shall not be liable to compensate the Eligible Consumer if his Rooftop  
+Renewable Energy Generating System  is unable to inject surplus power generated into the 
+Licensee's Network on account  of failure of power supply in the grid/Network.  
+  
+8.3. The existing metering System, if not in accordance with the Net Metering Regulations, shall 
+be replaced by a bi -directional meter (whole current/CT operated) or a pair of meters (as per 
+the definition of 'Net Meter' in the Regulations), and a separate generation meter may be 
+provided to measure Solar power generation. The bi -directional meter (whole current/CT 
+operated) or pair of meters shall be installed at the inter -connection point to the Licensee's 
+Network for recording export and import of energy.  
+  
+8.4. The uni -directional and bi -directional or pair of meters shall be fixed in separate meter boxes 
+in the same proximity.   
+  
+9. Connection Costs:  
+  
+The Eligible Consumer shall bear all costs related to the setting up of the Roof -top Renewable 
+Energy Generating System and the cost of Net Meter s.  
+--- Page 53 ---
+53 
+ 
+ 
+ 
+   
+10. Dispute Resolution:  
+  
+10.1. Any dispute arising under this Agreement shall be resolved promptly, in good faith  and in an 
+equitable manner by both the Parties.  
+  
+10.2. The Eligible Consumer shall have recourse to the concerned Consumer Grievance Redressal 
+Forum constituted under the relevant Regulations in respect of any grievance regarding 
+billing which has not been re dressed by the Licensee.  
+  
+In the witness where of …………… (name) for and on behalf of Eligible Consumer and 
+Shri. ……………….. (name) for and on behalf of Licensee agree to this agreement.  
+  
+  
+Signed by  
+ 
+ 
+…………………………………                                                                        ……………..………………  
+(First Party)                                                                                                 (Second Party)  
+ 
+Witnesses:                
+  
+  
+1) Signature with Name and Address:                                               2) Signature with Name and 
+Address    
+ 
+……………………………………                                                   ……………………………………  
+……………………………………                                                   ……………………………………   
+--- Page 54 ---
+54 
+ 
+ 
+ 
+ Annexure 5  
+Draft Memorandum of Understanding (MoU) Between: The Ministry of New and 
+Renewable Energy (MNRE), Government of India and _____(Name of the State/UT)  
+ 
+Preamble:  
+This Memorandum of Understanding (MoU) is entered into on this [DD/MM/YYYY], between 
+the Ministry of New and Renewable Energy (MNRE), Government of India, and the State/UT 
+Government of _____  
+Recitals:  
+WHEREAS, MNRE is entrusted with the responsibility of promoting and developing renewabl e 
+energy sources, including solar energy, in India.  
+AND WHEREAS, MNRE is implementing PM - Surya Ghar: Muft Bijli Yojana (hereinafter 
+referred to as “The Scheme”).  
+AND WHEREAS, REC Limited has been designated as the overall National Programme 
+Implementing  Agency (NPIA) for the PM - Surya Ghar: Muft Bijli Yojana.  
+AND WHEREAS, the Government of (State/UT name) and their agencies/departments, 
+especially electricity distribution companies (Discoms) & State Nodal Agency (SNA) for 
+renewable energy, have a crucia l role in the successful implementation of the PM -Surya 
+Ghar: Muft Bijli Yojana at ground level.  
+AND WHEREAS, both MNRE and the Government of (State/UT name) recognize the need to 
+collaborate to accelerate the deployment of grid -connected rooftop solar un der this scheme.  
+NOW, THEREFORE, in consideration of the mutual promises and covenants contained herein, 
+both parties agree as follows:  
+Objectives:  
+--- Page 55 ---
+55 
+ 
+ 
+ 
+ To promote the installation of grid -connected rooftop solar systems in the residential sector 
+within the geo graphical jurisdiction of State, and to that conduct public awareness, outreach 
+activities, and capacity -building initiatives to promote their adoption;  
+To set ambitious rooftop solar targets for the Government, commercial, and industrial (C&I), 
+as well as  residential sectors and establish robust high -level monitoring mechanisms for 
+overseeing the progress of the implementation of this scheme.  
+To strengthen Discoms for rooftop solar implementation by identifying dedicated manpower 
+for this programme, under take efforts to enhance the rooftop solar vendor base in respective 
+states/UTs and create a positive regulatory environment for grid -connected rooftop solar 
+power into the electricity grid, ensuring the efficient and sustainable use of solar energy  
+Responsibilities of MNRE : 
+Policy & Regulations Support : MNRE will provide guidance/inputs/recommendations to 
+update existing policy and regulations to DISCOM/SNA/Designated State Department/Agency  
+Technical Assistance : MNRE will collaborate with DISCOM/SNA /designated state department 
+for technical standards and guidelines assistance for grid -connected rooftop solar 
+installations.  
+Financial Support : MNRE shall provide financial support in line with the guidelines of the PM -
+Surya Ghar: Muft Bijli Yojana.  
+Nati onal Portal : MNRE shall be responsible for the Development and management of the 
+National Portal.  
+Responsibilities of State / UT Government  
+The State Government agrees to implement the Scheme and to that end shall ensure  
+1) Adherence to Scheme Guidelines : The State/UT Government shall ensure adherence 
+to the scheme guidelines in their entirety including the use of the scheme name  
+--- Page 56 ---
+56 
+ 
+ 
+ 
+ 2) Regulations :  The State/UT Government shall ensure that the processes, State/UT level 
+Standard Operating Procedures and regula tory provisions are at least in alignment with the 
+provisions of Electricity (Right of Consumers) Rule 2020 and its amendments thereof and in 
+alignment with the guidelines of the Scheme.  
+3) Service Time Lines : The State/UT government shall ensure that tim e-bound services are 
+provided to consumers for RTS for critical services such as technical feasibility, inspection, 
+commissioning, net meter supply and signing of Net Metering agreements.  
+4) IEC Activities : The State/UT Government shall undertake public aw areness campaigns 
+as per the IEC plan of the Scheme and shall ensure adherence to Scheme IEC guidelines.  
+5) Additional Subsidy : The State/UT Government may provide additional subsidy on top 
+of the Central financial assistance, however this will be subject to adherence to all scheme 
+guidelines and routing of additional subsidy through the National Portal. Any alteration to the 
+Scheme framework must be duly approved by the MNRE . 
+6) Coordination : The State/UT shall coordinate with National Programme 
+Implementations Agency for the successful implementation of the PM Surya Ghar: Muft Bijli 
+Yojana.  
+7) Monitoring of the Scheme : The State  Level Steering Committee headed by the Chief 
+Secretary of the State/UT and District Level Committees  shall regularly review the progress 
+of implementation of the scheme.  
+8) IT Integration : The State/UT Government shall coordinate in the integration of the  
+State Portal API with the National Portal for sharing of relevant data relating to rooftop solar 
+installations.  
+9) Vendor Registration : The State/UT DISCOM shall may register the vendors operating 
+within their respective State. The vendor is here by permi tted to get registered to any 
+DISCOM of the State/UT, in case of multiple DISCOMs operating in that State/UT and that no 
+DISCOM shall refuse to cater their request  for registration.  
+--- Page 57 ---
+57 
+ 
+ 
+ 
+ 10) Declaration of Target : The State/UT Governments may declare short medi um and long 
+term targets for rooftop solar systems across all sectors.  
+11) Formation of RTS cell : The State/UT Government shall create a dedicated RTS cell for 
+the purpose of monitoring and coordination with the NPIA and Ministry.  
+Cooperation:  
+MNRE and Sta tes will collaborate on projects, research, and initiatives aimed at improving 
+the distribution sector and accelerating the deployment of grid -connected rooftop solar 
+systems.  
+Both parties will engage in regular meetings, discussions, and information shari ng to ensure 
+the effective implementation of this MoU.  
+Funding:  
+Funding for grid -connected rooftop solar projects and initiatives under this MoU will be 
+determined through separate agreements or funding mechanisms as mutually agreed upon 
+by MNRE and State.  
+Duration:  
+This MoU shall come into effect on the date of signing and shall remain in force for a period 
+of [Specify Term], unless terminated by mutual consent.  
+Amendment:  
+Any amendment or modification to this MoU shall be made in writing and will require the 
+consent of both parties.  

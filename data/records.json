@@ -49,5 +49,96 @@
         "source_pages": [
             8
         ]
+    },
+    {
+        "record_id": 6,
+        "topic": "CFA Disbursement",
+        "key_rule": "CFA is disbursed in two installments: 90% after installation and commissioning, and 10% after submission of the performance report.",
+        "source": "MNRE Operational Guidelines",
+        "source_section": "Section 5(i)",
+        "source_pages": [
+            7
+        ]
+    },
+    {
+        "record_id": 7,
+        "topic": "Residential CFA Eligibility",
+        "key_rule": "CFA is available for grid-connected rooftop solar systems tagged to a residential power connection of the local DISCOM. Eligible installations include roofs, terraces, balconies, elevated structures and qualifying Building Integrated PV systems.",
+        "source": "MNRE Operational Guidelines",
+        "source_section": "Section 5(b)",
+        "source_pages": [
+            5
+        ]
+    },
+    {
+        "record_id": 8,
+        "topic": "Non-Residential Ineligibility",
+        "key_rule": "No CFA is provided to non-residential consumer segments, including government, commercial and industrial segments.",
+        "source": "MNRE Operational Guidelines",
+        "source_section": "Section 5(d)",
+        "source_pages": [
+            5
+        ]
+    },
+    {
+        "record_id": 9,
+        "topic": "CFA Structure for First 2 kWp",
+        "key_rule": "For the first 2 kWp of residential rooftop solar capacity, or part thereof, CFA is 60% of the benchmark cost of 2 kWp.",
+        "source": "MNRE Operational Guidelines",
+        "source_section": "Section 5(e)",
+        "source_pages": [
+            5
+        ]
+    },
+    {
+        "record_id": 10,
+        "topic": "CFA Structure for Additional Capacity",
+        "key_rule": "For additional residential rooftop solar capacity of 1 kWp, or part thereof, CFA is 40% of the benchmark cost of the additional kWp. No additional CFA is provided beyond 3 kWp.",
+        "source": "MNRE Operational Guidelines",
+        "source_section": "Section 5(e)",
+        "source_pages": [
+            5
+        ]
+    },
+    {
+        "record_id": 11,
+        "topic": "GHS and RWA CFA",
+        "key_rule": "Group Housing Societies and Residential Welfare Associations can receive CFA for common facilities, including EV charging, up to 500 kWp at 3 kWp per house. CFA follows the rate specified for additional residential rooftop solar capacity. The upper capacity limit includes individual rooftop plants.",
+        "source": "MNRE Operational Guidelines",
+        "source_section": "Section 5(e)",
+        "source_pages": [
+            5
+        ]
+    },
+    {
+        "record_id": 12,
+        "topic": "CFA Benchmark Cost",
+        "key_rule": "The benchmark cost is Rs 50,000 per kW for the first 2 kW of rooftop solar capacity and Rs 45,000 per kW for additional capacity. For special-category states, the benchmark cost is Rs 55,000 per kW for the first 2 kW and Rs 49,500 per kW for additional capacity.",
+        "source": "MNRE Operational Guidelines",
+        "source_section": "Section 5(g)",
+        "source_pages": [
+            6
+        ]
+    },
+    {
+        "record_id": 13,
+        "topic": "Effective CFA Rates",
+        "key_rule": "For general states, effective CFA is Rs 30,000 per kW for the first 2 kW and Rs 18,000 per kW for additional capacity up to 3 kW. For special-category states, the rates are Rs 33,000 per kW and Rs 19,800 per kW respectively. No additional CFA is provided beyond 3 kW.",
+        "source": "MNRE Operational Guidelines",
+        "source_section": "Section 5(h)",
+        "source_pages": [
+            6
+        ]
+    },
+    {
+        "record_id": 14,
+        "topic": "CFA Calculation Examples",
+        "key_rule": "The guidelines give these examples for general states: 1.5 kW receives Rs 45,000 CFA; 2.5 kW receives Rs 69,000 CFA; and 6 kW receives Rs 78,000 CFA.",
+        "source": "MNRE Operational Guidelines",
+        "source_section": "Section 5(h)",
+        "source_pages": [
+            6,
+            7
+        ]
     }
 ]

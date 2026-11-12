@@ -1,0 +1,301 @@
+
+--- Page 2 ---
+Guidelines for P M-Surya Ghar: Muft Bijli Yojana  
+Incentives to DISCOMs  
+ 
+Page 1 of 9 
+ Guidelines for PM -Surya Ghar: Muft Bijli Yojana  
+Incentives to DISCOMs  
+1) Background  
+a) The Government of India has approved the PM Surya Ghar: Muft Bijli Yojana on 29th February, 
+2024 to increase the share of solar rooftop capacity and empower residential households to 
+generate their own electricity. The scheme has an outlay of Rs 75,021 crore and is to be 
+implemented till FY 2026 -27. The administrative approval was granted to the scheme vide Order 
+No. 318/17/2024 -Grid Connected Rooftop dated 16th March, 20 24. 
+b) The scheme will be implemented by a National programme Implementation Agency (NPIA) at 
+the National level and by the State Implementation Agencies (SIAs) at the state level. The 
+Distribution Utility (DISCOMs or Power/Energy Departments, as the case may  be) shall be the 
+State Implementation Agencies (SIA) at the State/UT level.   
+c) Under the scheme, the DISCOMs shall be required to put in place several facilitative measures 
+for promotion of rooftop solar in their respective areas such as availability of net  meters, timely 
+inspection and commissioning of installations, vendor registration and management, inter -
+departmental convergence for solarizing government building etc. It is also expected that 
+rooftop solar installations shall be undertaken by the commer cial and industrial segments under 
+the DISCOM areas.  
+d) In order to enable DISCOMs to undertake these tasks more effectively and to create a greater 
+motivation within DISCOMs as SIAs for the scheme, the PM Surya Ghar: Muft Bijli Yojana has a 
+provision to inc entivize DISCOMs.  
+e) The Ministry of New and Renewable Energy (MNRE) was implementing the Grid Connected 
+Rooftop Solar (GCRT) Phase II Programme under which Incentives to DISCOMs were provided 
+under Component B. After the approval of PM Surya Ghar: Muft Bijl i Yojana, the Phase II 
+programme has been subsumed under the new scheme. This scheme component will operate 
+in continuation of the Component B of GCRT Phase II programme.  
+--- Page 3 ---
+Guidelines for P M-Surya Ghar: Muft Bijli Yojana  
+Incentives to DISCOMs  
+ 
+Page 2 of 9 
+  
+ 
+2) Scope  
+a) These guidelines shall govern the implementation of the “Incentives to DISCOM s” component 
+of PM - Surya Ghar: Muft Bijli Yojana.  
+b) The Incentives to DISCOMs shall provide resources to the DISCOMs to participate in IEC and 
+branding activities, create conducive regulatory and administrative mechanisms to ensure 
+adherence to timelines for approvals (feasibility, commissioning, inspection , grievance 
+redressal etc.), achieve targets for implementation, ensuring timely availability of net meters, 
+saturation of RTS on government buildings, utilization of incentive for RTS dedicated activities, 
+incentivizing field level staff through recogniti on and rewards and other measures that are to 
+be undertaken by the State DISCOMs or other agencies for RTS deployment.  
+3) Criteria  
+Incentives to DISCOMs will be based on achievement in installation of additional grid -
+connected rooftop solar capacity in all s ectors over and above the base level (as per the data 
+available under the Grid Connected Rooftop Solar Phase II scheme), with the incentives being 
+limited to the first additional 18,000 MW of rooftop solar capacity in the country (since 
+beginning of operat ion of Phase II programme). This incentive is pegged at 5% of applicable 
+benchmark cost for capacity achieved above 10% and less than 15% of the installed base 
+capacity, and 10% of the applicable benchmark cost for capacity achieved beyond 15% of the 
+insta lled base capacity.  
+ 
+4) Implementation  
+a) The incentives will be calculated on the basis of incremental RTS capacity installed by the 
+DISCOMs in their distribution area from the installed base capacity (at the end of previous 
+financial year) within the timeline  of 12 months (financial year -wise, i.e. 01.04.2024 to 
+--- Page 4 ---
+Guidelines for P M-Surya Ghar: Muft Bijli Yojana  
+Incentives to DISCOMs  
+ 
+Page 3 of 9 
+ 31.03.2025 and so on till the duration of the programme). The incentive pattern would 
+be a progressive one with higher incentive rates for higher levels of achievement, as 
+elaborated in the following t able: - 
+S. 
+No. Parameter  Incentive to be Provided  
+1 For installed capacity achieved above 10 % 
+and up to 15 % over and above of the 
+installed base capacity* within a financial 
+year  5% of the applicable cost** for 
+capacity achieved above 10 % of 
+the installed base capacity  
+2 For installed capacity achieved beyond 15 
+% over and above of the installed base 
+capacity* within one financial year  5% of the applicable cost** for 
+capacity achieved above 10 % 
+and up to 15 % of the installed 
+base capacity PLUS 10 % of the 
+applicable cost** for capacity 
+achieved beyond 15 % of the 
+installed base capacity  
+ 
+*Installed base capacity shall mean the cumulative RTS capacity installed within the jurisdiction of 
+DISCOM at the end of 31st March of the year preceding the year for which the calculation is being 
+done. This will include total RTS capacity installed under residential, Institutional, Social, Govt., 
+PSU, Statutory/ Autonomous bodies, Private Commercial, Industrial Sectors etc. In centive to 
+DISCOMs for the year 2024 -25 shall, therefore, be calculated on the basis of baseline capacity of 
+DISCOMs as on 31st March, 2024.  
+** Applicable Cost is the applicable benchmark cost of MNRE for the State/ UT for RTS capacity of 
+1 kW, which is cu rrently Rs 50,000 for general States and Rs 55,000 for special category States. In 
+case the benchmark cost is revised in the middle of the financial year, the incentive shall be 
+calculated on the basis of the weighted average benchmark rate for that financ ial year, weighted 
+as per the number of days for which the benchmark rate was operational.  
+--- Page 5 ---
+Guidelines for P M-Surya Ghar: Muft Bijli Yojana  
+Incentives to DISCOMs  
+ 
+Page 4 of 9 
+ The incentive mechanism has been illustrated in the following table:  
+DISCOMs  Installed 
+base 
+Capacity 
+(MW)  Achievement 
+under 
+programme 
+(MW)  Percentage 
+Achievement 
+of installed 
+base capacity 
+(%) Capacity 
+eligible for 
+5% 
+incentives 
+(MW)  Capacity 
+eligible for 
+10% 
+incentives 
+(MW)  
+A 100 10 10%  Nil Nil 
+B 100 12 12%  2 MW  Nil 
+C 100 20 20%  5 MW  5 MW  
+D 100 30 30%  5 MW  15 MW  
+ 
+Note: The capacity eligible for incentives by DISCOMs would cover the entire capacity installed 
+including the capacity installed without CFA and with CFA.  
+ 
+b) The Incentives to the DISCOMs would be available only for the addition of initial 18,000 
+MW RTS capacity in the country after 31st March 2019. In case, higher capacity is achieved 
+by the DISCOMs leading to entitlement for higher incentive slab of 10%, the total 
+incentives to the DISCOMs would be limited to the financial outlay available for incentive 
+under the programme, irrespective of the total ca pacity achieved under the programme 
+by any particular DISCOM.  
+The DISCOMs shall upload the details of the total RTS capacity added within their 
+jurisdiction on the National Portal in order to authenticate their submission of claim for 
+release of incentive component for the respective DISCOM.  
+5) Financial Outlay and Scheme Transition  
+a) The total financial outlay for Incentives to DISCOM component of the scheme is Rs. 
+4,950 crore. This outlay for GCRT Phase II scheme shall be subsumed into the scheme 
+component “In centive to DISCOMs” under PMSG:MBY, and all expenditure incurred 
+--- Page 6 ---
+Guidelines for P M-Surya Ghar: Muft Bijli Yojana  
+Incentives to DISCOMs  
+ 
+Page 5 of 9 
+ and liabilities arising under the GCRT Phase II Component B shall be covered under 
+the overall outlay.  
+b) Claims arising under GCRT Phase II Scheme Component B: Incentive to DISCOMs (for 
+incenti ve claims for FY 2022 -23 and before) shall continue to be guided by the scheme 
+guidelines issued for GCRT Phase II.  
+c) Claims arising under PM Surya Ghar: Muft Bijli Yojana (for incentive claims for FY 2024 -
+25 and after) shall be guided by current guidelines . 
+d) The claims for FY 2023 -24 shall be calculated after taking a weighted average of the 
+applicable benchmark costs, weighted as per the number of days for which the 
+benchmark was operational. Under GCRT Phase II, the national benchmark was Rs 
+36,470/kW till  December and later revised to Rs 45,000/kW in January. The 
+benchmark was pegged at Rs 50,000 under the PM Surya Ghar: Muft Bijli Yojana from 
+the date of the scheme launch, viz 13th February. The baseline date for calculation 
+shall be 31st March, 2023.  
+6) Utilization of the funds  
+a) The total incentives to a DISCOM shall be in the nature of untied funds, except for the 
+following mandatory provisions.  
+i) DISCOMs shall create dedicated RTS teams at Discom HQ, Circle, till division level, by 
+provisioning for hiring of contractual manpower within the scheme, or to include RTS 
+related services in the duties of outsourcing companies hired by DISCOMs. The RTS 
+division shall b e responsible for registration of vendors on the National Portal, up 
+gradation in ERP system/components and integration with national portal and 
+national dashboard, providing time bound services to RTS consumers, inspection and 
+online monitoring of RTS pla nts, online database management of commissioned 
+capacity, consumer awareness and publicity, ensuring availability of net -meters, 
+providing grid connectivity, capacity building of its officers/staff, etc.  
+ii) The DISCOMs shall allocate 10% of the incentives received (up to Rs. 1 crore) for 
+--- Page 7 ---
+Guidelines for P M-Surya Ghar: Muft Bijli Yojana  
+Incentives to DISCOMs  
+ 
+Page 6 of 9 
+ rewards system for DISCOM officials and functionaries. The model rewards system 
+framework is outlined in Annex 1, which may be modified by the DISCOM as per its 
+own requireme nt. The expenditure for the rewards system shall be borne through the 
+Incentives to DISCOMs component. If the incentives to DISCOMs component is 
+insufficient to meet the same, the balanceexpenditure may be borne through the 
+Service Charge scheme component received by DISCOM.  
+iii) The DISCOM shall allocate at least 50 % of the incentives (up to Rs 1 crore of allocation 
+per division) for dedicated utilization at the division and subdivisional level. This 
+provision shall be utilized by the Division and Sub -divisio nal units for administrative 
+expenses, outsourcing of services for facilitating rooftop solar related activities, 
+payment for contractual/outsourced/other positions for manpower utilized primarily 
+for rooftop solar related activities, capacity building act ivities, organization of 
+consumer -vendor -bankers melas, IEC activities, grievance redressal, establishment of 
+meter testing benches and associated manpower and improving consumer 
+experience for rooftop solar installation and related activities  
+b) The utilizat ion of the funds shall not be double accounted with any other central scheme 
+(like Revamped Distribution Sector Scheme (RDSS), Integrated Power Development 
+Scheme (IPDS), Deen Dayal Upadhyaya Gram Jyoti Yojana (DDUGJY) or Prime Minister's 
+Development Packa ge (PMDP) -2015), and that the audited report shall be attached with 
+the Fund Utilization Report.  
+c) The DISCOMs shall submit a fund utilization plan in adherence to the above clauses while 
+submitted the claim. The above mentioned expenses incurred by the DISC OM after 
+release shall be duly recorded in the Fund Utilization Report along with the necessary 
+receipts, where ever applicable, before the DISCOM submits the claim for the next 
+financial year. Failure to submit either the fund utilization plan at the time  of claim 
+submission or the fund utilization report or failure to adhere to the provisions of these 
+guidelines shall make the DISCOM claims liable to be rejected.  
+--- Page 8 ---
+Guidelines for P M-Surya Ghar: Muft Bijli Yojana  
+Incentives to DISCOMs  
+ 
+Page 7 of 9 
+ d) No incentive amount remaining after utilization under clauses a (i) and (ii) above can be 
+used by the DISCOM as a part of their balance sheet until the obligatory terms and 
+conditions of utilization of DISCOM incentives have been met.  
+e) As the incentives are proposed for specific expenditure mentioned above, the incentives 
+may not be a part of Tarif f Determination & Tariff Rationalization process of respective 
+Electricity Regulatory Commission.  
+7) Release of Funds  
+a) The DISCOM shall raise a claim to the Ministry for release of funds under this scheme 
+component for each financial year. Claims raised under  GCRT Phase II shall be processed 
+as per guidelines for GCRT Phase II. Claims raised under PM Surya Ghar for 2024 -25 
+onwards shall be processed under these current guidelines. The Ministry shall process 
+these claims based on submitted data and release the funds accordingly.  
+b) The release of fund under this scheme component from 2025 -26 onwards shall be 
+subjected to the submission of the Fund Utilization Report  by the DISCOM in alignment 
+with the compliance with these guidelines .  
+c) The Implementing agency will  remit the accrued interest and other charges to 
+Consolidated Fund of India as per Rule -230(8) of GFRs 2017.  
+d) Amendment of the Scheme Component of the Guideline  
+a) MNRE may make necessary amendments in the scheme guidelines for DISCOM incentives 
+component wit hin the overall spirit of the cabinet approval or issue any clarification to 
+remove difficulties in the implementation of the scheme, as and when required, with the 
+approval of the Hon’ble Minister, New and Renewable Energy.  
+ 
+  
+--- Page 9 ---
+Guidelines for P M-Surya Ghar: Muft Bijli Yojana  
+Incentives to DISCOMs  
+ 
+Page 8 of 9 
+ Annex 1  
+Indicative Rewards S ystem for Rooftop Solar Promotion for DISCOM Personnel  
+ 
+1. The DISCOM shall establish a quarterly ranking system for all divisions under its command.  
+2. The Ranking of the divisions and sub -divisions shall be undertaken by the formula:  
+No. of RTS installations  in the sub -division*30% (weightage) + Number of RTS installations 
+in the residential sector under PM Surya Ghar Scheme in the subdivision*70% (weightage) . 
+An illustration of the methodology is shown below:  
+S. 
+No. Division  Sub-Division  Installed 
+Capacity 
+(MW)  Residential 
+installed 
+capacity (MW)  Points 
+earned  Sub-
+Division 
+Ranking  
+1 Division 1  Sub-division 1  50 23 31.1  2 
+2 Division 1  Sub-division 2  20 4 8.8 4 
+3 Division 2  Sub-division 1  5 3 3.6 6 
+4 Division 2  Sub-division 2  40 32 34.4  1 
+5 Division 2  Sub-division 3  32 19 22.9  3 
+6 Division 2  Sub-division 4  18 8 11 4 
+ 
+3. Based on the rankings, the top 3 performing Subdivisions shall be identified. The 
+concerned officials in charge of the subdivision shall be awarded with a honorarium as 
+follows:  
+S. 
+No. Official rank or Equivalent  Award  
+1 Chief Engineer  Rs. 15,000  
+2 Superintendent Engineer  Rs. 30,000  
+3 Executive Engineer  Rs. 45,000  
+--- Page 10 ---
+Guidelines for P M-Surya Ghar: Muft Bijli Yojana  
+Incentives to DISCOMs  
+ 
+Page 9 of 9 
+ 4 Assistant Engineer  Rs. 10,000  
+4. The officer in charge of the sub -division shall ascertain 3 top performing sub -ordinates 
+who have impacted rooftop solar deployment in the sub -division most substantially who 
+shall be rewarded with a cash honorarium of Rs 10,000. These may include contract ual or 
+outsourced staff, as long as the officer in charge of the subdivision has determined that 
+the concerned staff has made significant contribution in maximizing rooftop solar 
+deployment within the sub -division.  
+5. Officials at the level of Chief Engineer , Superintendent Engineer and Executive Engineer 
+may be eligible for the award for multiple sub -divisions, hence they shall not be granted 
+for multiple awards and shall be limited to redeem the award once in a given quarter.  
+6. The MD/CEO of the DISCOM is aut horized to also grant up to 3 Special Category Award 
+for an amount of Rs 10,000 for officials/staff in the RTS division/cell in the DISCOM. The 
+awards shall be given to three different officials/staff allocated to work dedicatedly in the 
+RTS division under  this category.  
+7. The MD/CEO of the DISCOM may decide to withhold the operation of the rewards systems 
+to the extent necessary in case the achievement of Rooftop solar even in the winner 
+subdivisions is not satisfactory. Savings from the rewards allocation shall then be utilized 
+at the Division level for other RTS related activities.  
+ 
+ 
