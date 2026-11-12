@@ -2,9 +2,11 @@
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
 from typing import Optional
+import os
 
 from app.records import load_records, search, get_by_id
 from app.smart_search import smart_search
+from app.llm_client import get_llm_client, get_system_prompt, build_rag_context
 
 
 # Create FastAPI application
@@ -19,6 +21,13 @@ app = FastAPI(
 class QuestionRequest(BaseModel):
     question: str
     name: Optional[str] = None
+
+
+# Request model for chat (LLM-powered Q&A)
+class ChatRequest(BaseModel):
+    question: str
+    use_rag: bool = True
+    top_k: int = 5
 
 
 # Home endpoint
@@ -179,3 +188,113 @@ def submit_question(request: QuestionRequest):
         "question": question,
         "message": "Your question has been received successfully."
     }
+
+
+# LLM-powered chat endpoint with RAG
+@app.post("/chat")
+def chat_with_llm(request: ChatRequest):
+    """
+    Answer user questions using LLM with RAG (Retrieval-Augmented Generation).
+    
+    Process:
+    1. Validate question
+    2. Search for relevant records (RAG)
+    3. Build context from retrieved records
+    4. Send to LLM with system prompt
+    5. Return LLM-generated answer with sources
+    
+    Args:
+        request: ChatRequest with question, use_rag flag, and top_k
+    
+    Returns:
+        JSON with answer, sources, and metadata
+    """
+    question = request.question.strip()
+    
+    # Validate question
+    if not question:
+        raise HTTPException(
+            status_code=400,
+            detail="Question cannot be empty"
+        )
+    
+    try:
+        # Check if LLM is configured
+        api_key = os.getenv("GROQ_API_KEY")
+        if not api_key or api_key == "your_groq_api_key_here" or api_key == "gsk_demo_key_for_testing":
+            return {
+                "question": question,
+                "answer": "LLM is not configured. Please set GROQ_API_KEY in .env file. Get your free API key from https://console.groq.com/keys",
+                "sources": [],
+                "rag_enabled": False,
+                "error": "API key not configured"
+            }
+        
+        # Step 1: RAG - Retrieve relevant records
+        rag_context = None
+        retrieved_sources = []
+        
+        if request.use_rag:
+            smart_results = smart_search(question, top_k=request.top_k)
+            
+            if smart_results:
+                # Convert to dict format for context building
+                retrieved_records = []
+                for record, score in smart_results:
+                    rec_dict = {
+                        "record_id": record.record_id,
+                        "topic": record.topic,
+                        "key_rule": record.key_rule,
+                        "source_section": record.source_section,
+                        "relevance_score": round(score, 4)
+                    }
+                    retrieved_records.append(rec_dict)
+                    
+                    # Track sources for response
+                    retrieved_sources.append({
+                        "record_id": record.record_id,
+                        "topic": record.topic,
+                        "source_section": record.source_section,
+                        "relevance_score": round(score, 4)
+                    })
+                
+                # Build context string
+                rag_context = build_rag_context(retrieved_records)
+        
+        # Step 2: Initialize LLM client
+        llm_client = get_llm_client()
+        
+        # Step 3: Get system prompt
+        system_prompt = get_system_prompt()
+        
+        # Step 4: Generate LLM response
+        answer = llm_client.generate(
+            prompt=question,
+            system_prompt=system_prompt,
+            context=rag_context,
+        )
+        
+        # Step 5: Return structured response
+        return {
+            "question": question,
+            "answer": answer,
+            "sources": retrieved_sources,
+            "rag_enabled": request.use_rag,
+            "rag_results_count": len(retrieved_sources),
+            "model": llm_client.model,
+            "provider": llm_client.provider
+        }
+    
+    except ValueError as e:
+        # Configuration error (missing API key, etc.)
+        raise HTTPException(
+            status_code=500,
+            detail=f"Configuration error: {str(e)}"
+        )
+    
+    except Exception as e:
+        # LLM API error or other failures
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to generate answer: {str(e)}"
+        )

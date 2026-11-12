@@ -99,3 +99,87 @@ python -m app.smart_search
 ```
 
 Or use it via the API at `/search?q=your+query`
+
+---
+
+## Day 5: LLM Integration & Chat
+
+### 1. Get Groq API Key
+
+1. Sign up for free at: https://console.groq.com
+2. Go to API Keys section
+3. Create a new API key
+4. Copy the key (starts with `gsk_...`)
+
+### 2. Configure Environment
+
+```bash
+# Copy the example environment file
+cp .env.example .env
+
+# Edit .env and add your API key
+# Set: GROQ_API_KEY=your_actual_groq_api_key_here
+```
+
+### 3. Test LLM Client
+
+Test the LLM integration without running the server:
+
+```bash
+python -m app.llm_client
+```
+
+### 4. Use the /chat Endpoint
+
+Start the server and test the LLM-powered Q&A:
+
+```bash
+# Terminal 1: Start server
+uvicorn app.main:app --reload
+
+# Terminal 2: Test chat endpoint
+curl -X POST http://127.0.0.1:8000/chat \
+  -H "Content-Type: application/json" \
+  -d '{"question": "How much subsidy for 3 kW?", "use_rag": true}'
+```
+
+**Interactive API Testing:**
+- Open: http://127.0.0.1:8000/docs
+- Find `POST /chat` endpoint
+- Click "Try it out"
+- Enter your question
+- Execute
+
+### 5. Evaluate All 10 Questions
+
+Run the automated evaluation script:
+
+```bash
+# Make sure server is running first
+python eval/test_questions.py
+```
+
+This tests all 10 questions from `eval/questions.json` including:
+- Questions 1-6 from project card (including out-of-scope Q6)
+- Questions 7-10 from MNRE guidelines
+
+### 6. How RAG Works in SuryaGharSathi
+
+```
+User Question
+     ↓
+TF-IDF Search → Top 5 relevant records
+     ↓
+Build Context (topic + rule + section)
+     ↓
+LLM (Groq/Llama 3.1) + System Prompt + Context
+     ↓
+Grounded Answer with Source Citations
+```
+
+**Key Features:**
+- ✅ Retrieval-Augmented Generation (RAG) prevents hallucinations
+- ✅ Official MNRE guideline citations
+- ✅ Out-of-scope detection (returns "I don't know")
+- ✅ Accurate CFA subsidy calculations
+- ✅ Temperature 0.3 for focused, factual responses
