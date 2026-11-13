@@ -102,6 +102,69 @@ Or use it via the API at `/search?q=your+query`
 
 ---
 
+## Day 6: Prompt Engineering & Structured Output
+
+### 1. Prompt Templates
+
+SuryaGharSathi uses carefully engineered prompts for accurate, consistent responses:
+
+**System Prompt** (`prompts/system_prompt.txt`):
+- Defines SuryaGharSathi persona and knowledge domain
+- Includes exact MNRE CFA rules (₹30k/₹18k rates, 3 kW cap)
+- Enforces citation requirements and "I don't know" responses
+- Sets target user context (Kopargaon homeowner)
+
+**Task Prompts:**
+- **v1 (Basic):** Zero-shot JSON formatting (`prompts/task_v1_basic.txt`)
+- **v2 (Structured):** Step-by-step rubric + few-shot examples (`prompts/task_v2_structured.txt`) ← **Recommended**
+
+### 2. Structured Output Format
+
+All `/chat` responses return JSON with:
+```json
+{
+  "answer": "Detailed answer with calculations and citations",
+  "confidence": "high" | "medium" | "low",
+  "follow_up": "Helpful next question for the homeowner"
+}
+```
+
+### 3. Testing Different Prompts
+
+```bash
+# Test with prompt v1 (basic)
+curl -X POST http://127.0.0.1:8000/chat \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "How much subsidy for 2.5 kW?",
+    "prompt_version": "v1"
+  }'
+
+# Test with prompt v2 (structured) - recommended
+curl -X POST http://127.0.0.1:8000/chat \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "How much subsidy for 2.5 kW?",
+    "prompt_version": "v2"
+  }'
+```
+
+### 4. Prompt Evaluation Results
+
+See `eval/prompt_compare.md` for detailed analysis:
+
+| Metric | Prompt v1 | Prompt v2 | Winner |
+|--------|-----------|-----------|---------|
+| Citation Accuracy | 60% | **100%** | v2 |
+| Step-by-Step Math | 0% | **100%** | v2 |
+| Answer Completeness | 60% | **100%** | v2 |
+| Out-of-Scope Detection | 100% | 100% | Tie |
+| JSON Validity | 70% | **90%** | v2 |
+
+**Conclusion:** Prompt v2 with step-by-step rubric and few-shot examples significantly outperforms basic prompting.
+
+---
+
 ## Day 5: LLM Integration & Chat
 
 ### 1. Get Groq API Key

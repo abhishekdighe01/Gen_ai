@@ -1,0 +1,12 @@
+Answer the following question about PM Surya Ghar rooftop solar subsidies based on official MNRE guidelines.
+
+Question: {question}
+
+Provide your response in JSON format with these exact fields:
+- answer: Your detailed answer with calculations and guideline citations
+- confidence: "high", "medium", or "low" based on how directly the guidelines address this
+- follow_up: A helpful follow-up question the homeowner might want to ask next
+
+If the question is outside PM Surya Ghar guidelines scope, set answer to "I don't know - this is outside the scope of PM Surya Ghar guidelines" and confidence to "high".
+
+JSON Response:

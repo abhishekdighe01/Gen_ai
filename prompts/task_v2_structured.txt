@@ -1,0 +1,79 @@
+You will answer questions about PM Surya Ghar rooftop solar subsidies following this structured approach:
+
+STEP 1: UNDERSTAND THE QUESTION
+Identify what the homeowner is asking:
+- Subsidy calculation? → Use MNRE Section 5(h) CFA rates
+- Eligibility? → Check Section 5(b) and 5(d) criteria
+- Technical specs? → Refer to Section 5(k) and warranty requirements
+- Out-of-scope (tariffs, vendors, loans)? → Return "I don't know"
+
+STEP 2: RETRIEVE RELEVANT GUIDELINES
+Match question to official MNRE guidelines:
+- CFA rates: ₹30,000/kW (first 2 kW), ₹18,000/kW (2-3 kW), capped at ₹78,000
+- Eligibility: Residential only, grid-connected, DCR modules required
+- Process: DISCOM approval, net metering, 5-year CMC warranty
+- Disbursement: 90% after commissioning, 10% after performance report
+
+STEP 3: CALCULATE OR EXPLAIN
+For subsidy calculations, show step-by-step math:
+Example: "2.5 kW system = (2.0 × ₹30,000) + (0.5 × ₹18,000) = ₹60,000 + ₹9,000 = ₹69,000"
+
+For eligibility or process questions, cite specific sections.
+
+STEP 4: ASSESS CONFIDENCE
+- HIGH: Question directly answered by specific guideline section with exact numbers
+- MEDIUM: General guideline information without precise section or requires interpretation
+- LOW: Question touches multiple aspects or needs additional user context
+
+STEP 5: SUGGEST FOLLOW-UP
+Provide a natural next question the homeowner should consider:
+- After subsidy: Ask about terrace area requirements
+- After eligibility: Ask about DCR module verification
+- After installation: Ask about DISCOM timelines
+
+---
+
+FEW-SHOT EXAMPLES:
+
+EXAMPLE 1 (Subsidy Calculation):
+Question: "How much subsidy for 3 kW?"
+Answer: "For a 3 kW rooftop solar system, the Central Financial Assistance (CFA) is ₹78,000. Calculation: First 2 kW = 2.0 × ₹30,000 = ₹60,000; Additional 1 kW = 1.0 × ₹18,000 = ₹18,000; Total = ₹78,000. This is per MNRE Guidelines Section 5(h)."
+Confidence: "high"
+Follow-up: "Do I have enough terrace space for a 3 kW system?"
+
+EXAMPLE 2 (Eligibility):
+Question: "Can I get subsidy for imported solar panels?"
+Answer: "No, imported solar panels (non-DCR modules) are NOT eligible for Central Financial Assistance under PM Surya Ghar. Solar modules must be manufactured domestically using domestically manufactured solar cells, as per MNRE Guidelines Section 5(m). Only DCR-compliant modules qualify for CFA."
+Confidence: "high"
+Follow-up: "How do I verify if my vendor's panels are DCR-compliant?"
+
+EXAMPLE 3 (Out-of-Scope):
+Question: "What will MSEDCL's electricity tariff be next year?"
+Answer: "I don't know - this question is outside the scope of PM Surya Ghar: Muft Bijli Yojana guidelines. Electricity tariff rates are determined by state regulatory commissions and are not covered in the solar subsidy scheme documentation."
+Confidence: "high"
+Follow-up: "Would you like to know how rooftop solar can reduce your current electricity bill?"
+
+---
+
+NOW ANSWER THIS QUESTION:
+
+Question: {question}
+
+Context from retrieved guidelines:
+{context}
+
+Provide your response in JSON format with these exact fields:
+{{
+  "answer": "Your detailed answer with step-by-step calculations, specific guideline section citations (e.g., 'per MNRE Guidelines Section 5(h)'), and clear explanations",
+  "confidence": "high" | "medium" | "low",
+  "follow_up": "A natural, helpful follow-up question the homeowner might want to ask next"
+}}
+
+CRITICAL RULES:
+1. If question is out-of-scope, answer MUST start with "I don't know"
+2. For subsidy calculations, show complete step-by-step math
+3. Always cite specific MNRE guideline section numbers
+4. Use exact CFA rates: ₹30,000/kW (first 2 kW), ₹18,000/kW (2-3 kW)
+5. Return ONLY valid JSON, no extra text before or after
+
+JSON Response:

@@ -6,7 +6,7 @@ import os
 
 from app.records import load_records, search, get_by_id
 from app.smart_search import smart_search
-from app.llm_client import get_llm_client, get_system_prompt, build_rag_context
+from app.llm import generate_chat_response
 
 
 # Create FastAPI application
@@ -28,6 +28,7 @@ class ChatRequest(BaseModel):
     question: str
     use_rag: bool = True
     top_k: int = 5
+    prompt_version: str = "v2"  # "v1" or "v2"
 
 
 # Home endpoint
@@ -190,24 +191,28 @@ def submit_question(request: QuestionRequest):
     }
 
 
-# LLM-powered chat endpoint with RAG
+# LLM-powered chat endpoint with RAG (Day 6 Enhanced)
 @app.post("/chat")
 def chat_with_llm(request: ChatRequest):
     """
     Answer user questions using LLM with RAG (Retrieval-Augmented Generation).
     
+    Day 6 Enhancement:
+    - Returns structured JSON: {answer, confidence, follow_up}
+    - Supports prompt version selection (v1 or v2)
+    - Offline fallback when no API key configured
+    
     Process:
     1. Validate question
-    2. Search for relevant records (RAG)
-    3. Build context from retrieved records
-    4. Send to LLM with system prompt
-    5. Return LLM-generated answer with sources
+    2. Retrieve relevant records if use_rag=true
+    3. Call LLM with selected prompt version
+    4. Return structured response
     
     Args:
-        request: ChatRequest with question, use_rag flag, and top_k
+        request: ChatRequest with question, use_rag, top_k, prompt_version
     
     Returns:
-        JSON with answer, sources, and metadata
+        JSON with answer, confidence, follow_up, and metadata
     """
     question = request.question.strip()
     
@@ -219,81 +224,29 @@ def chat_with_llm(request: ChatRequest):
         )
     
     try:
-        # Check if LLM is configured
-        api_key = os.getenv("GROQ_API_KEY")
-        if not api_key or api_key == "your_groq_api_key_here" or api_key == "gsk_demo_key_for_testing":
-            return {
-                "question": question,
-                "answer": "LLM is not configured. Please set GROQ_API_KEY in .env file. Get your free API key from https://console.groq.com/keys",
-                "sources": [],
-                "rag_enabled": False,
-                "error": "API key not configured"
-            }
-        
-        # Step 1: RAG - Retrieve relevant records
-        rag_context = None
-        retrieved_sources = []
-        
-        if request.use_rag:
-            smart_results = smart_search(question, top_k=request.top_k)
-            
-            if smart_results:
-                # Convert to dict format for context building
-                retrieved_records = []
-                for record, score in smart_results:
-                    rec_dict = {
-                        "record_id": record.record_id,
-                        "topic": record.topic,
-                        "key_rule": record.key_rule,
-                        "source_section": record.source_section,
-                        "relevance_score": round(score, 4)
-                    }
-                    retrieved_records.append(rec_dict)
-                    
-                    # Track sources for response
-                    retrieved_sources.append({
-                        "record_id": record.record_id,
-                        "topic": record.topic,
-                        "source_section": record.source_section,
-                        "relevance_score": round(score, 4)
-                    })
-                
-                # Build context string
-                rag_context = build_rag_context(retrieved_records)
-        
-        # Step 2: Initialize LLM client
-        llm_client = get_llm_client()
-        
-        # Step 3: Get system prompt
-        system_prompt = get_system_prompt()
-        
-        # Step 4: Generate LLM response
-        answer = llm_client.generate(
-            prompt=question,
-            system_prompt=system_prompt,
-            context=rag_context,
+        # Generate response using new llm.py module
+        response = generate_chat_response(
+            question=question,
+            prompt_version=request.prompt_version,
+            use_rag=request.use_rag,
+            top_k=request.top_k
         )
         
-        # Step 5: Return structured response
-        return {
+        # Add metadata
+        result = {
             "question": question,
-            "answer": answer,
-            "sources": retrieved_sources,
+            "answer": response["answer"],
+            "confidence": response["confidence"],
+            "follow_up": response["follow_up"],
+            "prompt_version": request.prompt_version,
             "rag_enabled": request.use_rag,
-            "rag_results_count": len(retrieved_sources),
-            "model": llm_client.model,
-            "provider": llm_client.provider
+            "provider": os.getenv("LLM_PROVIDER", "groq"),
+            "model": os.getenv("LLM_MODEL", "llama-3.3-70b-versatile")
         }
-    
-    except ValueError as e:
-        # Configuration error (missing API key, etc.)
-        raise HTTPException(
-            status_code=500,
-            detail=f"Configuration error: {str(e)}"
-        )
+        
+        return result
     
     except Exception as e:
-        # LLM API error or other failures
         raise HTTPException(
             status_code=500,
             detail=f"Failed to generate answer: {str(e)}"
