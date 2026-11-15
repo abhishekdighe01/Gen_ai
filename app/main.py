@@ -8,6 +8,13 @@ from app.records import load_records, search, get_by_id
 from app.smart_search import smart_search
 from app.llm import generate_chat_response
 
+# Day 7: Vector store for semantic search
+try:
+    from app.vectorstore import query_vectorstore
+    VECTORSTORE_AVAILABLE = True
+except ImportError:
+    VECTORSTORE_AVAILABLE = False
+
 
 # Create FastAPI application
 app = FastAPI(
@@ -250,4 +257,58 @@ def chat_with_llm(request: ChatRequest):
         raise HTTPException(
             status_code=500,
             detail=f"Failed to generate answer: {str(e)}"
+        )
+
+
+# Semantic search endpoint (Day 7)
+@app.get("/search/semantic")
+def search_semantic(
+    q: str = Query(..., min_length=1, description="Search query"),
+    limit: int = Query(default=5, ge=1, le=20, description="Number of results")
+):
+    """
+    Semantic search using dense vector embeddings (ChromaDB).
+    
+    Day 7 Feature:
+    - Uses sentence-transformers embeddings
+    - Queries persistent ChromaDB vector store
+    - Returns chunks with metadata and similarity scores
+    
+    Args:
+        q: Search query
+        limit: Number of results (1-20)
+    
+    Returns:
+        JSON with query, search_method, total_results, and results list
+    """
+    if not VECTORSTORE_AVAILABLE:
+        raise HTTPException(
+            status_code=503,
+            detail="Semantic search not available. Install chromadb and sentence-transformers."
+        )
+    
+    try:
+        # Query vector store
+        results = query_vectorstore(q, top_k=limit)
+        
+        if not results:
+            raise HTTPException(
+                status_code=404,
+                detail="No matching chunks found"
+            )
+        
+        return {
+            "query": q,
+            "search_method": "semantic_embeddings",
+            "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+            "total_results": len(results),
+            "results": results
+        }
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Semantic search failed: {str(e)}"
         )
