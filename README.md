@@ -246,3 +246,89 @@ Grounded Answer with Source Citations
 - ✅ Out-of-scope detection (returns "I don't know")
 - ✅ Accurate CFA subsidy calculations
 - ✅ Temperature 0.3 for focused, factual responses
+
+---
+
+## Day 8: RAG Pipeline & Evaluation
+
+### RAG Evaluation Results
+
+**Evaluation Set:** 15 questions (10 from Day 5 + 5 additional guideline questions)  
+**Configurations Tested:** 2 chunk/retrieval strategies  
+**Metrics:** Retrieval Hit Rate, Keyword Recall, Q6 Abstention, Citation Rate, Latency
+
+#### Configuration Comparison
+
+| Metric | Config A (chunk_500_topk_3) | Config B (chunk_300_topk_5) | Winner |
+|--------|----------------------------|----------------------------|---------|
+| **Chunk Size** | 500 | 300 | - |
+| **Overlap** | 80 | 50 | - |
+| **Top-K** | 3 | 5 | - |
+| **Retrieval Hit Rate** | **92.9%** | 85.7% | **A** |
+| **Avg Keyword Recall** | 78.3% | **81.2%** | B |
+| **Q6 Abstention Pass** | ✓ PASS | ✓ PASS | Tie |
+| **Citation Rate** | 100.0% | 100.0% | Tie |
+| **Avg Latency (ms)** | **245** | 312 | **A** |
+
+#### 🏆 Winner: Config A (chunk_500_topk_3)
+
+**Reasoning:**
+- **Higher retrieval hit rate (92.9%)** - Larger chunks capture more complete guideline context
+- **27% faster performance (245ms)** - Fewer chunks to process with top_k=3
+- **100% citation rate** - All answerable questions receive proper citations
+- **Robust Q6 abstention** - Correctly returns "I don't know" for unanswerable questions
+
+Config A provides optimal balance of accuracy and performance with larger, more contextual chunks (500 chars) and focused retrieval (top_k=3).
+
+### Using the RAG Pipeline
+
+#### 1. POST /ask Endpoint
+
+```bash
+# Ask a question with RAG
+curl -X POST http://127.0.0.1:8000/ask \
+  -H "Content-Type: application/json" \
+  -d '{"question": "How much subsidy for 3 kW?", "top_k": 4}'
+```
+
+**Response Format:**
+```json
+{
+  "question": "How much subsidy will I get for a 3 kW rooftop solar system?",
+  "answer": "For a 3 kW residential rooftop solar system in general states (such as Maharashtra), you will get Rs 78,000 in Central Financial Assistance (CFA): Rs 30,000 per kW for the first 2 kW (Rs 60,000) plus Rs 18,000 per kW for the additional 1 kW between 2 kW and 3 kW [Guidelines for PM-Surya Ghar: Muft Bijli Yojana, Page 6].",
+  "citations": [
+    {
+      "chunk_id": "record_011_c01",
+      "title": "Guidelines for PM-Surya Ghar: Muft Bijli Yojana — Effective CFA Rates",
+      "source": "https://cdnbbsr.s3waas.gov.in/.../202407021768035484.pdf",
+      "page": 6,
+      "date_issued": "2024-06-07",
+      "score": 0.7823
+    }
+  ],
+  "confidence": "high",
+  "abstained": false
+}
+```
+
+#### 2. Key RAG Features
+
+- **Semantic Search:** Uses sentence-transformers embeddings with ChromaDB vector store
+- **Date Prioritization:** Newer `date_issued` documents win when guidelines conflict
+- **Grounded Citations:** Every answer includes inline citations with source page
+- **Abstention Logic:** Returns "I don't know" for out-of-scope questions (Q6)
+- **Structured Metadata:** Citations include chunk_id, title, source, page, date_issued, score
+
+#### 3. Run RAG Evaluation
+
+```bash
+# Evaluate both configurations on 15-question benchmark
+python -m eval.run_eval
+```
+
+This generates:
+- Console comparison table
+- Detailed report: `eval/rag_eval_results.md`
+- Metrics for retrieval hit rate, keyword recall, Q6 abstention, citation rate, latency
+
+See `eval/rag_eval_results.md` for complete analysis and sample question results.

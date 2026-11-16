@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "How much subsidy will I get for a 3 kW rooftop solar system?",
+    "expected_keywords": ["78,000", "Rs", "60,000", "18,000", "CFA", "3 kW"],
+    "expected_source_page": 6,
+    "answerable": true,
+    "reference_answer": "Rs 78,000 CFA for general states (Rs 60,000 for first 2 kW + Rs 18,000 for additional 1 kW)"
+  },
+  {
+    "id": 2,
+    "question": "How much terrace area do I need for 1 kW?",
+    "expected_keywords": ["10 square", "metres", "100 sq", "area", "kW"],
+    "expected_source_page": 12,
+    "answerable": true,
+    "reference_answer": "Approximately 10 square meters (100 sq ft) per kW"
+  },
+  {
+    "id": 3,
+    "question": "What is the minimum warranty on solar panels under this scheme?",
+    "expected_keywords": ["5 year", "warranty", "CMC", "90%", "80%", "performance"],
+    "expected_source_page": 8,
+    "answerable": true,
+    "reference_answer": "5-year warranty and 5-year free Comprehensive Maintenance Contract (CMC); >90% nominal power for 10 years, >80% for next 15 years"
+  },
+  {
+    "id": 4,
+    "question": "I want 4 kW on my house in Kopargaon. How much subsidy do I get, and do I still need net metering from MSEDCL?",
+    "expected_keywords": ["78,000", "capped", "3 kW", "net metering", "MSEDCL", "DISCOM"],
+    "expected_source_page": 6,
+    "answerable": true,
+    "reference_answer": "Rs 78,000 CFA (capped at 3 kW, no additional CFA beyond 3 kW). Yes, net metering from MSEDCL is mandatory."
+  },
+  {
+    "id": 5,
+    "question": "My vendor says I must pay full cost first and subsidy comes later. Is that right, and in how many days is the subsidy released?",
+    "expected_keywords": ["Capex", "pay", "15 days", "commissioning", "DISCOM", "inspection"],
+    "expected_source_page": 7,
+    "answerable": true,
+    "reference_answer": "Yes, under Capex mode you pay first. CFA is processed within 15 days of approval by the DISCOM."
+  },
+  {
+    "id": 6,
+    "question": "What will MSEDCL's electricity tariff per unit be next year?",
+    "expected_keywords": ["don't know", "not contain", "out of scope"],
+    "expected_source_page": null,
+    "answerable": false,
+    "reference_answer": "I don't know. This question is outside the scope of PM Surya Ghar guidelines."
+  },
+  {
+    "id": 7,
+    "question": "How much Central Financial Assistance (CFA) will I get if I install a 2.5 kW rooftop solar system on my house?",
+    "expected_keywords": ["69,000", "Rs", "60,000", "9,000", "2.5 kW"],
+    "expected_source_page": 6,
+    "answerable": true,
+    "reference_answer": "Rs 69,000 CFA for general states (Rs 60,000 for first 2 kW + Rs 9,000 for additional 0.5 kW)"
+  },
+  {
+    "id": 8,
+    "question": "Are imported solar panels (non-DCR modules) eligible for central subsidy under PM Surya Ghar: Muft Bijli Yojana?",
+    "expected_keywords": ["No", "DCR", "domestic", "manufactured", "ineligible"],
+    "expected_source_page": 9,
+    "answerable": true,
+    "reference_answer": "No, solar modules must be manufactured domestically using domestically manufactured solar cells. Non-DCR modules are ineligible for CFA."
+  },
+  {
+    "id": 9,
+    "question": "If I install a 3 kW inverter with 2 kW of solar panels, is the subsidy calculated on the inverter capacity or the solar module capacity?",
+    "expected_keywords": ["module", "DC capacity", "2 kW", "60,000", "not inverter"],
+    "expected_source_page": 8,
+    "answerable": true,
+    "reference_answer": "CFA is calculated based on the rated DC capacity of the solar module system, not the inverter capacity. For 2 kW of panels, CFA = Rs 60,000."
+  },
+  {
+    "id": 10,
+    "question": "Can a Group Housing Society (GHS) or Resident Welfare Association (RWA) get rooftop solar subsidy for common facilities and EV charging?",
+    "expected_keywords": ["Yes", "GHS", "RWA", "18,000", "common facilities", "EV charging", "500 kWp"],
+    "expected_source_page": 6,
+    "answerable": true,
+    "reference_answer": "Yes, GHS and RWA can receive CFA for common facilities including EV charging, up to 500 kWp at 3 kWp per house. CFA follows the additional residential capacity rate (Rs 18,000 per kW for general states)."
+  },
+  {
+    "id": 11,
+    "question": "What is the benchmark cost for rooftop solar installations in general states?",
+    "expected_keywords": ["50,000", "45,000", "benchmark", "general states", "first 2 kW", "additional"],
+    "expected_source_page": 6,
+    "answerable": true,
+    "reference_answer": "Rs 50,000 per kW for the first 2 kW and Rs 45,000 per kW for additional capacity in general states."
+  },
+  {
+    "id": 12,
+    "question": "What is the time period for grievance redressal under the PM Surya Ghar scheme?",
+    "expected_keywords": ["30 days", "grievance", "National Portal", "Call Centre"],
+    "expected_source_page": 15,
+    "answerable": true,
+    "reference_answer": "Grievances are resolved within a period of 30 days through the National Portal or National Call Centre."
+  },
+  {
+    "id": 13,
+    "question": "Which organization is designated as the National Programme Implementation Agency (NPIA) for PM Surya Ghar?",
+    "expected_keywords": ["REC Limited", "NPIA", "National Programme", "Implementation Agency"],
+    "expected_source_page": 17,
+    "answerable": true,
+    "reference_answer": "REC Limited is designated as the National Programme Implementation Agency (NPIA) at the national level."
+  },
+  {
+    "id": 14,
+    "question": "What is the total financial outlay of PM Surya Ghar: Muft Bijli Yojana and till which financial year is it implemented?",
+    "expected_keywords": ["75,021 crore", "65,700 crore", "FY 2026-27", "31st March 2027", "outlay"],
+    "expected_source_page": 2,
+    "answerable": true,
+    "reference_answer": "Total financial outlay of Rs 75,021 crore (including Rs 65,700 crore for residential CFA) implemented till FY 2026-27 (31st March 2027)."
+  },
+  {
+    "id": 15,
+    "question": "What is the Payment Security Mechanism (PSM) for RESCO vendors, and what is the bank guarantee requirement?",
+    "expected_keywords": ["100 crore", "PSM", "2,000", "25 lakh", "bank guarantee", "RESCO", "5 years"],
+    "expected_source_page": 5,
+    "answerable": true,
+    "reference_answer": "Rs 100 crore corpus for Payment Security Mechanism (PSM-RTS) with Rs 2,000 per installation PSM fee, and RESCO vendors must submit a bank guarantee of Rs 25 lakh (valid for at least 5 years)."
+  }
+]

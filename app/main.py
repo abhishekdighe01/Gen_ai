@@ -15,6 +15,13 @@ try:
 except ImportError:
     VECTORSTORE_AVAILABLE = False
 
+# Day 8: RAG pipeline
+try:
+    from app.rag import answer_question
+    RAG_AVAILABLE = True
+except ImportError:
+    RAG_AVAILABLE = False
+
 
 # Create FastAPI application
 app = FastAPI(
@@ -36,6 +43,12 @@ class ChatRequest(BaseModel):
     use_rag: bool = True
     top_k: int = 5
     prompt_version: str = "v2"  # "v1" or "v2"
+
+
+# Request model for RAG /ask endpoint (Day 8)
+class AskRequest(BaseModel):
+    question: str
+    top_k: Optional[int] = 4
 
 
 # Home endpoint
@@ -311,4 +324,55 @@ def search_semantic(
         raise HTTPException(
             status_code=500,
             detail=f"Semantic search failed: {str(e)}"
+        )
+
+
+# RAG endpoint with grounded citations (Day 8)
+@app.post("/ask")
+def ask_rag_endpoint(request: AskRequest):
+    """
+    RAG-powered Q&A with grounded citations from PM Surya Ghar guidelines.
+    
+    Day 8 Feature:
+    - Retrieves top-k semantic chunks with date prioritization
+    - Generates grounded answers with inline citations
+    - Returns "I don't know" for unanswerable queries (Q6)
+    - Includes structured citation metadata
+    
+    Args:
+        request: AskRequest with question and optional top_k
+    
+    Returns:
+        JSON with question, answer, citations, confidence
+    """
+    if not RAG_AVAILABLE:
+        raise HTTPException(
+            status_code=503,
+            detail="RAG pipeline not available. Check app/rag.py setup."
+        )
+    
+    question = request.question.strip()
+    
+    if not question:
+        raise HTTPException(
+            status_code=400,
+            detail="Question cannot be empty"
+        )
+    
+    try:
+        # Call RAG pipeline
+        result = answer_question(question, top_k=request.top_k)
+        
+        return {
+            "question": result["question"],
+            "answer": result["answer"],
+            "citations": result["citations"],
+            "confidence": result["confidence"],
+            "abstained": result.get("abstained", False),
+        }
+    
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"RAG processing failed: {str(e)}"
         )
