@@ -22,6 +22,13 @@ try:
 except ImportError:
     RAG_AVAILABLE = False
 
+# Day 9: Agent with tools and graph
+try:
+    from app.graph import run_graph_agent
+    AGENT_AVAILABLE = True
+except ImportError:
+    AGENT_AVAILABLE = False
+
 
 # Create FastAPI application
 app = FastAPI(
@@ -49,6 +56,13 @@ class ChatRequest(BaseModel):
 class AskRequest(BaseModel):
     question: str
     top_k: Optional[int] = 4
+
+
+# Request model for Agent /agent endpoint (Day 9)
+class AgentRequest(BaseModel):
+    question: str
+    thread_id: Optional[str] = "default"
+    approved: Optional[bool] = True
 
 
 # Home endpoint
@@ -375,4 +389,64 @@ def ask_rag_endpoint(request: AskRequest):
         raise HTTPException(
             status_code=500,
             detail=f"RAG processing failed: {str(e)}"
+        )
+
+
+# Agent endpoint with tools and approval gate (Day 9)
+@app.post("/agent")
+def agent_endpoint(request: AgentRequest):
+    """
+    LangGraph agent with solar CFA calculator tool and approval gate.
+    
+    Day 9 Features:
+    - Calls solar_cfa_calculator for capacity/subsidy/cost calculations
+    - Calls answer_question (RAG) for policy/guideline citations
+    - Multi-turn memory via thread_id
+    - Approval gate for >3 kW systems (subsidy capped)
+    - Combines tool outputs with RAG citations
+    
+    Args:
+        request: AgentRequest with question, thread_id, approved
+    
+    Returns:
+        JSON with answer, tools_used, tool_output, citations, approval_status, thread_id
+    """
+    if not AGENT_AVAILABLE:
+        raise HTTPException(
+            status_code=503,
+            detail="Agent not available. Check app/graph.py and dependencies (langgraph)."
+        )
+    
+    question = request.question.strip()
+    
+    if not question:
+        raise HTTPException(
+            status_code=400,
+            detail="Question cannot be empty"
+        )
+    
+    try:
+        # Call graph agent
+        result = run_graph_agent(
+            question=question,
+            thread_id=request.thread_id,
+            approved=request.approved
+        )
+        
+        return {
+            "question": result["question"],
+            "answer": result["answer"],
+            "tools_used": result.get("tools_used", []),
+            "tool_output": result.get("tool_output", {}),
+            "citations": result.get("citations", []),
+            "approval_status": result.get("approval_status", "not_required"),
+            "requires_approval": result.get("requires_approval", False),
+            "thread_id": result["thread_id"],
+            "history_length": len(result.get("history", [])),
+        }
+    
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Agent processing failed: {str(e)}"
         )
