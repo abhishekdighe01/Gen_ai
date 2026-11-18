@@ -332,3 +332,94 @@ This generates:
 - Metrics for retrieval hit rate, keyword recall, Q6 abstention, citation rate, latency
 
 See `eval/rag_eval_results.md` for complete analysis and sample question results.
+
+---
+
+## Day 10: Streamlit UI & Signature Payback Chart
+
+### Interactive Chat & Solar Calculator
+
+**SuryaGharSathi** now has a complete Streamlit web interface with:
+
+#### 🎯 Key Features
+
+1. **Chat Assistant** (Tab 1)
+   - Multi-turn conversations with `/ask` (RAG) or `/agent` (with tools)
+   - Real-time display of official MNRE citations
+   - Thumbs up/down feedback persistence (`data/feedback.jsonl`)
+   - Tool usage badges (shows when `solar_cfa_calculator` is called)
+   - Automatic fallback to direct function calls if FastAPI unavailable
+
+2. **Solar Payback Calculator** ⭐ **Signature Feature** (Tab 2)
+   - **Interactive Inputs:**
+     - Monthly MSEDCL Bill: ₹500-₹15,000 (default: ₹2,000)
+     - System Size: 1.0-10.0 kW (default: 3.0 kW)
+     - Available Terrace Area: Shadow-free roof space in sq m
+     - State Category: General vs Special Category states
+   
+   - **KPI Metrics Display:**
+     - Gross System Cost (MNRE benchmark)
+     - CFA Subsidy Amount
+     - Net Cost to Homeowner (after subsidy)
+     - Payback Period in Years
+   
+   - **Year-by-Year Payback Chart:**
+     - 15-year cumulative savings vs net cost line chart
+     - Visual break-even point marker
+     - Orange payback year highlight
+   
+   - **2 kW vs 3 kW Comparison:**
+     - Side-by-side cards for Kopargaon homeowner persona
+     - Recommendation based on maximum CFA utilization
+   
+   - **Roof Area Check:**
+     - Validates available terrace vs required area (10 sq m per kW)
+     - Suggests optimal system size if space insufficient
+
+3. **Safety & Compliance**
+   - Mandatory MNRE safety disclaimer visible in sidebar and footer
+   - Links to official national portal and DISCOM
+   - Clear note that this is informational guidance, not financial advice
+
+### Screenshot
+
+![SuryaGharSathi UI - Payback Chart](docs/suryagharsathi_ui.png)
+
+*3 kW Rooftop Solar Payback Analysis showing break-even at Year 6 for ₹2,000/month electricity bill*
+
+### Running the UI
+
+```bash
+# Start FastAPI backend (in one terminal)
+uvicorn app.main:app --reload
+
+# Start Streamlit UI (in another terminal)
+streamlit run ui/app.py
+```
+
+**Fallback Mode:** If the FastAPI backend is not running, the UI automatically falls back to direct function calls (`answer_question`, `run_graph_agent`, `solar_cfa_calculator`), so live demos never crash.
+
+### UI Configuration (Sidebar)
+
+- **Mode Selector:** Choose between Agent (with tools) or RAG Q&A
+- **Backend URL:** Default `http://127.0.0.1:8000`
+- **Thread ID:** For multi-turn conversation memory
+- **Approval Checkbox:** Pre-approve >3 kW systems where CFA is capped
+- **Sample Questions:** 6 quick-click buttons including Q6 (abstention test)
+- **Clear Chat Button:** Reset conversation history
+
+### Feedback Tracking
+
+All thumbs up/down ratings are saved to `data/feedback.jsonl`:
+
+```json
+{"timestamp": "2024-01-15T10:30:00", "question": "How much subsidy for 3 kW?", "answer": "For a 3 kW residential...", "rating": "helpful", "thread_id": "user123"}
+```
+
+### Technology Stack (Day 10)
+
+- **Frontend:** Streamlit 1.35+
+- **Charts:** Matplotlib 3.8+
+- **Backend:** FastAPI + LangGraph
+- **Storage:** JSONL for feedback persistence
+- **Deployment:** Local-first with API fallback
