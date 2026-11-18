@@ -385,7 +385,9 @@ See `eval/rag_eval_results.md` for complete analysis and sample question results
 
 ![SuryaGharSathi UI - Payback Chart](docs/suryagharsathi_ui.png)
 
-*3 kW Rooftop Solar Payback Analysis showing break-even at Year 6 for ₹2,000/month electricity bill*
+*Payback Chart for 3 kW system showing ₹78,000 CFA subsidy, ₹67,000 net cost, and 4-year payback (₹16,800 annual savings at ₹2,000/month bill with 70% solar offset)*
+
+**Note:** The image above is a generated chart preview. For the live demo, launch the Streamlit UI to see the full interactive interface with chat, citations display, and real-time calculator.
 
 ### Running the UI
 

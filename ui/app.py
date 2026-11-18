@@ -26,11 +26,18 @@ matplotlib.use('Agg')  # Use non-interactive backend
 # Add parent directory to path for direct imports (fallback mode)
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-# Try to import for fallback mode
+# Import tools separately (always needed for payback calculator)
+try:
+    from app.tools import solar_cfa_calculator
+    TOOLS_AVAILABLE = True
+except ImportError:
+    TOOLS_AVAILABLE = False
+    st.error("⚠️ app.tools not available - payback calculator disabled")
+
+# Try to import for fallback mode (chat features)
 try:
     from app.rag import answer_question
     from app.graph import run_graph_agent
-    from app.tools import solar_cfa_calculator
     FALLBACK_AVAILABLE = True
 except ImportError:
     FALLBACK_AVAILABLE = False
@@ -106,6 +113,9 @@ if "thread_id" not in st.session_state:
 
 if "feedback_data" not in st.session_state:
     st.session_state.feedback_data = []
+
+if "pending" not in st.session_state:
+    st.session_state.pending = None
 
 
 def save_feedback(question: str, answer: str, rating: str, timestamp: str):
@@ -212,6 +222,10 @@ def calculate_payback_data(
     special_category: bool = False
 ) -> Dict[str, Any]:
     """Calculate year-by-year payback data."""
+    if not TOOLS_AVAILABLE:
+        st.error("Calculator tools not available")
+        return None
+    
     try:
         calc_result = solar_cfa_calculator(
             capacity_kw=capacity_kw,
@@ -223,16 +237,22 @@ def calculate_payback_data(
         annual_savings = monthly_bill * 12 * 0.70
         net_cost = calc_result['net_cost_inr']
         
+        # Calculate exact payback in years (decimal)
+        if annual_savings > 0:
+            payback_years_decimal = net_cost / annual_savings
+        else:
+            payback_years_decimal = None
+        
         # Year-by-year cumulative data
         years = list(range(0, 16))
         cumulative_savings = [annual_savings * year for year in years]
         net_cost_line = [net_cost] * len(years)
         
-        # Find payback year
-        payback_year = None
+        # Find payback year (first whole year where cumulative >= net cost)
+        payback_year_whole = None
         for year, savings in enumerate(cumulative_savings):
             if savings >= net_cost:
-                payback_year = year
+                payback_year_whole = year
                 break
         
         return {
@@ -240,7 +260,8 @@ def calculate_payback_data(
             "years": years,
             "cumulative_savings": cumulative_savings,
             "net_cost_line": net_cost_line,
-            "payback_year": payback_year,
+            "payback_year_decimal": payback_years_decimal,
+            "payback_year_whole": payback_year_whole,
             "annual_savings": annual_savings,
         }
     
@@ -256,19 +277,23 @@ def plot_payback_chart(payback_data: Dict[str, Any], capacity_kw: float):
     years = payback_data["years"]
     cumulative_savings = payback_data["cumulative_savings"]
     net_cost_line = payback_data["net_cost_line"]
-    payback_year = payback_data["payback_year"]
+    payback_year_whole = payback_data["payback_year_whole"]
+    payback_year_decimal = payback_data["payback_year_decimal"]
     
     # Plot lines
     ax.plot(years, cumulative_savings, 'g-', linewidth=2, label='Cumulative Electricity Savings')
     ax.plot(years, net_cost_line, 'r--', linewidth=2, label='Net System Cost (after CFA)')
     
-    # Mark payback point
-    if payback_year:
-        ax.axvline(x=payback_year, color='orange', linestyle=':', linewidth=2, alpha=0.7)
-        ax.plot(payback_year, net_cost_line[0], 'o', markersize=10, color='orange', 
-                label=f'Break-Even at Year {payback_year}')
-        ax.text(payback_year, net_cost_line[0] * 1.1, f'Payback: {payback_year} years', 
-                ha='center', fontsize=10, fontweight='bold', color='orange')
+    # Mark payback point (use whole year for visual)
+    if payback_year_whole:
+        ax.axvline(x=payback_year_whole, color='orange', linestyle=':', linewidth=2, alpha=0.7)
+        ax.plot(payback_year_whole, net_cost_line[0], 'o', markersize=10, color='orange', 
+                label=f'Break-Even at Year {payback_year_whole}')
+        # Show decimal value in annotation
+        if payback_year_decimal:
+            ax.text(payback_year_whole, net_cost_line[0] * 1.1, 
+                   f'Payback: {payback_year_decimal:.1f} years', 
+                   ha='center', fontsize=10, fontweight='bold', color='orange')
     
     # Styling
     ax.set_xlabel('Years', fontsize=12, fontweight='bold')
@@ -346,7 +371,7 @@ with st.sidebar:
     
     for i, q in enumerate(sample_questions):
         if st.button(q, key=f"sample_{i}"):
-            st.session_state.messages.append({"role": "user", "content": q})
+            st.session_state.pending = q
             st.rerun()
     
     st.divider()
@@ -399,7 +424,7 @@ with tab1:
                     message["content"])
     
     # Chat input
-    if prompt := st.chat_input("Ask about PM Surya Ghar subsidies, requirements, or payback..."):
+    if prompt := (st.chat_input("Ask about PM Surya Ghar subsidies, requirements, or payback...") or st.session_state.pop("pending", None)):
         # Add user message
         st.session_state.messages.append({"role": "user", "content": prompt})
         
@@ -548,11 +573,11 @@ with tab2:
                     )
                 
                 with metric_cols[3]:
-                    if calc['estimated_payback_years']:
+                    if payback_data['payback_year_decimal']:
                         st.metric(
                             label="Payback Period",
-                            value=f"{calc['estimated_payback_years']} years",
-                            help="Time to recover net investment"
+                            value=f"{payback_data['payback_year_decimal']:.1f} years",
+                            help="Time to recover net investment through electricity savings"
                         )
                     else:
                         st.metric(label="Payback Period", value="N/A")
@@ -586,8 +611,9 @@ with tab2:
                 fig = plot_payback_chart(payback_data, system_size)
                 st.pyplot(fig)
                 
-                st.caption(f"Assumptions: ₹{monthly_bill}/month electricity bill, 70% bill offset by solar, "
-                         f"{system_size} kW system, {calc['state_category']} state rates")
+                st.caption(f"**Assumptions:** ₹{monthly_bill}/month electricity bill, 70% bill offset by solar generation, "
+                         f"₹50,000/kW benchmark cost (first 2 kW) and ₹45,000/kW (additional capacity) per MNRE guidelines Section 5(g), "
+                         f"{calc['state_category']} state CFA rates")
                 
                 st.divider()
                 
@@ -609,23 +635,32 @@ with tab2:
                         - **Gross Cost:** ₹{scenario_2kw['calc_result']['benchmark_cost_inr']:,.0f}
                         - **Net Cost:** ₹{scenario_2kw['calc_result']['net_cost_inr']:,.0f}
                         - **Roof Area:** {scenario_2kw['calc_result']['shadow_free_area_sq_m']} sq m
-                        - **Payback:** {scenario_2kw['payback_year']} years
+                        - **Payback:** {scenario_2kw['payback_year_decimal']:.1f} years
                         - **Annual Savings:** ₹{scenario_2kw['annual_savings']:,.0f}
                         """)
                     
                     with comp_col2:
-                        st.markdown("#### 3 kW System ⭐ Recommended")
+                        st.markdown("#### 3 kW System")
                         st.markdown(f"""
                         - **CFA Subsidy:** ₹{scenario_3kw['calc_result']['cfa_subsidy_inr']:,.0f}
                         - **Gross Cost:** ₹{scenario_3kw['calc_result']['benchmark_cost_inr']:,.0f}
                         - **Net Cost:** ₹{scenario_3kw['calc_result']['net_cost_inr']:,.0f}
                         - **Roof Area:** {scenario_3kw['calc_result']['shadow_free_area_sq_m']} sq m
-                        - **Payback:** {scenario_3kw['payback_year']} years
+                        - **Payback:** {scenario_3kw['payback_year_decimal']:.1f} years
                         - **Annual Savings:** ₹{scenario_3kw['annual_savings']:,.0f}
                         """)
                     
-                    st.info(f"💡 **Recommendation:** 3 kW system maximizes CFA subsidy (capped at ₹78,000) "
-                           f"and provides {scenario_3kw['payback_year']} year payback with your ₹2,000/month bill.")
+                    # Computed recommendation
+                    if scenario_3kw['calc_result']['cfa_subsidy_inr'] > scenario_2kw['calc_result']['cfa_subsidy_inr']:
+                        recommended = "3 kW"
+                        reason = f"maximizes CFA subsidy (₹{scenario_3kw['calc_result']['cfa_subsidy_inr']:,.0f} vs ₹{scenario_2kw['calc_result']['cfa_subsidy_inr']:,.0f})"
+                    else:
+                        recommended = "2 kW"
+                        reason = "provides adequate capacity for your consumption"
+                    
+                    st.info(f"💡 **Analysis:** {recommended} system {reason} "
+                           f"with payback in {scenario_3kw['payback_year_decimal'] if recommended == '3 kW' else scenario_2kw['payback_year_decimal']:.1f} years "
+                           f"for your ₹2,000/month bill. Note: This is informational analysis, not financial advice.")
                 
                 st.divider()
                 
