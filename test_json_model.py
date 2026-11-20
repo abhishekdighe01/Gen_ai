@@ -1,5 +1,6 @@
 
 import json
+
 from app.models import SolarRecord
 
 # Open the JSON file

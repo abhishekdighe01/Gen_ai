@@ -1,7 +1,6 @@
 
 import os
 
-
 folder = "data/processed"
 
 for filename in os.listdir(folder):

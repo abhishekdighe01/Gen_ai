@@ -1,12 +1,13 @@
 
+import os
+from typing import Optional
+
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
-from typing import Optional
-import os
 
-from app.records import load_records, search, get_by_id
-from app.smart_search import smart_search
 from app.llm import generate_chat_response
+from app.records import get_by_id, load_records, search
+from app.smart_search import smart_search
 
 # Day 7: Vector store for semantic search
 try:
@@ -146,7 +147,7 @@ def search_records(q: str = Query(..., min_length=1)):
     """
     # Try smart search first (TF-IDF + cosine similarity)
     smart_results = smart_search(q, top_k=10)
-    
+
     if smart_results:
         # Convert (Record, score) tuples to dict format for JSON response
         results = []
@@ -164,23 +165,23 @@ def search_records(q: str = Query(..., min_length=1)):
                 "relevance_score": round(score, 4)
             }
             results.append(result_dict)
-        
+
         return {
             "query": q,
             "search_method": "smart_search",
             "total_results": len(results),
             "results": results
         }
-    
+
     # Fallback to keyword search
     keyword_results = search(q)
-    
+
     if not keyword_results:
         raise HTTPException(
             status_code=404,
             detail="No matching records found"
         )
-    
+
     # Convert Record objects to dicts
     results = []
     for record in keyword_results:
@@ -230,33 +231,33 @@ def submit_question(request: QuestionRequest):
 def chat_with_llm(request: ChatRequest):
     """
     Answer user questions using LLM with RAG (Retrieval-Augmented Generation).
-    
+
     Day 6 Enhancement:
     - Returns structured JSON: {answer, confidence, follow_up}
     - Supports prompt version selection (v1 or v2)
     - Offline fallback when no API key configured
-    
+
     Process:
     1. Validate question
     2. Retrieve relevant records if use_rag=true
     3. Call LLM with selected prompt version
     4. Return structured response
-    
+
     Args:
         request: ChatRequest with question, use_rag, top_k, prompt_version
-    
+
     Returns:
         JSON with answer, confidence, follow_up, and metadata
     """
     question = request.question.strip()
-    
+
     # Validate question
     if not question:
         raise HTTPException(
             status_code=400,
             detail="Question cannot be empty"
         )
-    
+
     try:
         # Generate response using new llm.py module
         response = generate_chat_response(
@@ -265,7 +266,7 @@ def chat_with_llm(request: ChatRequest):
             use_rag=request.use_rag,
             top_k=request.top_k
         )
-        
+
         # Add metadata
         result = {
             "question": question,
@@ -277,9 +278,9 @@ def chat_with_llm(request: ChatRequest):
             "provider": os.getenv("LLM_PROVIDER", "groq"),
             "model": os.getenv("LLM_MODEL", "llama-3.3-70b-versatile")
         }
-        
+
         return result
-    
+
     except Exception as e:
         raise HTTPException(
             status_code=500,
@@ -295,16 +296,16 @@ def search_semantic(
 ):
     """
     Semantic search using dense vector embeddings (ChromaDB).
-    
+
     Day 7 Feature:
     - Uses sentence-transformers embeddings
     - Queries persistent ChromaDB vector store
     - Returns chunks with metadata and similarity scores
-    
+
     Args:
         q: Search query
         limit: Number of results (1-20)
-    
+
     Returns:
         JSON with query, search_method, total_results, and results list
     """
@@ -313,17 +314,17 @@ def search_semantic(
             status_code=503,
             detail="Semantic search not available. Install chromadb and sentence-transformers."
         )
-    
+
     try:
         # Query vector store
         results = query_vectorstore(q, top_k=limit)
-        
+
         if not results:
             raise HTTPException(
                 status_code=404,
                 detail="No matching chunks found"
             )
-        
+
         return {
             "query": q,
             "search_method": "semantic_embeddings",
@@ -331,7 +332,7 @@ def search_semantic(
             "total_results": len(results),
             "results": results
         }
-    
+
     except HTTPException:
         raise
     except Exception as e:
@@ -346,16 +347,16 @@ def search_semantic(
 def ask_rag_endpoint(request: AskRequest):
     """
     RAG-powered Q&A with grounded citations from PM Surya Ghar guidelines.
-    
+
     Day 8 Feature:
     - Retrieves top-k semantic chunks with date prioritization
     - Generates grounded answers with inline citations
     - Returns "I don't know" for unanswerable queries (Q6)
     - Includes structured citation metadata
-    
+
     Args:
         request: AskRequest with question and optional top_k
-    
+
     Returns:
         JSON with question, answer, citations, confidence
     """
@@ -364,19 +365,19 @@ def ask_rag_endpoint(request: AskRequest):
             status_code=503,
             detail="RAG pipeline not available. Check app/rag.py setup."
         )
-    
+
     question = request.question.strip()
-    
+
     if not question:
         raise HTTPException(
             status_code=400,
             detail="Question cannot be empty"
         )
-    
+
     try:
         # Call RAG pipeline
         result = answer_question(question, top_k=request.top_k)
-        
+
         return {
             "question": result["question"],
             "answer": result["answer"],
@@ -384,7 +385,7 @@ def ask_rag_endpoint(request: AskRequest):
             "confidence": result["confidence"],
             "abstained": result.get("abstained", False),
         }
-    
+
     except Exception as e:
         raise HTTPException(
             status_code=500,
@@ -397,17 +398,17 @@ def ask_rag_endpoint(request: AskRequest):
 def agent_endpoint(request: AgentRequest):
     """
     LangGraph agent with solar CFA calculator tool and approval gate.
-    
+
     Day 9 Features:
     - Calls solar_cfa_calculator for capacity/subsidy/cost calculations
     - Calls answer_question (RAG) for policy/guideline citations
     - Multi-turn memory via thread_id
     - Approval gate for >3 kW systems (subsidy capped)
     - Combines tool outputs with RAG citations
-    
+
     Args:
         request: AgentRequest with question, thread_id, approved
-    
+
     Returns:
         JSON with answer, tools_used, tool_output, citations, approval_status, thread_id
     """
@@ -416,15 +417,15 @@ def agent_endpoint(request: AgentRequest):
             status_code=503,
             detail="Agent not available. Check app/graph.py and dependencies (langgraph)."
         )
-    
+
     question = request.question.strip()
-    
+
     if not question:
         raise HTTPException(
             status_code=400,
             detail="Question cannot be empty"
         )
-    
+
     try:
         # Call graph agent
         result = run_graph_agent(
@@ -432,7 +433,7 @@ def agent_endpoint(request: AgentRequest):
             thread_id=request.thread_id,
             approved=request.approved
         )
-        
+
         return {
             "question": result["question"],
             "answer": result["answer"],
@@ -444,7 +445,7 @@ def agent_endpoint(request: AgentRequest):
             "thread_id": result["thread_id"],
             "history_length": len(result.get("history", [])),
         }
-    
+
     except Exception as e:
         raise HTTPException(
             status_code=500,

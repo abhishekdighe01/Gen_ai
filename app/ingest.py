@@ -9,14 +9,14 @@ Run with:
     python -m app.ingest
 """
 
+import json
 import os
 import re
-import json
 import shutil
+
 from PyPDF2 import PdfReader
 
 from app.models import Record
-
 
 # ---------------------------------------------------------------------------
 # Document metadata table
@@ -404,7 +404,6 @@ def parse_text_file(txt_path: str, meta: dict) -> list:
     page_blocks = re.split(r"--- Page (\d+) ---", full_text)
 
     # page_blocks alternates: [pre-first-page-text, page_num, page_text, page_num, page_text, ...]
-    current_pages = [1]
     paragraphs_seen = set()
 
     # Walk through the split result collecting (page_numbers, text) pairs

@@ -5,7 +5,6 @@ from pprint import pformat
 
 from data.sample_records import records
 
-
 # Section and page references from the MNRE guidelines
 references = {
     1: ("Section 1 - Background", [2]),

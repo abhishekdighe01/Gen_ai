@@ -11,7 +11,8 @@ Provides:
 """
 
 import os
-from typing import Optional, List, Dict
+from typing import Dict, List, Optional
+
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -29,14 +30,14 @@ except ImportError:
 class LLMClient:
     """
     LLM client wrapper for question answering with RAG context.
-    
+
     Supports:
     - Groq API (Llama 3.1, Mixtral)
     - System prompt injection
     - Context augmentation from retrieved records
     - Temperature and token controls
     """
-    
+
     def __init__(
         self,
         provider: str = "groq",
@@ -47,7 +48,7 @@ class LLMClient:
     ):
         """
         Initialize LLM client.
-        
+
         Args:
             provider: LLM provider ("groq" or "gemini")
             api_key: API key (reads from env if not provided)
@@ -56,33 +57,33 @@ class LLMClient:
             max_tokens: Maximum response tokens
         """
         self.provider = provider.lower()
-        
+
         # Load configuration from environment
         if api_key is None:
             if self.provider == "groq":
                 api_key = os.getenv("GROQ_API_KEY")
             elif self.provider == "gemini":
                 api_key = os.getenv("GEMINI_API_KEY")
-        
+
         if not api_key:
             raise ValueError(
                 f"No API key found for provider '{self.provider}'. "
                 f"Set {self.provider.upper()}_API_KEY in .env file."
             )
-        
+
         self.api_key = api_key
-        
+
         # Model selection
         if model is None:
             if self.provider == "groq":
                 model = os.getenv("GROQ_MODEL", "llama-3.1-70b-versatile")
             elif self.provider == "gemini":
                 model = os.getenv("GEMINI_MODEL", "gemini-pro")
-        
+
         self.model = model
         self.temperature = temperature
         self.max_tokens = max_tokens
-        
+
         # Initialize client
         if self.provider == "groq":
             if not GROQ_AVAILABLE:
@@ -92,7 +93,7 @@ class LLMClient:
             self.client = Groq(api_key=self.api_key)
         else:
             raise ValueError(f"Unsupported provider: {self.provider}")
-    
+
     def generate(
         self,
         prompt: str,
@@ -101,31 +102,31 @@ class LLMClient:
     ) -> str:
         """
         Generate LLM response for a user prompt.
-        
+
         Args:
             prompt: User question/prompt
             system_prompt: System instructions for the LLM
             context: Retrieved context from RAG (optional)
-        
+
         Returns:
             Generated response text
-        
+
         Raises:
             Exception: If API call fails
         """
         if not prompt or not prompt.strip():
             raise ValueError("Prompt cannot be empty")
-        
+
         # Build messages
         messages = []
-        
+
         # Add system prompt
         if system_prompt:
             messages.append({
                 "role": "system",
                 "content": system_prompt
             })
-        
+
         # Add context if provided
         if context:
             user_message = f"""Based on the following official guidelines:
@@ -138,12 +139,12 @@ Answer based only on the guidelines provided above. If the information is not in
 """
         else:
             user_message = prompt
-        
+
         messages.append({
             "role": "user",
             "content": user_message
         })
-        
+
         # Call LLM API
         try:
             if self.provider == "groq":
@@ -156,7 +157,7 @@ Answer based only on the guidelines provided above. If the information is not in
                 return response.choices[0].message.content.strip()
             else:
                 raise ValueError(f"Provider {self.provider} not implemented")
-        
+
         except Exception as e:
             raise Exception(f"LLM API call failed: {str(e)}")
 
@@ -164,7 +165,7 @@ Answer based only on the guidelines provided above. If the information is not in
 def get_system_prompt() -> str:
     """
     Return the system prompt for SuryaGharSathi.
-    
+
     This prompt instructs the LLM to:
     - Act as a PM Surya Ghar solar subsidy assistant
     - Answer based on official MNRE guidelines
@@ -198,28 +199,28 @@ Your target user is a homeowner in Kopargaon, Maharashtra (MSEDCL area) with a �
 def build_rag_context(retrieved_records: List[Dict]) -> str:
     """
     Build RAG context string from retrieved records.
-    
+
     Args:
         retrieved_records: List of record dicts with topic, key_rule, source_section
-    
+
     Returns:
         Formatted context string for LLM prompt
     """
     if not retrieved_records:
         return ""
-    
+
     context_parts = []
     for i, record in enumerate(retrieved_records, 1):
         topic = record.get("topic", "")
         rule = record.get("key_rule", "")
         section = record.get("source_section", "")
-        
+
         context_parts.append(
             f"[{i}] Topic: {topic}\n"
             f"    Rule: {rule}\n"
             f"    Source: {section}"
         )
-    
+
     return "\n\n".join(context_parts)
 
 
@@ -230,38 +231,38 @@ _llm_client_instance: Optional[LLMClient] = None
 def get_llm_client() -> LLMClient:
     """
     Get or create singleton LLM client instance.
-    
+
     Returns:
         Configured LLMClient instance
-    
+
     Raises:
         ValueError: If API key is missing
         ImportError: If groq package not installed
     """
     global _llm_client_instance
-    
+
     if _llm_client_instance is None:
         provider = os.getenv("LLM_PROVIDER", "groq")
         temperature = float(os.getenv("LLM_TEMPERATURE", "0.3"))
         max_tokens = int(os.getenv("LLM_MAX_TOKENS", "1000"))
-        
+
         _llm_client_instance = LLMClient(
             provider=provider,
             temperature=temperature,
             max_tokens=max_tokens,
         )
-    
+
     return _llm_client_instance
 
 
 if __name__ == "__main__":
     """Test the LLM client with a sample question."""
-    
+
     print("=" * 70)
     print("SuryaGharSathi LLM Client Test")
     print("=" * 70)
     print()
-    
+
     # Test 1: Check configuration
     print("1. Configuration Check")
     api_key = os.getenv("GROQ_API_KEY")
@@ -270,7 +271,7 @@ if __name__ == "__main__":
     else:
         print("   ✗ GROQ_API_KEY not found in environment")
     print()
-    
+
     # Test 2: Initialize client
     print("2. Initialize LLM Client")
     try:
@@ -282,7 +283,7 @@ if __name__ == "__main__":
         print(f"   ✗ Failed to initialize: {e}")
         exit(1)
     print()
-    
+
     # Test 3: Generate without context (simple test)
     print("3. Test Simple Generation (No RAG)")
     try:
@@ -290,13 +291,13 @@ if __name__ == "__main__":
             prompt="What is PM Surya Ghar?",
             system_prompt=get_system_prompt(),
         )
-        print(f"   Q: What is PM Surya Ghar?")
+        print("   Q: What is PM Surya Ghar?")
         print(f"   A: {response[:150]}...")
         print("   ✓ Generation successful")
     except Exception as e:
         print(f"   ✗ Generation failed: {e}")
     print()
-    
+
     # Test 4: Generate with RAG context
     print("4. Test RAG-Enhanced Generation")
     mock_context = """[1] Topic: CFA Structure
@@ -306,20 +307,20 @@ if __name__ == "__main__":
 [2] Topic: CFA Example
     Rule: A 2.5 kW system receives Rs 69000 CFA under the standard category.
     Source: MNRE Guidelines Section 5(h)"""
-    
+
     try:
         response = client.generate(
             prompt="How much subsidy for 2.5 kW?",
             system_prompt=get_system_prompt(),
             context=mock_context,
         )
-        print(f"   Q: How much subsidy for 2.5 kW?")
+        print("   Q: How much subsidy for 2.5 kW?")
         print(f"   A: {response}")
         print("   ✓ RAG generation successful")
     except Exception as e:
         print(f"   ✗ RAG generation failed: {e}")
     print()
-    
+
     print("=" * 70)
     print("LLM Client Test Complete")
     print("=" * 70)

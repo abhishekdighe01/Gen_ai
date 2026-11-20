@@ -425,3 +425,99 @@ All thumbs up/down ratings are saved to `data/feedback.jsonl`:
 - **Backend:** FastAPI + LangGraph
 - **Storage:** JSONL for feedback persistence
 - **Deployment:** Local-first with API fallback
+
+---
+
+## Day 11: Testing, Code Quality & Docker
+
+### Automated Testing with pytest
+
+**Test Suite:** 10 comprehensive tests covering all core functionality
+
+Run tests:
+```bash
+# Run all tests
+pytest tests/ -v
+
+# Run with coverage
+pytest tests/ --cov=app --cov-report=html
+
+# Run specific test
+pytest tests/test_suryagharsathi.py::test_solar_cfa_calculator_slabs -v
+```
+
+**Test Coverage:**
+1. `test_load_records_and_schema` - Record loading and validation
+2. `test_records_search_and_get_by_id` - Search and filtering
+3. `test_smart_search_tfidf_ranking` - TF-IDF semantic search
+4. `test_api_health_endpoint` - Health check endpoint
+5. `test_api_records_and_404` - Records API and error handling
+6. `test_ask_endpoint_with_fake_llm` - RAG with mocked LLM
+7. `test_ask_endpoint_q6_abstention` - Q6 "I don't know" test
+8. `test_solar_cfa_calculator_slabs` - CFA calculation (2/2.5/3/4 kW)
+9. `test_solar_cfa_calculator_invalid_input` - Input validation
+10. `test_agent_endpoint_approval_and_tool_call` - Agent approval gate
+
+### Code Quality with Ruff
+
+```bash
+# Check for linting errors
+ruff check .
+
+# Auto-fix issues
+ruff check --fix .
+
+# Format code
+ruff format .
+```
+
+**Zero lint errors** across entire codebase (app/, ui/, tests/, analysis/, eval/)
+
+### Run with Docker
+
+**Quick Start:**
+```bash
+# Build and start both API and UI
+docker compose up --build
+
+# Access services:
+# - API Documentation: http://localhost:8000/docs
+# - Streamlit UI: http://localhost:8501
+
+# Stop services
+docker compose down
+```
+
+**Production Deployment:**
+```bash
+# Build image
+docker build -t suryagharsathi:latest .
+
+# Run API only
+docker run -p 8000:8000 suryagharsathi:latest
+
+# Run with environment variables
+docker run -p 8000:8000 \
+  -e LLM_PROVIDER=groq \
+  -e GROQ_API_KEY=your_key_here \
+  suryagharsathi:latest
+```
+
+**Docker Compose Services:**
+- `api` - FastAPI backend on port 8000 with health checks
+- `ui` - Streamlit frontend on port 8501, depends on API
+- Shared network for inter-service communication
+- Volume mounts for data persistence
+
+**Environment Variables:**
+- `LLM_PROVIDER` - LLM provider (groq/gemini)
+- `LLM_MODEL` - Model name
+- `API_BASE_URL` - Backend URL for UI (default: http://api:8000)
+
+### Container Features:
+- ✅ Python 3.11-slim base image
+- ✅ Multi-stage build optimization
+- ✅ Health check for API readiness
+- ✅ Volume mounts for development
+- ✅ Hot reload enabled
+- ✅ Proper .dockerignore for smaller images

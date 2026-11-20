@@ -1,6 +1,7 @@
 
 import json
-from app.models import Record, SolarRecord
+
+from app.models import Record
 
 
 def _load_from_json():
