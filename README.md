@@ -1,5 +1,7 @@
 # SuryaGharSathi
 
+[![CI](https://github.com/abhishekdighe01/Gen_ai/actions/workflows/ci.yml/badge.svg)](https://github.com/abhishekdighe01/Gen_ai/actions/workflows/ci.yml)
+
 ## Product
 SuryaGharSathi helps homeowners understand PM Surya Ghar rooftop solar rules, calculate the applicable central government subsidy, and estimate how long a rooftop solar system will take to recover its cost.
 
@@ -521,3 +523,66 @@ docker run -p 8000:8000 \
 - ✅ Volume mounts for development
 - ✅ Hot reload enabled
 - ✅ Proper .dockerignore for smaller images
+
+---
+
+## Day 12: CI/CD Pipeline & Live Deployment
+
+### Continuous Integration (GitHub Actions)
+
+**Automated CI Pipeline:** Every push and pull request triggers:
+
+1. **Lint & Test Job**
+   - Code quality check with `ruff check .`
+   - Full test suite with `pytest tests/ -v`
+   - Python 3.11 on ubuntu-latest
+   - Pip dependency caching for faster builds
+
+2. **Docker Build Job**
+   - Builds production Docker image
+   - Uses Docker Buildx with GitHub Actions cache
+   - Validates Dockerfile and dependencies
+   - Only runs after lint-and-test passes
+
+**CI Status:** View live build status at [GitHub Actions](https://github.com/abhishekdighe01/Gen_ai/actions)
+
+### Live Deployment
+
+**Deployment Platforms Supported:**
+
+1. **Render** (recommended for free tier)
+   - Configuration: `render.yaml` (Render Blueprint)
+   - One-click deployment from GitHub
+   - Automatic deploys on main branch updates
+   - Free tier includes HTTPS, custom domains
+
+2. **Hugging Face Spaces**
+   - Dockerfile-based deployment
+   - GPU acceleration available
+   - Community-friendly sharing
+
+**Environment Variables Required:**
+```bash
+LLM_PROVIDER=groq
+LLM_MODEL=llama-3.1-8b-instant
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+**Health Check Endpoint:** `/health` (used by Render for readiness checks)
+
+**Dynamic PORT Binding:** Dockerfile CMD now supports `$PORT` environment variable for cloud platform compatibility:
+```bash
+CMD sh -c "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"
+```
+
+### Deployment Steps (Render)
+
+1. Fork/push this repo to your GitHub account
+2. Sign up at [render.com](https://render.com)
+3. Click "New +" → "Blueprint"
+4. Connect your GitHub repository
+5. Render auto-detects `render.yaml` and provisions services
+6. Add `GROQ_API_KEY` in dashboard environment variables
+7. Deploy! 🚀
+
+Your API will be live at `https://suryagharsathi-api.onrender.com`

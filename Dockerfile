@@ -33,4 +33,5 @@ RUN mkdir -p data/chroma_db data/processed
 EXPOSE 8000 8501
 
 # Default command (can be overridden in docker-compose)
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Supports dynamic PORT environment variable for cloud deployments
+CMD sh -c "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"
