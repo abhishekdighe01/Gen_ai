@@ -10,4 +10,5 @@ ignore = [
     "TRY004",  # Prefer TypeError - ValueError is fine for validation
     "B023",    # Function loop variable binding (false positive in pandas apply)
     "SIM117",  # Nested with statements are readable in this context
+    "UP017",   # datetime.UTC not available in Python 3.10, using timezone.utc
 ]

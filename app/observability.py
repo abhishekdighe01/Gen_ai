@@ -128,7 +128,7 @@ def log_request_metric(
 ) -> dict[str, Any]:
     """Log request metrics to JSONL and in-memory store."""
     record = {
-        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "timestamp": datetime.now(tz=timezone.utc).isoformat(),
         "endpoint": endpoint,
         "latency_ms": round(float(latency_ms), 2),
         "prompt_tokens": int(prompt_tokens),
@@ -140,11 +140,13 @@ def log_request_metric(
     
     _IN_MEMORY_METRICS.append(record)
     
+    # Write to JSONL file (non-critical, allow silent failure for resilience)
     try:
         os.makedirs(REQUEST_LOG_PATH.parent, exist_ok=True)
         with open(REQUEST_LOG_PATH, "a", encoding="utf-8") as f:
             f.write(json.dumps(record) + "\n")
-    except Exception:
+    except Exception:  # noqa: S110
+        # Intentionally suppress file write errors - metrics still stored in memory
         pass
     
     return record
