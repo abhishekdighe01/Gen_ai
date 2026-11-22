@@ -1,10 +1,20 @@
 
 import os
+import time
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Request
 from pydantic import BaseModel
 
 from app.llm import generate_chat_response
+
+# Day 13: Observability, caching, and security
+from app.observability import (
+    RESPONSE_CACHE,
+    estimate_tokens,
+    get_metrics_summary,
+    log_request_metric,
+    validate_user_input,
+)
 from app.records import get_by_id, load_records, search
 from app.smart_search import smart_search
 
@@ -36,6 +46,17 @@ app = FastAPI(
     description="API for PM Surya Ghar rooftop solar information",
     version="1.0.0"
 )
+
+
+# Day 13: Latency tracking middleware
+@app.middleware("http")
+async def add_latency_header(request: Request, call_next):
+    """Track request latency and add X-Process-Time-Ms header."""
+    start_time = time.time()
+    response = await call_next(request)
+    latency_ms = (time.time() - start_time) * 1000
+    response.headers["X-Process-Time-Ms"] = str(round(latency_ms, 2))
+    return response
 
 
 # Request model for user questions
@@ -81,6 +102,13 @@ def health_check():
         "status": "healthy",
         "message": "SuryaGharSathi API is running"
     }
+
+
+# Day 13: Metrics endpoint
+@app.get("/metrics")
+def get_metrics():
+    """Get aggregated observability metrics."""
+    return get_metrics_summary()
 
 
 # Get all records
@@ -208,24 +236,30 @@ def search_records(q: str = Query(..., min_length=1)):
 # Accept user questions
 @app.post("/questions")
 def submit_question(request: QuestionRequest):
+    """Submit a user question with Day 13 input validation."""
+    start_time = time.time()
+    
+    try:
+        # Day 13: Validate input (length + prompt injection)
+        question = validate_user_input(request.question)
+        
+        latency_ms = (time.time() - start_time) * 1000
+        log_request_metric("/questions", latency_ms, status_code=200)
+        
+        return {
+            "status": "received",
+            "name": request.name,
+            "question": question,
+            "message": "Your question has been received successfully."
+        }
+    
+    except (ValueError, PermissionError) as e:
+        latency_ms = (time.time() - start_time) * 1000
+        log_request_metric("/questions", latency_ms, status_code=400)
+        raise HTTPException(status_code=400, detail=str(e))
 
-    question = request.question.strip()
 
-    if not question:
-        raise HTTPException(
-            status_code=400,
-            detail="Question cannot be empty"
-        )
-
-    return {
-        "status": "received",
-        "name": request.name,
-        "question": question,
-        "message": "Your question has been received successfully."
-    }
-
-
-# LLM-powered chat endpoint with RAG (Day 6 Enhanced)
+# LLM-powered chat endpoint with RAG (Day 6 Enhanced, Day 13 Cached)
 @app.post("/chat")
 def chat_with_llm(request: ChatRequest):
     """
@@ -236,28 +270,40 @@ def chat_with_llm(request: ChatRequest):
     - Supports prompt version selection (v1 or v2)
     - Offline fallback when no API key configured
 
+    Day 13 Enhancement:
+    - Input validation (length + prompt injection)
+    - Response caching (TTL 1 hour)
+    - Token and latency logging
+
     Process:
     1. Validate question
-    2. Retrieve relevant records if use_rag=true
-    3. Call LLM with selected prompt version
-    4. Return structured response
+    2. Check cache
+    3. Retrieve relevant records if use_rag=true
+    4. Call LLM with selected prompt version
+    5. Return structured response
 
     Args:
         request: ChatRequest with question, use_rag, top_k, prompt_version
 
     Returns:
-        JSON with answer, confidence, follow_up, and metadata
+        JSON with answer, confidence, follow_up, metadata, and cached flag
     """
-    question = request.question.strip()
-
-    # Validate question
-    if not question:
-        raise HTTPException(
-            status_code=400,
-            detail="Question cannot be empty"
-        )
-
+    start_time = time.time()
+    
     try:
+        # Day 13: Validate input
+        question = validate_user_input(request.question)
+        
+        # Day 13: Check cache
+        cache_key = RESPONSE_CACHE.make_key("chat", f"{question}:{request.prompt_version}:{request.use_rag}")
+        cached_response = RESPONSE_CACHE.get(cache_key)
+        
+        if cached_response is not None:
+            latency_ms = (time.time() - start_time) * 1000
+            log_request_metric("/chat", latency_ms, cached=True, status_code=200)
+            cached_response["cached"] = True
+            return cached_response
+
         # Generate response using new llm.py module
         response = generate_chat_response(
             question=question,
@@ -275,12 +321,28 @@ def chat_with_llm(request: ChatRequest):
             "prompt_version": request.prompt_version,
             "rag_enabled": request.use_rag,
             "provider": os.getenv("LLM_PROVIDER", "groq"),
-            "model": os.getenv("LLM_MODEL", "llama-3.3-70b-versatile")
+            "model": os.getenv("LLM_MODEL", "llama-3.3-70b-versatile"),
+            "cached": False,
         }
+        
+        # Day 13: Cache response
+        RESPONSE_CACHE.set(cache_key, result)
+        
+        # Day 13: Log metrics
+        latency_ms = (time.time() - start_time) * 1000
+        prompt_tokens = estimate_tokens(question)
+        completion_tokens = estimate_tokens(response["answer"])
+        log_request_metric("/chat", latency_ms, prompt_tokens, completion_tokens, status_code=200)
 
         return result
 
+    except (ValueError, PermissionError) as e:
+        latency_ms = (time.time() - start_time) * 1000
+        log_request_metric("/chat", latency_ms, status_code=400)
+        raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
+        latency_ms = (time.time() - start_time) * 1000
+        log_request_metric("/chat", latency_ms, status_code=500)
         raise HTTPException(
             status_code=500,
             detail=f"Failed to generate answer: {e!s}"
@@ -341,7 +403,7 @@ def search_semantic(
         )
 
 
-# RAG endpoint with grounded citations (Day 8)
+# RAG endpoint with grounded citations (Day 8, Day 13 Enhanced)
 @app.post("/ask")
 def ask_rag_endpoint(request: AskRequest):
     """
@@ -353,11 +415,16 @@ def ask_rag_endpoint(request: AskRequest):
     - Returns "I don't know" for unanswerable queries (Q6)
     - Includes structured citation metadata
 
+    Day 13 Enhancement:
+    - Input validation (length + prompt injection)
+    - Response caching (TTL 1 hour)
+    - Token and latency logging
+
     Args:
         request: AskRequest with question and optional top_k
 
     Returns:
-        JSON with question, answer, citations, confidence
+        JSON with question, answer, citations, confidence, cached flag
     """
     if not RAG_AVAILABLE:
         raise HTTPException(
@@ -365,34 +432,59 @@ def ask_rag_endpoint(request: AskRequest):
             detail="RAG pipeline not available. Check app/rag.py setup."
         )
 
-    question = request.question.strip()
-
-    if not question:
-        raise HTTPException(
-            status_code=400,
-            detail="Question cannot be empty"
-        )
-
+    start_time = time.time()
+    
     try:
+        # Day 13: Validate input
+        question = validate_user_input(request.question)
+        
+        # Day 13: Check cache
+        cache_key = RESPONSE_CACHE.make_key("ask", f"{question}:{request.top_k}")
+        cached_response = RESPONSE_CACHE.get(cache_key)
+        
+        if cached_response is not None:
+            latency_ms = (time.time() - start_time) * 1000
+            log_request_metric("/ask", latency_ms, cached=True, status_code=200)
+            cached_response["cached"] = True
+            return cached_response
+
         # Call RAG pipeline
         result = answer_question(question, top_k=request.top_k)
-
-        return {
+        
+        response = {
             "question": result["question"],
             "answer": result["answer"],
             "citations": result["citations"],
             "confidence": result["confidence"],
             "abstained": result.get("abstained", False),
+            "cached": False,
         }
+        
+        # Day 13: Cache response
+        RESPONSE_CACHE.set(cache_key, response)
+        
+        # Day 13: Log metrics
+        latency_ms = (time.time() - start_time) * 1000
+        prompt_tokens = estimate_tokens(question)
+        completion_tokens = estimate_tokens(result["answer"])
+        log_request_metric("/ask", latency_ms, prompt_tokens, completion_tokens, status_code=200)
 
+        return response
+
+    except (ValueError, PermissionError) as e:
+        latency_ms = (time.time() - start_time) * 1000
+        log_request_metric("/ask", latency_ms, status_code=400)
+        raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
+        latency_ms = (time.time() - start_time) * 1000
+        log_request_metric("/ask", latency_ms, status_code=500)
         raise HTTPException(
             status_code=500,
             detail=f"RAG processing failed: {e!s}"
         )
 
 
-# Agent endpoint with tools and approval gate (Day 9)
+# Agent endpoint with tools and approval gate (Day 9, Day 13 Enhanced)
 @app.post("/agent")
 def agent_endpoint(request: AgentRequest):
     """
@@ -405,11 +497,16 @@ def agent_endpoint(request: AgentRequest):
     - Approval gate for >3 kW systems (subsidy capped)
     - Combines tool outputs with RAG citations
 
+    Day 13 Enhancement:
+    - Input validation (length + prompt injection)
+    - Response caching (TTL 1 hour)
+    - Token and latency logging
+
     Args:
         request: AgentRequest with question, thread_id, approved
 
     Returns:
-        JSON with answer, tools_used, tool_output, citations, approval_status, thread_id
+        JSON with answer, tools_used, tool_output, citations, approval_status, cached flag
     """
     if not AGENT_AVAILABLE:
         raise HTTPException(
@@ -417,23 +514,30 @@ def agent_endpoint(request: AgentRequest):
             detail="Agent not available. Check app/graph.py and dependencies (langgraph)."
         )
 
-    question = request.question.strip()
-
-    if not question:
-        raise HTTPException(
-            status_code=400,
-            detail="Question cannot be empty"
-        )
-
+    start_time = time.time()
+    
     try:
+        # Day 13: Validate input
+        question = validate_user_input(request.question)
+        
+        # Day 13: Check cache
+        cache_key = RESPONSE_CACHE.make_key("agent", f"{question}:{request.thread_id}:{request.approved}")
+        cached_response = RESPONSE_CACHE.get(cache_key)
+        
+        if cached_response is not None:
+            latency_ms = (time.time() - start_time) * 1000
+            log_request_metric("/agent", latency_ms, cached=True, status_code=200)
+            cached_response["cached"] = True
+            return cached_response
+
         # Call graph agent
         result = run_graph_agent(
             question=question,
             thread_id=request.thread_id,
             approved=request.approved
         )
-
-        return {
+        
+        response = {
             "question": result["question"],
             "answer": result["answer"],
             "tools_used": result.get("tools_used", []),
@@ -443,9 +547,27 @@ def agent_endpoint(request: AgentRequest):
             "requires_approval": result.get("requires_approval", False),
             "thread_id": result["thread_id"],
             "history_length": len(result.get("history", [])),
+            "cached": False,
         }
+        
+        # Day 13: Cache response
+        RESPONSE_CACHE.set(cache_key, response)
+        
+        # Day 13: Log metrics
+        latency_ms = (time.time() - start_time) * 1000
+        prompt_tokens = estimate_tokens(question)
+        completion_tokens = estimate_tokens(result["answer"])
+        log_request_metric("/agent", latency_ms, prompt_tokens, completion_tokens, status_code=200)
 
+        return response
+
+    except (ValueError, PermissionError) as e:
+        latency_ms = (time.time() - start_time) * 1000
+        log_request_metric("/agent", latency_ms, status_code=400)
+        raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
+        latency_ms = (time.time() - start_time) * 1000
+        log_request_metric("/agent", latency_ms, status_code=500)
         raise HTTPException(
             status_code=500,
             detail=f"Agent processing failed: {e!s}"
