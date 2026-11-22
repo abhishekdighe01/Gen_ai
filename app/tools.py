@@ -12,10 +12,10 @@ Run with:
 """
 
 import re
-from typing import Any, Dict, Optional
+from typing import Any
 
 
-def extract_capacity_kw(text: str) -> Optional[float]:
+def extract_capacity_kw(text: str) -> float | None:
     """
     Extract solar capacity in kW from natural language text.
 
@@ -63,7 +63,7 @@ def solar_cfa_calculator(
     capacity_kw: float,
     special_category_state: bool = False,
     monthly_bill_inr: float = 2000.0
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Calculate PM Surya Ghar CFA subsidy and system costs using exact MNRE rules.
 
@@ -232,7 +232,7 @@ if __name__ == "__main__":
             print(f"Estimated Payback: {result['estimated_payback_years']} years")
 
         print("\nSlab Breakdown:")
-        for slab_name, slab_data in result['slab_breakdown'].items():
+        for slab_data in result['slab_breakdown'].values():
             if slab_data['capacity_kw'] > 0:
                 print(f"  {slab_data['description']}: {slab_data['capacity_kw']} kW × ₹{slab_data['rate_per_kw']:,} = ₹{slab_data['cfa_amount']:,.0f}")
 

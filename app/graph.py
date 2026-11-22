@@ -13,7 +13,7 @@ Run with:
     python -m app.graph
 """
 
-from typing import Any, Dict, List, Literal, Optional, TypedDict
+from typing import Any, Literal, TypedDict
 
 # Try to import LangGraph
 try:
@@ -33,21 +33,21 @@ class AgentState(TypedDict):
     """State for the agent graph."""
     question: str
     thread_id: str
-    capacity_kw: Optional[float]
+    capacity_kw: float | None
     requires_approval: bool
     approved: bool
     approval_status: str
-    tool_output: Dict[str, Any]
-    rag_output: Dict[str, Any]
-    citations: List[Dict[str, Any]]
-    tools_used: List[str]
+    tool_output: dict[str, Any]
+    rag_output: dict[str, Any]
+    citations: list[dict[str, Any]]
+    tools_used: list[str]
     answer: str
-    history: List[Dict[str, str]]
+    history: list[dict[str, str]]
     current_node: str
 
 
 # Global memory storage (simple dict-based for fallback)
-_memory_store: Dict[str, List[Dict[str, str]]] = {}
+_memory_store: dict[str, list[dict[str, str]]] = {}
 
 
 def router_node(state: AgentState) -> AgentState:
@@ -82,10 +82,7 @@ def router_node(state: AgentState) -> AgentState:
     q_lower = question.lower()
     cost_keywords = ["cost", "price", "payback", "install", "vendor quote"]
 
-    if capacity and capacity > 3.0:
-        state["requires_approval"] = True
-        state["approval_status"] = "pending"
-    elif any(kw in q_lower for kw in cost_keywords):
+    if capacity and capacity > 3.0 or any(kw in q_lower for kw in cost_keywords):
         state["requires_approval"] = True
         state["approval_status"] = "pending"
     else:
@@ -335,7 +332,7 @@ def run_graph_agent(
     thread_id: str = "default",
     approved: bool = True,
     special_category_state: bool = False,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Run the LangGraph agent with approval gate and memory.
 
@@ -393,7 +390,7 @@ def run_graph_agent(
         except Exception as e:
             return {
                 "question": question,
-                "answer": f"Graph execution error: {str(e)}",
+                "answer": f"Graph execution error: {e!s}",
                 "tools_used": [],
                 "tool_output": {},
                 "citations": [],
@@ -445,7 +442,7 @@ def run_graph_agent(
         except Exception as e:
             return {
                 "question": question,
-                "answer": f"Fallback execution error: {str(e)}",
+                "answer": f"Fallback execution error: {e!s}",
                 "tools_used": [],
                 "tool_output": {},
                 "citations": [],

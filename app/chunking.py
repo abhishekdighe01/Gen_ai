@@ -17,7 +17,6 @@ import json
 import os
 import re
 from pathlib import Path
-from typing import Dict, List
 
 # Document metadata mapping
 DOCUMENT_METADATA = {
@@ -44,7 +43,7 @@ def chunk_text(
     chunk_size: int = 500,
     overlap: int = 80,
     min_chunk_size: int = 100
-) -> List[str]:
+) -> list[str]:
     """
     Split text into overlapping chunks.
 
@@ -99,8 +98,8 @@ def chunk_text(
 def chunk_document_file(
     filepath: str,
     doc_id: str,
-    metadata: Dict[str, str]
-) -> List[Dict]:
+    metadata: dict[str, str]
+) -> list[dict]:
     """
     Chunk a processed text file with page markers.
 
@@ -167,7 +166,7 @@ def chunk_document_file(
     return chunks
 
 
-def chunk_json_records(json_path: str = "data/records.json") -> List[Dict]:
+def chunk_json_records(json_path: str = "data/records.json") -> list[dict]:
     """
     Chunk structured records from JSON.
 
@@ -226,7 +225,7 @@ def chunk_json_records(json_path: str = "data/records.json") -> List[Dict]:
     return chunks
 
 
-def get_all_chunks(force_refresh: bool = False) -> List[Dict]:
+def get_all_chunks(force_refresh: bool = False) -> list[dict]:
     """
     Get all document chunks from cache or generate fresh.
 

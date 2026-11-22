@@ -27,7 +27,7 @@ def generate_payback_chart():
     annual_savings = 2000 * 12 * 0.70  # 70% bill offset
     net_cost = calc['net_cost_inr']
 
-    years = list(range(0, 16))
+    years = list(range(16))
     cumulative_savings = [annual_savings * year for year in years]
     net_cost_line = [net_cost] * len(years)
 
@@ -52,16 +52,16 @@ def generate_payback_chart():
                 label=f'Break-Even at Year {payback_year}', zorder=5)
         ax.text(payback_year, net_cost_line[0] * 1.15, f'Payback: {payback_year} years',
                 ha='center', fontsize=12, fontweight='bold', color='orange',
-                bbox=dict(boxstyle='round', facecolor='white', edgecolor='orange', linewidth=2))
+                bbox={'boxstyle': 'round', 'facecolor': 'white', 'edgecolor': 'orange', 'linewidth': 2})
 
     # Add annotations
     ax.annotate(f'CFA Subsidy: ₹{calc["cfa_subsidy_inr"]:,.0f}',
                 xy=(8, net_cost * 0.5), fontsize=11,
-                bbox=dict(boxstyle='round', facecolor='lightgreen', alpha=0.8))
+                bbox={'boxstyle': 'round', 'facecolor': 'lightgreen', 'alpha': 0.8})
 
     ax.annotate(f'Net Cost: ₹{net_cost:,.0f}',
                 xy=(8, net_cost * 1.1), fontsize=11,
-                bbox=dict(boxstyle='round', facecolor='lightcoral', alpha=0.8))
+                bbox={'boxstyle': 'round', 'facecolor': 'lightcoral', 'alpha': 0.8})
 
     # Styling
     ax.set_xlabel('Years', fontsize=14, fontweight='bold')

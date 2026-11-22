@@ -13,7 +13,6 @@ Run with:
     python -m app.vectorstore
 """
 
-from typing import Dict, List, Optional
 
 # Try to import ChromaDB
 try:
@@ -25,6 +24,8 @@ except ImportError:
     print("Warning: chromadb not installed. Run: pip install chromadb")
 
 # Import our modules
+import sys
+
 from app.chunking import get_all_chunks
 from app.embed import embed_texts
 
@@ -71,7 +72,7 @@ def get_or_create_collection(client=None):
         return collection
 
 
-def index_chunks(chunks: Optional[List[Dict]] = None) -> int:
+def index_chunks(chunks: list[dict] | None = None) -> int:
     """
     Index chunks into ChromaDB collection.
 
@@ -144,8 +145,8 @@ def index_chunks(chunks: Optional[List[Dict]] = None) -> int:
 def query_vectorstore(
     query: str,
     top_k: int = 5,
-    filter_metadata: Optional[Dict] = None
-) -> List[Dict]:
+    filter_metadata: dict | None = None
+) -> list[dict]:
     """
     Query the vector store for similar chunks.
 
@@ -236,7 +237,7 @@ if __name__ == "__main__":
 
     if not CHROMADB_AVAILABLE:
         print("ChromaDB not available - install with: pip install chromadb")
-        exit(1)
+        sys.exit(1)
 
     # Index chunks
     print("Step 1: Index chunks into ChromaDB")

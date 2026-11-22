@@ -13,7 +13,7 @@ Run with:
 
 import os
 import re
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 import requests
 
@@ -52,7 +52,7 @@ def _retrieve_chunks(
     top_k: int = 4,
     chunk_size: int = 500,
     overlap: int = 80,
-) -> List[Dict[str, Any]]:
+) -> list[dict[str, Any]]:
     """
     Retrieve top-k relevant chunks using semantic search.
 
@@ -87,7 +87,7 @@ def _retrieve_chunks(
                 "score": score} for c, score in search_results]
 
     # Sort hits by (score_bucket, date_issued) so newer documents win when scores are close
-    def sort_key(h: Dict[str, Any]):
+    def sort_key(h: dict[str, Any]):
         score = float(h.get("score", 0.0))
         date_str = str(h.get("date_issued", "2024-06-07"))
         return (round(score, 2), date_str)
@@ -96,7 +96,7 @@ def _retrieve_chunks(
     return hits_sorted[:top_k]
 
 
-def _build_rag_prompt(question: str, citations: List[Dict[str, Any]]) -> str:
+def _build_rag_prompt(question: str, citations: list[dict[str, Any]]) -> str:
     """Build RAG prompt with retrieved context and citation instructions."""
     context_blocks = []
     for idx, c in enumerate(citations, start=1):
@@ -120,7 +120,7 @@ def _build_rag_prompt(question: str, citations: List[Dict[str, Any]]) -> str:
     )
 
 
-def _call_llm_for_rag(prompt: str) -> Optional[str]:
+def _call_llm_for_rag(prompt: str) -> str | None:
     """Call LLM for RAG answer generation (Groq or Gemini)."""
     provider = os.getenv("LLM_PROVIDER", "groq").strip().lower()
     groq_key = os.getenv("GROQ_API_KEY", "").strip()
@@ -163,7 +163,7 @@ def _call_llm_for_rag(prompt: str) -> Optional[str]:
     return None
 
 
-def _synthesize_grounded_answer(question: str, citations: List[Dict[str, Any]]) -> str:
+def _synthesize_grounded_answer(question: str, citations: list[dict[str, Any]]) -> str:
     """
     Deterministic grounded synthesis from retrieved chunks with inline citations,
     ensuring 100% factual accuracy and citation formatting even without an external LLM key.
@@ -281,7 +281,7 @@ def answer_question(
     top_k: int = 4,
     chunk_size: int = 500,
     overlap: int = 80,
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Answers a SuryaGharSathi user question from retrieved chunks with citations.
     Strictly returns "I don't know" for out-of-scope questions like Q6.

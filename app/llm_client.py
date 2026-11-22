@@ -11,7 +11,7 @@ Provides:
 """
 
 import os
-from typing import Dict, List, Optional
+import sys
 
 from dotenv import load_dotenv
 
@@ -41,8 +41,8 @@ class LLMClient:
     def __init__(
         self,
         provider: str = "groq",
-        api_key: Optional[str] = None,
-        model: Optional[str] = None,
+        api_key: str | None = None,
+        model: str | None = None,
         temperature: float = 0.3,
         max_tokens: int = 1000,
     ):
@@ -97,8 +97,8 @@ class LLMClient:
     def generate(
         self,
         prompt: str,
-        system_prompt: Optional[str] = None,
-        context: Optional[str] = None,
+        system_prompt: str | None = None,
+        context: str | None = None,
     ) -> str:
         """
         Generate LLM response for a user prompt.
@@ -159,7 +159,7 @@ Answer based only on the guidelines provided above. If the information is not in
                 raise ValueError(f"Provider {self.provider} not implemented")
 
         except Exception as e:
-            raise Exception(f"LLM API call failed: {str(e)}")
+            raise Exception(f"LLM API call failed: {e!s}")
 
 
 def get_system_prompt() -> str:
@@ -196,7 +196,7 @@ EXAMPLE RESPONSES:
 Your target user is a homeowner in Kopargaon, Maharashtra (MSEDCL area) with a ₹2,000/month electricity bill and 40 sq m terrace space."""
 
 
-def build_rag_context(retrieved_records: List[Dict]) -> str:
+def build_rag_context(retrieved_records: list[dict]) -> str:
     """
     Build RAG context string from retrieved records.
 
@@ -225,7 +225,7 @@ def build_rag_context(retrieved_records: List[Dict]) -> str:
 
 
 # Singleton instance for reuse
-_llm_client_instance: Optional[LLMClient] = None
+_llm_client_instance: LLMClient | None = None
 
 
 def get_llm_client() -> LLMClient:
@@ -281,7 +281,7 @@ if __name__ == "__main__":
         print(f"   ✓ Temperature: {client.temperature}")
     except Exception as e:
         print(f"   ✗ Failed to initialize: {e}")
-        exit(1)
+        sys.exit(1)
     print()
 
     # Test 3: Generate without context (simple test)

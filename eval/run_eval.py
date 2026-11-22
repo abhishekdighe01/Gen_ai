@@ -26,7 +26,7 @@ import json
 import os
 import sys
 import time
-from typing import Any, Dict, List
+from typing import Any
 
 # Add parent directory to path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -34,13 +34,13 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from app.rag import answer_question
 
 
-def load_eval_set(path: str = "eval/eval_set.json") -> List[Dict[str, Any]]:
+def load_eval_set(path: str = "eval/eval_set.json") -> list[dict[str, Any]]:
     """Load evaluation set from JSON."""
     with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 
-def compute_keyword_recall(answer: str, expected_keywords: List[str]) -> float:
+def compute_keyword_recall(answer: str, expected_keywords: list[str]) -> float:
     """Compute percentage of expected keywords present in answer."""
     if not expected_keywords:
         return 1.0
@@ -50,7 +50,7 @@ def compute_keyword_recall(answer: str, expected_keywords: List[str]) -> float:
     return matches / len(expected_keywords)
 
 
-def check_retrieval_hit(citations: List[Dict], expected_page: int) -> bool:
+def check_retrieval_hit(citations: list[dict], expected_page: int) -> bool:
     """Check if expected page appears in retrieved citations."""
     if expected_page is None:
         return True  # N/A for unanswerable questions
@@ -63,12 +63,12 @@ def check_retrieval_hit(citations: List[Dict], expected_page: int) -> bool:
 
 
 def evaluate_config(
-    eval_set: List[Dict[str, Any]],
+    eval_set: list[dict[str, Any]],
     config_name: str,
     chunk_size: int,
     overlap: int,
     top_k: int
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Evaluate RAG performance on eval set with given configuration.
 
@@ -188,7 +188,7 @@ def evaluate_config(
     }
 
 
-def print_comparison_table(config_a: Dict, config_b: Dict):
+def print_comparison_table(config_a: dict, config_b: dict):
     """Print side-by-side comparison table."""
     print("\n" + "=" * 70)
     print("RAG EVALUATION RESULTS — Configuration Comparison")
@@ -242,7 +242,7 @@ def print_comparison_table(config_a: Dict, config_b: Dict):
     return winner, score_a, score_b
 
 
-def save_detailed_report(config_a: Dict, config_b: Dict, winner: str, output_path: str = "eval/rag_eval_results.md"):
+def save_detailed_report(config_a: dict, config_b: dict, winner: str, output_path: str = "eval/rag_eval_results.md"):
     """Save detailed evaluation report to markdown."""
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
@@ -294,8 +294,7 @@ def save_detailed_report(config_a: Dict, config_b: Dict, winner: str, output_pat
 
             if result['citations']:
                 f.write("**Citation Details:**\n")
-                for i, cite in enumerate(result['citations'][:3], 1):
-                    f.write(f"{i}. {cite['chunk_id']} (Page {cite['page']}, Score: {cite['score']:.3f})\n")
+                f.writelines(f"{i}. {cite['chunk_id']} (Page {cite['page']}, Score: {cite['score']:.3f})\n" for i, cite in enumerate(result['citations'][:3], 1))
                 f.write("\n")
 
             f.write("---\n\n")
@@ -313,8 +312,7 @@ def save_detailed_report(config_a: Dict, config_b: Dict, winner: str, output_pat
 
             if result['citations']:
                 f.write("**Citation Details:**\n")
-                for i, cite in enumerate(result['citations'][:3], 1):
-                    f.write(f"{i}. {cite['chunk_id']} (Page {cite['page']}, Score: {cite['score']:.3f})\n")
+                f.writelines(f"{i}. {cite['chunk_id']} (Page {cite['page']}, Score: {cite['score']:.3f})\n" for i, cite in enumerate(result['citations'][:3], 1))
                 f.write("\n")
 
             f.write("---\n\n")
@@ -368,7 +366,7 @@ def main():
     )
 
     # Print comparison
-    winner, score_a, score_b = print_comparison_table(config_a, config_b)
+    winner, _score_a, _score_b = print_comparison_table(config_a, config_b)
 
     # Save detailed report
     save_detailed_report(config_a, config_b, winner)

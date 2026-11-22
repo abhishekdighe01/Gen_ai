@@ -11,7 +11,6 @@ Run with:
     results = smart_search("CFA subsidy rates", top_k=5)
 """
 
-from typing import List, Tuple
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -64,7 +63,7 @@ def _build_index():
     return vectorizer, doc_vectors, records
 
 
-def smart_search(query: str, top_k: int = 5) -> List[Tuple[Record, float]]:
+def smart_search(query: str, top_k: int = 5) -> list[tuple[Record, float]]:
     """
     Search records using TF-IDF + cosine similarity.
 

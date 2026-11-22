@@ -13,7 +13,7 @@ Run with:
     python -m app.agent_loop
 """
 
-from typing import Any, Dict, List
+from typing import Any
 
 from app.rag import answer_question
 from app.tools import extract_capacity_kw, solar_cfa_calculator
@@ -56,7 +56,7 @@ def run_agent_loop(
     max_steps: int = 3,
     special_category_state: bool = False,
     monthly_bill_inr: float = 2000.0
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Run hand-written ReAct-style agent loop.
 
@@ -140,7 +140,7 @@ def run_agent_loop(
                 })
 
             except Exception as e:
-                observation_calc = f"Calculator error: {str(e)}"
+                observation_calc = f"Calculator error: {e!s}"
                 steps.append({
                     "step": 2,
                     "type": "action",
@@ -191,7 +191,7 @@ def run_agent_loop(
             })
 
         except Exception as e:
-            observation_rag = f"RAG error: {str(e)}"
+            observation_rag = f"RAG error: {e!s}"
             steps.append({
                 "step": 2 if not needs_calc else 3,
                 "type": "action",
@@ -240,8 +240,8 @@ def run_agent_loop(
 
 def _synthesize_answer(
     question: str,
-    tool_output: Dict[str, Any],
-    citations: List[Dict[str, Any]]
+    tool_output: dict[str, Any],
+    citations: list[dict[str, Any]]
 ) -> str:
     """
     Synthesize final answer from tool outputs and citations.
@@ -288,7 +288,7 @@ def _synthesize_answer(
             )
 
         answer_parts.append("\n\n**CFA Calculation Breakdown:**\n")
-        for slab_name, slab_data in calc['slab_breakdown'].items():
+        for slab_data in calc['slab_breakdown'].values():
             if slab_data['capacity_kw'] > 0:
                 answer_parts.append(
                     f"• {slab_data['description']}: {slab_data['capacity_kw']} kW × "

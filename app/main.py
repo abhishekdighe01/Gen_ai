@@ -1,6 +1,5 @@
 
 import os
-from typing import Optional
 
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
@@ -42,7 +41,7 @@ app = FastAPI(
 # Request model for user questions
 class QuestionRequest(BaseModel):
     question: str
-    name: Optional[str] = None
+    name: str | None = None
 
 
 # Request model for chat (LLM-powered Q&A)
@@ -56,14 +55,14 @@ class ChatRequest(BaseModel):
 # Request model for RAG /ask endpoint (Day 8)
 class AskRequest(BaseModel):
     question: str
-    top_k: Optional[int] = 4
+    top_k: int | None = 4
 
 
 # Request model for Agent /agent endpoint (Day 9)
 class AgentRequest(BaseModel):
     question: str
-    thread_id: Optional[str] = "default"
-    approved: Optional[bool] = True
+    thread_id: str | None = "default"
+    approved: bool | None = True
 
 
 # Home endpoint
@@ -284,7 +283,7 @@ def chat_with_llm(request: ChatRequest):
     except Exception as e:
         raise HTTPException(
             status_code=500,
-            detail=f"Failed to generate answer: {str(e)}"
+            detail=f"Failed to generate answer: {e!s}"
         )
 
 
@@ -338,7 +337,7 @@ def search_semantic(
     except Exception as e:
         raise HTTPException(
             status_code=500,
-            detail=f"Semantic search failed: {str(e)}"
+            detail=f"Semantic search failed: {e!s}"
         )
 
 
@@ -389,7 +388,7 @@ def ask_rag_endpoint(request: AskRequest):
     except Exception as e:
         raise HTTPException(
             status_code=500,
-            detail=f"RAG processing failed: {str(e)}"
+            detail=f"RAG processing failed: {e!s}"
         )
 
 
@@ -449,5 +448,5 @@ def agent_endpoint(request: AgentRequest):
     except Exception as e:
         raise HTTPException(
             status_code=500,
-            detail=f"Agent processing failed: {str(e)}"
+            detail=f"Agent processing failed: {e!s}"
         )

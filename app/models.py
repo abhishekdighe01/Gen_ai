@@ -1,6 +1,5 @@
 
 from dataclasses import asdict, dataclass, field
-from typing import List
 
 
 @dataclass
@@ -13,7 +12,7 @@ class Record:
     key_rule: str
     source_url: str
     source_section: str = ""
-    source_pages: List[int] = field(default_factory=list)
+    source_pages: list[int] = field(default_factory=list)
 
     @property
     def source(self) -> str:

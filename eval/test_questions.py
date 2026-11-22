@@ -12,7 +12,6 @@ Run with:
 """
 
 import json
-from typing import Dict, List
 
 import requests
 
@@ -20,13 +19,13 @@ import requests
 BASE_URL = "http://127.0.0.1:8000"
 
 
-def load_questions() -> List[Dict]:
+def load_questions() -> list[dict]:
     """Load questions from questions.json."""
     with open("eval/questions.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
 
-def test_chat_endpoint(question: str, use_rag: bool = True) -> Dict:
+def test_chat_endpoint(question: str, use_rag: bool = True) -> dict:
     """
     Send a question to /chat endpoint.
 

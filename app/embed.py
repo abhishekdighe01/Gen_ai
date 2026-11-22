@@ -15,7 +15,6 @@ Run with:
 
 import json
 import os
-from typing import Dict, List, Optional, Tuple
 
 import numpy as np
 
@@ -72,7 +71,7 @@ def get_embedding_model():
     return "tfidf_svd", (_tfidf_vectorizer, _svd_model)
 
 
-def embed_texts(texts: List[str], use_cache: bool = True) -> np.ndarray:
+def embed_texts(texts: list[str], use_cache: bool = True) -> np.ndarray:
     """
     Generate embeddings for a list of texts.
 
@@ -114,9 +113,9 @@ def embed_texts(texts: List[str], use_cache: bool = True) -> np.ndarray:
 
 def semantic_search(
     query: str,
-    chunks: Optional[List[Dict]] = None,
+    chunks: list[dict] | None = None,
     top_k: int = 5
-) -> List[Tuple[Dict, float]]:
+) -> list[tuple[dict, float]]:
     """
     Perform semantic search over chunks.
 
@@ -211,7 +210,7 @@ def evaluate_questions(
     print("Report generated successfully!")
 
 
-def generate_report(results: List[Dict], output_path: str) -> None:
+def generate_report(results: list[dict], output_path: str) -> None:
     """Generate markdown evaluation report."""
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)

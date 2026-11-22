@@ -17,7 +17,6 @@ import json
 import os
 import re
 from pathlib import Path
-from typing import Dict, Optional
 
 from dotenv import load_dotenv
 
@@ -84,9 +83,9 @@ class LLMClient:
 
     def __init__(
         self,
-        provider: Optional[str] = None,
-        model: Optional[str] = None,
-        api_key: Optional[str] = None,
+        provider: str | None = None,
+        model: str | None = None,
+        api_key: str | None = None,
         temperature: float = 0.3,
         max_tokens: int = 1500,
     ):
@@ -138,7 +137,7 @@ class LLMClient:
         )
         return response.text.strip()
 
-    def _fallback_response(self, question: str, context: str = "") -> Dict[str, str]:
+    def _fallback_response(self, question: str, context: str = "") -> dict[str, str]:
         """
         Offline fallback using RAG search.
         Returns structured response without calling LLM API.
@@ -204,12 +203,12 @@ class LLMClient:
 
         except Exception as e:
             return {
-                "answer": f"Error generating response: {str(e)}",
+                "answer": f"Error generating response: {e!s}",
                 "confidence": "low",
                 "follow_up": "Please try rephrasing your question."
             }
 
-    def _parse_json_response(self, text: str) -> Optional[Dict]:
+    def _parse_json_response(self, text: str) -> dict | None:
         """
         Extract and parse JSON from LLM response.
         Handles cases where LLM adds extra text before/after JSON.
@@ -229,7 +228,7 @@ class LLMClient:
         question: str,
         context: str = "",
         prompt_version: str = "v2"
-    ) -> Dict[str, str]:
+    ) -> dict[str, str]:
         """
         Generate structured response with answer, confidence, and follow_up.
 
@@ -315,7 +314,7 @@ def generate_chat_response(
     prompt_version: str = "v2",
     use_rag: bool = True,
     top_k: int = 5
-) -> Dict[str, str]:
+) -> dict[str, str]:
     """
     Main entry point for generating chat responses.
 

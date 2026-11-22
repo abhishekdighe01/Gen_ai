@@ -16,7 +16,7 @@ import json
 import os
 import sys
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 import matplotlib
 import matplotlib.pyplot as plt
@@ -140,7 +140,7 @@ def save_feedback(question: str, answer: str, rating: str, timestamp: str):
     st.session_state.feedback_data.append(feedback_entry)
 
 
-def call_api(endpoint: str, payload: Dict[str, Any], backend_url: str) -> Optional[Dict[str, Any]]:
+def call_api(endpoint: str, payload: dict[str, Any], backend_url: str) -> dict[str, Any] | None:
     """Call FastAPI endpoint with fallback to direct function calls."""
     try:
         # Try API call first
@@ -176,14 +176,14 @@ def call_api(endpoint: str, payload: Dict[str, Any], backend_url: str) -> Option
                     return result
 
             except Exception as fallback_error:
-                st.error(f"❌ Fallback failed: {str(fallback_error)}")
+                st.error(f"❌ Fallback failed: {fallback_error!s}")
                 return None
         else:
-            st.error(f"❌ API call failed and fallback not available: {str(api_error)}")
+            st.error(f"❌ API call failed and fallback not available: {api_error!s}")
             return None
 
 
-def display_citations(citations: List[Dict[str, Any]]):
+def display_citations(citations: list[dict[str, Any]]):
     """Display citations in expandable section."""
     if not citations or len(citations) == 0:
         return
@@ -222,7 +222,7 @@ def calculate_payback_data(
     capacity_kw: float,
     monthly_bill: float,
     special_category: bool = False
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Calculate year-by-year payback data."""
     if not TOOLS_AVAILABLE:
         st.error("Calculator tools not available")
@@ -246,7 +246,7 @@ def calculate_payback_data(
             payback_years_decimal = None
 
         # Year-by-year cumulative data
-        years = list(range(0, 16))
+        years = list(range(16))
         cumulative_savings = [annual_savings * year for year in years]
         net_cost_line = [net_cost] * len(years)
 
@@ -268,11 +268,11 @@ def calculate_payback_data(
         }
 
     except Exception as e:
-        st.error(f"Calculation error: {str(e)}")
+        st.error(f"Calculation error: {e!s}")
         return None
 
 
-def plot_payback_chart(payback_data: Dict[str, Any], capacity_kw: float):
+def plot_payback_chart(payback_data: dict[str, Any], capacity_kw: float):
     """Generate interactive payback chart."""
     fig, ax = plt.subplots(figsize=(10, 6))
 
@@ -670,7 +670,7 @@ with tab2:
                 with st.expander("📋 Detailed CFA Calculation Breakdown"):
                     st.markdown("**Slab-Based CFA Calculation:**")
 
-                    for slab_name, slab_data in calc['slab_breakdown'].items():
+                    for slab_data in calc['slab_breakdown'].values():
                         if slab_data['capacity_kw'] > 0:
                             st.markdown(f"""
                             - **{slab_data['description']}:**

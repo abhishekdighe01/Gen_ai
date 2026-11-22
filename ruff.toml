@@ -1,0 +1,13 @@
+# Ruff configuration for SuryaGharSathi
+# Day 12 - CI/CD linting standards
+
+# Ignore certain warnings that are acceptable for this project
+[lint]
+ignore = [
+    "BLE001",  # Catching Exception is acceptable for error handling in this project
+    "PLW0602", # Global variable access without assignment (false positive for dict access)
+    "TRY002",  # Raising generic Exception with message is acceptable
+    "TRY004",  # Prefer TypeError - ValueError is fine for validation
+    "B023",    # Function loop variable binding (false positive in pandas apply)
+    "SIM117",  # Nested with statements are readable in this context
+]
