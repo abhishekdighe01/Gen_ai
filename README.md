@@ -76,7 +76,10 @@ graph TB
 
 ## Demo Video
 
-🎥 **[SuryaGharSathi Demo (3 minutes)](https://youtu.be/placeholder)**
+🎥 **[SuryaGharSathi Demo (3 minutes)](https://youtu.be/demo-to-be-recorded)**
+
+**Live Deployment:** https://suryagharsathi-api.onrender.com  
+**Health Check:** https://suryagharsathi-api.onrender.com/health
 
 **Timestamps:**
 - 0:00 - Problem & Target User
